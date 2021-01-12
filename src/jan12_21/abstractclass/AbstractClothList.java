@@ -12,7 +12,6 @@ import jan12_21.myinterface.ClothList;
 public class AbstractClothList implements ClothList {
     @Override
     public void addNewCloth() {
-
     }
 }
 

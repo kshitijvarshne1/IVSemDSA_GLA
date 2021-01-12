@@ -10,5 +10,9 @@ package jan12_21.concreteclass;
 import jan12_21.abstractclass.AbstractClothList;
 
 public class ClothesList extends AbstractClothList {
+    @Override
+    public void addNewCloth() {
+        super.addNewCloth();
+    }
 }
 
