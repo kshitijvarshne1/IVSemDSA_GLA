@@ -7,6 +7,8 @@
 
 package jan12_21.abstractclass;
 
-public class AbstractClothList {
+import jan12_21.myinterface.ClothList;
+
+public class AbstractClothList implements ClothList {
 }
 
