@@ -7,9 +7,13 @@
 
 package jan12_21.main;
 
+import jan12_21.concreteclass.ClothesList;
+import jan12_21.myinterface.ClothList;
+
 public class Main {
     public static void main(String[] args) {
-
+        ClothList clothesList = new ClothesList();
+        clothesList.addNewCloth();
     }
 }
 
