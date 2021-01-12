@@ -7,6 +7,8 @@
 
 package jan12_21.concreteclass;
 
-public class ClothesList {
+import jan12_21.abstractclass.AbstractClothList;
+
+public class ClothesList extends AbstractClothList {
 }
 
