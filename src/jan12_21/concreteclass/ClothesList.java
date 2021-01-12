@@ -7,6 +7,6 @@
 
 package jan12_21.concreteclass;
 
-public class ClothList {
+public class ClothesList {
 }
 
