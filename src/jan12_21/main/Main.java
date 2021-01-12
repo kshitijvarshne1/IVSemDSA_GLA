@@ -8,5 +8,8 @@
 package jan12_21.main;
 
 public class Main {
+    public static void main(String[] args) {
+
+    }
 }
 
