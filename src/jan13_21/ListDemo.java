@@ -30,6 +30,12 @@ public class ListDemo {
         System.out.println(list1);
         //4.using lambda programming
         list1.stream().forEach(element -> System.out.println(element + " "));
+        //OR
+        /*
+        list1.stream().forEach(
+                System.out::println
+        );
+        */
 
         //linkedlist
         LinkedList<Integer> list2 = new LinkedList<>();
