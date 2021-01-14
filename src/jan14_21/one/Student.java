@@ -7,6 +7,10 @@
 
 package jan14_21.one;
 
-public class Student {
+public class Student extends Man {
+    @Override
+    public void breathe() {
+        System.out.println("student breathe ");
+    }
 }
 
