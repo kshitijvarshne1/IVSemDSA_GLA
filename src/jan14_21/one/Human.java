@@ -7,6 +7,10 @@ public interface Human {
     void breathe();
 }
 
+//Man is a Human
 abstract class Man implements Human {
+    @Override
+    public void breathe() {
 
+    }
 }
