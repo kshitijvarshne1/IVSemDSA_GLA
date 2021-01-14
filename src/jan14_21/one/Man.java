@@ -10,7 +10,6 @@ package jan14_21.one;
 public abstract class Man implements Human {
     @Override
     public void breathe() {
-
     }
 }
 
