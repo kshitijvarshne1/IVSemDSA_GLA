@@ -6,3 +6,7 @@ public interface Human {
 
     void breathe();
 }
+
+abstract class Man implements Human {
+
+}
