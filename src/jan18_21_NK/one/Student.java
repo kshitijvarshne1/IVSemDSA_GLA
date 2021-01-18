@@ -8,5 +8,12 @@
 package jan18_21_NK.one;
 
 public class Student {
+    private String universityName;
+    private String nameOfStream;
+    private int id;
+    private int marks;
+    private String studentName;
+
+
 }
 
