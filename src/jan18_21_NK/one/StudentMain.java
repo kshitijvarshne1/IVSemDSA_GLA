@@ -40,4 +40,10 @@ public class StudentMain {
         System.out.println("Average :- " + average);
     }
 }
-
+// for line no 28
+/*
+ catch(NumberFormatException a){
+    sout("Any message");
+    a.printStackTrace();
+}
+*/
