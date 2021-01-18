@@ -68,4 +68,4 @@ public class Student {
 }
 
 //instance :- memory allocate at the time of object creation :---- Heap Area
-//statoc variable : - memory allocate at the time of loading of load file :----
+//static variable : - memory allocate at the time of loading of load file :----
