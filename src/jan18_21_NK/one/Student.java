@@ -8,23 +8,18 @@
 package jan18_21_NK.one;
 
 public class Student {
-    private String universityName;
-    private String nameOfStream;
+    private static String universityName;
+    private static String nameOfStream;
     private int id;
     private int marks;
     private String studentName;
 
-    public Student(int id, int marks, String studentName) {
-        this.id = id;
-        this.marks = marks;
-        this.studentName = studentName;
-        this.universityName = "GLA";
-        this.nameOfStream = "B.Tech";
+    static {
+        universityName = "GLA";
+        nameOfStream = "B.Tech";
     }
 
-    public Student(String universityName, String nameOfStream, int id, int marks, String studentName) {
-        this.universityName = universityName;
-        this.nameOfStream = nameOfStream;
+    public Student(int id, int marks, String studentName) {
         this.id = id;
         this.marks = marks;
         this.studentName = studentName;
