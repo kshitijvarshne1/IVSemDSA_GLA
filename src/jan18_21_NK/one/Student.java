@@ -10,14 +10,15 @@ package jan18_21_NK.one;
 public class Student {
     private static String universityName;
     private static String nameOfStream;
-    private int id;
-    private int marks;
-    private String studentName;
 
     static {
         universityName = "GLA";
         nameOfStream = "B.Tech";
     }
+
+    private int id;
+    private int marks;
+    private String studentName;
 
     public Student(int id, int marks, String studentName) {
         this.id = id;
@@ -30,7 +31,7 @@ public class Student {
     }
 
     public void setUniversityName(String universityName) {
-        this.universityName = universityName;
+        Student.universityName = universityName;
     }
 
     public String getNameOfStream() {
@@ -38,7 +39,7 @@ public class Student {
     }
 
     public void setNameOfStream(String nameOfStream) {
-        this.nameOfStream = nameOfStream;
+        Student.nameOfStream = nameOfStream;
     }
 
     public int getId() {
