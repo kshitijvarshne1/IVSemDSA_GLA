@@ -37,8 +37,8 @@ public class StudentMain {
         System.out.println("enter the value for start the program" +
                 "\n"
                 + "enter 1 for find the average of all marks" + '\n'
-                + " enter 2 for show all the objects" + '\n'
-                + " enter -1 for terminate the program");
+                + "enter 2 for show all the objects" + '\n'
+                + "enter -1 for terminate the program");
         while (var != -1) {
             var = sc.nextInt();
             switch (var) {
