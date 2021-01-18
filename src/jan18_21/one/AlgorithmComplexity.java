@@ -8,5 +8,11 @@
 package jan18_21.one;
 
 public class AlgorithmComplexity {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        // 1 statement run
+        // constant time complexity => O(1)
+    }
+
 }
 
