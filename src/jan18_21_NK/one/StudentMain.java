@@ -8,5 +8,8 @@
 package jan18_21_NK.one;
 
 public class StudentMain {
+    public static void main(String[] args) {
+
+    }
 }
 
