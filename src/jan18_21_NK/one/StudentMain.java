@@ -7,18 +7,26 @@
 
 package jan18_21_NK.one;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class StudentMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int limit = sc.nextInt();
+        int id = 0;
+        int marks = 0;
+        String studentName = null;
         Student[] studentArray = new Student[5];
         for (int i = 0; i < limit; i++) {
-            int id = sc.nextInt();
-            int marks = sc.nextInt();
-            sc.nextLine();
-            String studentName = sc.nextLine();
+            try {
+                id = sc.nextInt();
+                marks = sc.nextInt();
+                sc.nextLine();
+                studentName = sc.nextLine();
+            } catch (InputMismatchException a) {
+                System.out.println("Stop the program and again provide the value for object");
+            }
             Student obj = new Student(id, marks, studentName);
             studentArray[i] = obj;
         }
