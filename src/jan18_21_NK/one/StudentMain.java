@@ -17,7 +17,7 @@ public class StudentMain {
         int id = 0;
         int marks = 0;
         String studentName = null;
-        Student[] studentArray = new Student[5];
+        Student[] studentArray = new Student[limit];
         for (int i = 0; i < limit; i++) {
             try {
                 id = sc.nextInt();
