@@ -26,6 +26,7 @@ public class StudentMain {
                 studentName = sc.nextLine();
             } catch (InputMismatchException a) {
                 System.out.println("Stop the program and again provide the value for object");
+                a.printStackTrace();
             }
             Student obj = new Student(id, marks, studentName);
             studentArray[i] = obj;
