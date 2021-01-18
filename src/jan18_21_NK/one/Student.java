@@ -14,6 +14,14 @@ public class Student {
     private int marks;
     private String studentName;
 
+    public Student(int id, int marks, String studentName) {
+        this.id = id;
+        this.marks = marks;
+        this.studentName = studentName;
+        this.universityName = "GLA";
+        this.nameOfStream = "B.Tech";
+    }
+
     public Student(String universityName, String nameOfStream, int id, int marks, String studentName) {
         this.universityName = universityName;
         this.nameOfStream = nameOfStream;
