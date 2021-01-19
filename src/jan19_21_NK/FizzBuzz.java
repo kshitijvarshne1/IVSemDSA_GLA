@@ -22,7 +22,7 @@ public class FizzBuzz {
             if (three != 3 && five != 5) {
                 System.out.print(" " + i + " ");
                 result.append(" ");
-                result.append(String.valueOf(i));
+                result.append(i);
                 result.append(" ");
             }
             if (three == 3) {
