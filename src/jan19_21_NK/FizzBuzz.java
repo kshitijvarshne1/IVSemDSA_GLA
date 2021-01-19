@@ -36,7 +36,7 @@ public class FizzBuzz {
                 result.append("Buzz ");
             }
         }
-        //System.out.println();
+        System.out.println();
         System.out.println(result);
     }
 }
