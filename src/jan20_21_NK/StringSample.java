@@ -8,5 +8,8 @@
 package jan20_21_NK;
 
 public class StringSample {
+    public static void main(String[] args) {
+
+    }
 }
 
