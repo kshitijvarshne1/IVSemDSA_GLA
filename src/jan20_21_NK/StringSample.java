@@ -27,7 +27,7 @@ public class StringSample {
                 System.out.println(s1[i] + " " + s2[i]);
             }
         }
-        for (int i = 0; i < 10; i++) {
+        /*for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; i++) {
                 if (s1[i].equals(s2[i])) {
                     System.out.println(s1[i]);
@@ -35,7 +35,7 @@ public class StringSample {
                     System.out.println(s1[i] + " " + s2[i]);
                 }
             }
-        }
+        }*/
     }
 }
 
