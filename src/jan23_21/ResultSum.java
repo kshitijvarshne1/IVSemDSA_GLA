@@ -8,5 +8,8 @@
 package jan23_21;
 
 public class ResultSum {
+    public static void main(String[] args) {
+
+    }
 }
 
