@@ -34,7 +34,6 @@ public class StringSample {
                 } else {
                     System.out.println(s1[i] + " " + s2[i]);
                 }
-
             }
         }
     }
