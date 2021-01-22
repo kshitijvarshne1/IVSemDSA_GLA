@@ -29,6 +29,11 @@ public class StringSample {
         }
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; i++) {
+                if (s1[i].equals(s2[i])) {
+                    System.out.println(s1[i]);
+                } else {
+                    System.out.println(s1[i] + " " + s2[i]);
+                }
 
             }
         }
