@@ -41,7 +41,6 @@ public class ResultSum {
         for (Integer k : result.keySet()) {
             System.out.println(k + " " + result.get(k));
         }
-
     }
 }
 
