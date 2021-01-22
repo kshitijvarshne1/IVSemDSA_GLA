@@ -27,6 +27,11 @@ public class StringSample {
                 System.out.println(s1[i] + " " + s2[i]);
             }
         }
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; i++) {
+
+            }
+        }
     }
 }
 
