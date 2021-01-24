@@ -26,7 +26,6 @@ public class ResultSum {
         final int RESULTSUM = 10;
         int start = 0;
         //can be done using HashSet -> for this we have to make a class of Pair for storing the pair in the HashSet
-
         HashMap<Integer, Integer> result = new HashMap<>();
         int last = arr.size() - 1;
         while (start < last) {
