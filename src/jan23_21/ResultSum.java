@@ -25,6 +25,7 @@ public class ResultSum {
         Collections.sort(arr);
         final int RESULTSUM = 10;
         int start = 0;
+        //can be done using HashSet
         HashMap<Integer, Integer> result = new HashMap<>();
         int last = arr.size() - 1;
         while (start < last) {
