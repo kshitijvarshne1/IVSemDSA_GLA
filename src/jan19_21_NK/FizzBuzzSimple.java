@@ -14,6 +14,9 @@ public class FizzBuzzSimple {
         Scanner sc = new Scanner(System.in);
         int lastLimit = sc.nextInt();
         sc.close();
+        int three = 0;
+        int five = 0;
+
 
     }
 }
