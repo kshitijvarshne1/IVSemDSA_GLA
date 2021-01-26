@@ -32,7 +32,7 @@ public class StringSample {
                 if (s1[i].equals(s2[i])) {
                     System.out.println(s1[i]);
                 } else {
-                    System.out.println(s1[i] + " " + s2[i]);
+                    System.out.println(s1[i] + "  " + s2[i]);
                 }
             }
         }*/
