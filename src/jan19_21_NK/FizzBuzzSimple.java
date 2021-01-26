@@ -7,8 +7,11 @@
 
 package jan19_21_NK;
 
+import java.util.Scanner;
+
 public class FizzBuzzSimple {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
     }
 }
