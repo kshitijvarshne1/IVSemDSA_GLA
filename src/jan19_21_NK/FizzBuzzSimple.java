@@ -16,7 +16,22 @@ public class FizzBuzzSimple {
         sc.close();
         int three = 0;
         int five = 0;
+        for (int i = 1; i < lastLimit; i++) {
+            three++;
+            five++;
+            if (three != 3 && five != 5) {
+                System.out.print(i + " ");
+            }
+            if (three == 3) {
+                System.out.print("Fizz ");
+                three = 0;
+            }
+            if (five == 5) {
+                System.out.print("Buzz ");
+                five = 0;
+            }
 
+        }
 
     }
 }
