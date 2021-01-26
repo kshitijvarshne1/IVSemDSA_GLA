@@ -8,5 +8,8 @@
 package jan19_21_NK;
 
 public class FizzBuzzSimple {
+    public static void main(String[] args) {
+
+    }
 }
 
