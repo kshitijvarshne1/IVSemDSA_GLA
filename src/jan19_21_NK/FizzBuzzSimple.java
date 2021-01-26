@@ -12,6 +12,8 @@ import java.util.Scanner;
 public class FizzBuzzSimple {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int lastLimit = sc.nextInt();
+        sc.close();
 
     }
 }
