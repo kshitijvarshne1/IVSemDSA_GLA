@@ -30,8 +30,6 @@ public class FizzBuzzSimple {
                 System.out.print("Buzz ");
                 five = 0;
             }
-
-
         }
 
     }
