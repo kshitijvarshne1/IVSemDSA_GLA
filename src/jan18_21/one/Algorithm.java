@@ -29,7 +29,7 @@ public class Algorithm {
  *           2.Linear Time:- O(n),O(n/2)
  *           3.Quadratc  :- O(n^2),(m*n)
  *
- *
+ *          Generally, we talk about the worst case for the algorithm
  *
  *       2.Space(Memory) complexity
  *
