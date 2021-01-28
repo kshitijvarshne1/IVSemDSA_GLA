@@ -30,7 +30,6 @@ public class One {
                 }
             }
         }
-
         return true;
     }
 }
