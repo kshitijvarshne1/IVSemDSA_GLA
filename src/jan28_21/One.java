@@ -18,10 +18,9 @@ public class One {
     }
 
     public static boolean checkWhetherStringIsUnique(String string) {
-        boolean response = true;
         Map<Character, Boolean> characters = new HashMap<>();
         for (int i = 0; i < string.length(); i++) {
-            if (string.codePointAt(i) < MAX_UNICODE && Character.isWhitespace(string.charAt(i)) == false) {
+            if (string.codePointAt(i) < MAX_UNICODE && !Character.isWhitespace(string.charAt(i))) {
                 char temp = string.charAt(i);
                 if (characters.get(temp) == null) {
                     characters.put(temp, true);
