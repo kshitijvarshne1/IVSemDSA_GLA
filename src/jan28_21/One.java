@@ -14,14 +14,18 @@ public class One {
     public static final int MAX_UNICODE = 65_535;
 
     public static void main(String[] args) {
-        System.out.println(checkWhetherStringIsUnique("Competitive Programming"));
+        System.out.println(checkWhetherStringIsUnique("abc d f"));
     }
 
     public static boolean checkWhetherStringIsUnique(String string) {
+        boolean response = true;
         Map<Character, Boolean> characters = new HashMap<>();
+        for (int i = 0; i < string.length(); i++) {
+            if (string.codePointAt(i) < MAX_UNICODE) {
+                char temp = string.charAt(i);
 
-        // Write your code here...
-
+            }
+        }
         return true;
     }
 }
