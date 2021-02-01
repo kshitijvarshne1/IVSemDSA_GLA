@@ -17,8 +17,8 @@ public class One {
 
     public static int[] minAndMax(int[] arr) {
         int[] temp = new int[2];
-        int maxEle = -1;
-        int minEle = 10000000;
+        int maxEle = Integer.MIN_VALUE;
+        int minEle = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
             maxEle = Math.max(maxEle, arr[i]);
             minEle = Math.min(minEle, arr[i]);
