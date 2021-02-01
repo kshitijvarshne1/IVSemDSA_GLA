@@ -5,7 +5,7 @@
  *   File: Main.java
  */
 
-package feb01_21.four;
+package feb01_21_NK.four;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -5,7 +5,7 @@
  *   File: One.java
  */
 
-package feb01_21;
+package feb01_21_NK;
 
 public class One {
     public static void main(String[] args) {

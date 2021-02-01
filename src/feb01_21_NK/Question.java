@@ -5,7 +5,7 @@
  *   File: Question.java
  */
 
-package feb01_21;
+package feb01_21_NK;
 /*
  * write a program to find largest and smallest value in array
  * write a program to insert an element on specific into an array without overriding the value

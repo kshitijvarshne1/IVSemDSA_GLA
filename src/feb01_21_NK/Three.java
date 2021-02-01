@@ -5,7 +5,7 @@
  *   File: Three.java
  */
 
-package feb01_21;
+package feb01_21_NK;
 
 public class Three {
     public static void main(String[] args) {

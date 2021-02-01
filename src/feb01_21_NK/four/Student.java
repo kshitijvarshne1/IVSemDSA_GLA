@@ -5,7 +5,7 @@
  *   File: Student.java
  */
 
-package feb01_21.four;
+package feb01_21_NK.four;
 
 public class Student {
     private int stuRollNo;
