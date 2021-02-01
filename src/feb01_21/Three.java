@@ -9,7 +9,7 @@ package feb01_21;
 
 public class Three {
     public static void main(String[] args) {
-        int n = 100;
+        int n = 600;
         Recursion(n);
     }
 
@@ -18,6 +18,7 @@ public class Three {
             return;
         }
         Recursion(n - 1);
+
         System.out.println(n);
     }
 }
