@@ -28,8 +28,6 @@ public class Main {
         }
         int[] result = calResult(students);
         System.out.println(Arrays.toString(result));
-
-
     }
 
     public static int[] calResult(Student[] student) {
