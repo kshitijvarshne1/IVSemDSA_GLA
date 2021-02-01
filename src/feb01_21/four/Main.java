@@ -45,7 +45,6 @@ public class Main {
             temp[i] = result;
         }
         return temp;
-
     }
 }
 
