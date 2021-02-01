@@ -41,6 +41,5 @@ public class Student {
     public void setSubjects(int[] subjects) {
         this.subjects = subjects;
     }
-
 }
 
