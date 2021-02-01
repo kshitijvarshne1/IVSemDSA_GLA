@@ -18,7 +18,6 @@ public class Three {
             return;
         }
         Recursion(n - 1);
-
         System.out.println(n);
     }
 }
