@@ -8,5 +8,25 @@
 package feb01_21;
 
 public class One {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 99, 7, 6, 11, 55, 7, 8};
+        int[] temp = minAndMax(arr);
+        System.out.println("Max Element " + temp[0] + " Min element " + temp[1]);
+
+    }
+
+    public static int[] minAndMax(int[] arr) {
+        int[] temp = new int[2];
+        int maxEle = -1;
+        int minEle = 10000000;
+        for (int i = 0; i < arr.length; i++) {
+            maxEle = Math.max(maxEle, arr[i]);
+            minEle = Math.min(minEle, arr[i]);
+            System.out.println(maxEle + " " + minEle);
+        }
+        temp[0] = maxEle;
+        temp[1] = minEle;
+        return temp;
+    }
 }
 
