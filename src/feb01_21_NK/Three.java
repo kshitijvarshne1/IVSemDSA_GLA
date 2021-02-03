@@ -23,8 +23,6 @@ public class Three {
         // This function print the numbers in increasing order ( 1,2,3,4,5,6,7.......)
     }
 }
-
-
 // For the tail recursion
     /*
     public static void Recursion(int n) {
