@@ -20,6 +20,7 @@ public class Three {
         //Hail Recursion
         Recursion(n - 1);
         System.out.println(n);
+        // This function print the numbers in increasing order ( 1,2,3,4,5,6,7.......)
     }
 }
 
