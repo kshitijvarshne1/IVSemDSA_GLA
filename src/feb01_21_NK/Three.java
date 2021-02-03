@@ -24,7 +24,8 @@ public class Three {
 }
 
 
-    // For the tail recursion
+// For the tail recursion
+    /*
     public static void Recursion(int n) {
         if (n == 0) {
             return;
@@ -32,4 +33,6 @@ public class Three {
         System.out.println(n);
         Recursion(n - 1);
         //Tail recursion
-    }
+
+    }*/
+//  This function print the numbers in reverse order
