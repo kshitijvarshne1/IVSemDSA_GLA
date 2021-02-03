@@ -23,3 +23,13 @@ public class Three {
     }
 }
 
+
+    // For the tail recursion
+    public static void Recursion(int n) {
+        if (n == 0) {
+            return;
+        }
+        System.out.println(n);
+        Recursion(n - 1);
+        //Tail recursion
+    }
