@@ -8,5 +8,8 @@
 package feb05_21.one;
 
 public class LinkedListDemo {
+    public static void main(String[] args) {
+
+    }
 }
 
