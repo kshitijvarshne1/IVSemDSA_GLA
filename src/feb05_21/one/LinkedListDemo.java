@@ -31,6 +31,8 @@ public class LinkedListDemo {
         list.removeIf(n -> (n % 2 == 0));
         System.out.println(list);
         //3. Search
+        System.out.println(list.contains(5));
+
         //4. Sort
         //5. Traverse
 
