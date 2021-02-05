@@ -32,8 +32,13 @@ public class LinkedListDemo {
         System.out.println(list);
         //3. Search
         System.out.println(list.contains(5));
-
         //4. Sort
+        list.sort((o1, o2) -> -Integer.compare(o1, o2));
+        System.out.println(list);
+        /*
+        list.sort((o1, o2) -> -Integer.compare(o1,o2));
+        for descending order
+        */
         //5. Traverse
 
 
