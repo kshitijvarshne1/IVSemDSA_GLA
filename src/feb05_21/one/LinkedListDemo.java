@@ -33,14 +33,26 @@ public class LinkedListDemo {
         //3. Search
         System.out.println(list.contains(5));
         //4. Sort
-        list.sort((o1, o2) -> -Integer.compare(o1, o2));
+        list.sort((o1, o2) -> Integer.compare(o1, o2));
         System.out.println(list);
         /*
         list.sort((o1, o2) -> -Integer.compare(o1,o2));
         for descending order
         */
         //5. Traverse
-
+        for (int i = 0; i < list.size(); i++) {
+            var number = list.get(i);
+            System.out.print(number + " ");
+        }
+        System.out.println();
+        for (Integer integer : list) {
+            System.out.print(integer + " ");
+        }
+        System.out.println();
+        list.forEach(
+                value -> System.out.print(value + " ")
+        );
+        System.out.println();
 
     }
 }
