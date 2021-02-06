@@ -55,6 +55,5 @@ public class LinkedListDemo {
         System.out.println();
     }
 }
-
 //Interview m ek ques aayega:--->
 // The variable written inside a lambda are final or effectively final, why?
