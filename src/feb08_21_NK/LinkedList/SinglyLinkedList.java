@@ -45,5 +45,16 @@ public class SinglyLinkedList {
         return;
     }
 
+    public boolean serachNode(int element) {
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data == element) {
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
+
 }
 
