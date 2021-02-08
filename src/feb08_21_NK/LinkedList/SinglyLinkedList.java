@@ -28,7 +28,22 @@ public class SinglyLinkedList {
                 System.out.print(temp.data + " -> ");
                 temp = temp.next;
             }
+            System.out.println();
         }
+    }
+
+    public void insertAtEnd(Node newNode) {
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        return;
+        //System.out.println(temp.data);
     }
 
 }
