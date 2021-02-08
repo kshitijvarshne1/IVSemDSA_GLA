@@ -56,5 +56,44 @@ public class SinglyLinkedList {
         return false;
     }
 
+    public int length() {
+        Node temp = head;
+        int length = 0;
+        while (temp != null) {
+            length += 1;
+            temp = temp.next;
+        }
+        return length;
+
+    }
+
+    public void insertAtPosition(Node newNode, int position) {
+        int length = length();
+        Node temp = head;
+        if (head == null) {
+            head = newNode;
+        } else if (position > length) {
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        } else if (position == 0) {
+            temp = head;
+            head = newNode;
+            newNode.next = temp;
+        } else {
+            int i = 0;
+            while (i < position - 1) {
+                temp = temp.next;
+                i++;
+            }
+            Node add = temp.next;
+            temp.next = newNode;
+            newNode.next = add;
+        }
+        return;
+    }
+
+
 }
 
