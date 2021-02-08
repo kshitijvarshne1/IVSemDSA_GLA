@@ -13,5 +13,11 @@ public class SinglyLinkedList {
     public SinglyLinkedList() {
         head = null;
     }
+
+    public void insertAtBegin(Node newNode) {
+        newNode.next = head;
+        head = newNode;
+    }
+
 }
 
