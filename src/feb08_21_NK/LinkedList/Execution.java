@@ -15,9 +15,6 @@ public class Execution {
             list.insertAtBegin(new Node(i));
         }
         list.printSinglyLinkedList();
-        Node n1 = new Node(1000);
-        list.insertAtEnd(n1);
-        list.printSinglyLinkedList();
     }
 
 }

@@ -43,7 +43,6 @@ public class SinglyLinkedList {
         }
         temp.next = newNode;
         return;
-        //System.out.println(temp.data);
     }
 
 }
