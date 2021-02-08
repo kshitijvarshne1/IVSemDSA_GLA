@@ -94,6 +94,27 @@ public class SinglyLinkedList {
         return;
     }
 
+    //Using Runner pointer approach
+    public void insertAtMiddle(Node newNode) {
+        if (head == null && head.next == null) {
+            return;
+        }
+        Node slow = head;
+        Node fast;
+        int length = length();
+        if (length % 2 == 0) {
+            fast = head.next;
+        } else {
+            fast = head;
+        }
+        while (slow != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        Node add = slow.next;
+        slow.next = newNode;
+        newNode.next = add;
+    }
 
 }
 
