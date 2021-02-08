@@ -7,7 +7,11 @@
 
 package feb08_21_NK.LinkedList;
 
+
 public class Execution {
-    SinglyLinkedList list = new SinglyLinkedList();
+    public static void main(String[] args) {
+
+    }
+
 }
 
