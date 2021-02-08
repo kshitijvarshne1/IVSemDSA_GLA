@@ -14,7 +14,7 @@ public class Execution {
         for (int i = 0; i < 5; i++) {
             list.insertAtBegin(new Node(i));
         }
-        list.printSinglyLinkedList();
+       list.printSinglyLinkedList();
     }
 
 }
