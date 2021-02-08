@@ -9,7 +9,7 @@ package feb08_21_NK.LinkedList;
 
 public class Node {
     int data;
-    Node next;
+    Node next; // self reference structure
 
     public Node(int d) {
         data = d;
