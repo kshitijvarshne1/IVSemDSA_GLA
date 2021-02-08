@@ -24,8 +24,8 @@ public class SinglyLinkedList {
         if (temp == null) {
             System.out.println("No data member");
         } else {
-            while (temp.next != null) {
-                System.out.println(temp.data + " -> ");
+            while (temp != null) {
+                System.out.print(temp.data + " -> ");
                 temp = temp.next;
             }
         }
