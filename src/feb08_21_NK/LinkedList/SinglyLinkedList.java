@@ -19,5 +19,17 @@ public class SinglyLinkedList {
         head = newNode;
     }
 
+    public void PrintSinglyLinkedList() {
+        Node temp = head;
+        if (temp == null) {
+            System.out.println("No data member");
+        } else {
+            while (temp.next != null) {
+                System.out.println(temp.data + " -> ");
+                temp = temp.next;
+            }
+        }
+    }
+
 }
 
