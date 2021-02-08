@@ -19,7 +19,7 @@ public class SinglyLinkedList {
         head = newNode;
     }
 
-    public void PrintSinglyLinkedList() {
+    public void printSinglyLinkedList() {
         Node temp = head;
         if (temp == null) {
             System.out.println("No data member");
