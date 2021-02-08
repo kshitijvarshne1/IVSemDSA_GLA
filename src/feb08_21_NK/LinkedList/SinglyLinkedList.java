@@ -8,5 +8,10 @@
 package feb08_21_NK.LinkedList;
 
 public class SinglyLinkedList {
+    Node head;
+
+    public SinglyLinkedList() {
+        head = null;
+    }
 }
 
