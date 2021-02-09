@@ -17,5 +17,4 @@ public class Node {
         exponent = exp;
         next = null;
     }
-
 }
