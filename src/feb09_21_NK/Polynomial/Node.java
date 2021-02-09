@@ -8,4 +8,14 @@
 package feb09_21_NK.Polynomial;
 
 public class Node {
+    int coefficient;
+    int exponent;
+    Node next; // self reference structure
+
+    public Node(int coe, int exp) {
+        coefficient = coe;
+        exponent = exp;
+        next = null;
+    }
+
 }
