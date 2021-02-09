@@ -17,4 +17,11 @@ public class Node {
         exponent = exp;
         next = null;
     }
+
+    public Node() {
+        coefficient = 0;
+        exponent = 0;
+        next = null;
+    }
+
 }
