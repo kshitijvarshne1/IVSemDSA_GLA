@@ -24,7 +24,16 @@ public class PLL {
             temp = temp.next;
         }
         temp.next = newNode;
-        return;
     }
+
+    public void print() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.coefficient + " x ^" + temp.exponent + " -> ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
 }
 
