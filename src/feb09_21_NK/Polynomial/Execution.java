@@ -22,10 +22,7 @@ public class Execution {
         PLL p3 = new PLL();
         addTwoPolynomial(p1.head, p2.head, p3);
         p3.print();
-
-
     }
-
     public static void addTwoPolynomial(Node p1, Node p2, PLL result) {
         Node a = p1;
         Node b = p2;
