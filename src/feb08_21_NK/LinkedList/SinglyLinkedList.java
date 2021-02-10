@@ -132,6 +132,5 @@ public class SinglyLinkedList {
         }
         return;
     }
-
 }
 
