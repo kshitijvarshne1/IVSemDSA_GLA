@@ -116,5 +116,22 @@ public class SinglyLinkedList {
         newNode.next = add;
     }
 
+    public void reverseLinkedList() {
+        Node temp = head;
+        if (head == null) {
+            return;
+        }
+        Node prev = null;
+        Node n;
+        while (temp != null) {
+            n = temp;
+            temp = temp.next;
+            n.next = prev;
+            prev = n;
+            head = n;
+        }
+        return;
+    }
+
 }
 
