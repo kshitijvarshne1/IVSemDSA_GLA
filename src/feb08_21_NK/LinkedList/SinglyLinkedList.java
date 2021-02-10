@@ -132,5 +132,19 @@ public class SinglyLinkedList {
         }
         return;
     }
+
+    public void swap() {
+        Node temp = head;
+        if (temp == null) {
+            return;
+        }
+        int n;
+        while (temp != null && temp.next != null) {
+            n = temp.data;
+            temp.data = temp.next.data;
+            temp.next.data = n;
+            temp = temp.next;
+        }
+    }
 }
 
