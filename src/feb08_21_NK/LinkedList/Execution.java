@@ -18,9 +18,12 @@ public class Execution {
         for (int i = 19; i >= 0; i -= 3) {
             list2.insertAtBegin(new Node(i));
         }
-        SinglyLinkedList list3 = new SinglyLinkedList();
-        list3.head = merge(list1.head, list2.head);
-        list3.printSinglyLinkedList();
+        //SinglyLinkedList list3 = new SinglyLinkedList();
+        //list3.head = merge(list1.head, list2.head);
+        //list3.printSinglyLinkedList();
+        list1.printSinglyLinkedList();
+        list1.reverseLinkedList();
+        list1.printSinglyLinkedList();
 
     }
 
