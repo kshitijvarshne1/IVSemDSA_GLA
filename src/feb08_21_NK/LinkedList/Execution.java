@@ -26,7 +26,6 @@ public class Execution {
         list1.printSinglyLinkedList();
         list1.swap();
         list1.printSinglyLinkedList();
-
     }
 
     public static Node merge(Node a, Node b) {
