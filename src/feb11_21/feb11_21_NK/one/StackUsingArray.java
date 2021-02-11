@@ -17,24 +17,23 @@ public class StackUsingArray {
     }
 
     public boolean isEmpty() {
-        return top != arr.length - 1;
+        return top == -1;
     }
 
     public boolean isFull() {
-        return top == arr.length;
+        return top == arr.length - 1;
     }
 
     public void push(int value) {
-        if (isEmpty()) {
+        if (!isFull()) {
             top += 1;
             arr[top] = value;
             return;
         }
         System.out.println("Stack is full");
-        return;
     }
 
-    public int top() {
+    public int peek() {
         if (!isEmpty()) {
             return arr[top];
         }
@@ -47,7 +46,6 @@ public class StackUsingArray {
             return;
         }
         System.out.println("Underflow");
-        return;
     }
 
     public void deleteStack() {
@@ -64,7 +62,6 @@ public class StackUsingArray {
             return;
         }
         System.out.println("Stack is empty");
-        return;
     }
 
 }
