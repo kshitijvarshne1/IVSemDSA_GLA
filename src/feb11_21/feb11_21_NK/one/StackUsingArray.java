@@ -53,5 +53,19 @@ public class StackUsingArray {
     public void deleteStack() {
         arr = null;
     }
+
+    public void print() {
+        if (!isEmpty()) {
+            int count = top;
+            for (int i = count; i >= 0; i--) {
+                System.out.print(arr[i] + " ");
+            }
+            System.out.println();
+            return;
+        }
+        System.out.println("Stack is empty");
+        return;
+    }
+
 }
 
