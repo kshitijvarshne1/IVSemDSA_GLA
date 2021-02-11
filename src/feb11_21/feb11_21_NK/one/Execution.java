@@ -9,7 +9,7 @@ package feb11_21.feb11_21_NK.one;
 
 public class Execution {
     public static void main(String[] args) {
-
+        StackUsingArray stack = new StackUsingArray(5);
     }
 }
 
