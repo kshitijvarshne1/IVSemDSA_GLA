@@ -21,17 +21,5 @@ public class Execution {
         System.out.println(stack.isEmpty());
         System.out.println(stack.peek());
         stack.deleteStack();
-
-
     }
 }
-/*
-System.out.println(stack.peek());
-        stack.pop();
-        System.out.println(stack.isEmpty());
-        System.out.println(stack.peek());
-        System.out.println("fdd"+stack.peek());
-
-        System.out.println(stack.isFull());
-        stack.deleteStack();
-        */
