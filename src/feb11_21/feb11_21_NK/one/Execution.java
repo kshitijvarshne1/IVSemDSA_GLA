@@ -13,12 +13,25 @@ public class Execution {
         for (int i = 0; i < 5; i++) {
             stack.push(i * i);
         }
-        stack.push(99);
-        stack.pop();
-        System.out.println(stack.top);
         System.out.println(stack.isEmpty());
         System.out.println(stack.isFull());
+        stack.push(99);
+        stack.pop();
+        stack.push(444);
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.peek());
+        stack.deleteStack();
+
 
     }
 }
+/*
+System.out.println(stack.peek());
+        stack.pop();
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.peek());
+        System.out.println("fdd"+stack.peek());
 
+        System.out.println(stack.isFull());
+        stack.deleteStack();
+        */
