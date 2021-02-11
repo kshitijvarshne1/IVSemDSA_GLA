@@ -7,6 +7,23 @@
 
 package feb11_21.one;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class StackDemo {
+    public static void main(String[] args) {
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i < 5; i++) {
+            stack.push(i);
+        }
+        /*var popValue = stack.pop();
+        System.out.println(popValue);
+        var topValue= stack.peek();
+        System.out.println(topValue);*/
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
+
+    }
 }
 
