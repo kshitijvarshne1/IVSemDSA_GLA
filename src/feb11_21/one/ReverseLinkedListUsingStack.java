@@ -32,7 +32,6 @@ public class ReverseLinkedListUsingStack {
         while (!stack.isEmpty()) {
             list.add(stack.poll());
         }
-
         return;
     }
 }
