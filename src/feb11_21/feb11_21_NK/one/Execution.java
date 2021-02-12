@@ -19,6 +19,7 @@ public class Execution {
         stack.push(99);
         stack.pop();
         stack.push(444);
+        stack.pop();
         System.out.println(stack.isEmpty());
         System.out.println(stack.peek());
         stack.deleteStack();
