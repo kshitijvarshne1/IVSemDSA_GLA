@@ -15,7 +15,6 @@ public class BalancedParenthesis {
         Scanner sc = new Scanner(System.in);
         String parenthesis = sc.nextLine();
         System.out.println(check(parenthesis));
-
     }
 
     private static boolean check(String parenthesis) {
