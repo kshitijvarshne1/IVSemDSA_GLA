@@ -47,7 +47,6 @@ public class ReverseTheStackUsingOneVariable {
             transfer(helperStack, stack, n - i - 1);
         }
     }
-
 }
 // Time complexity o(n^2)
 // Space Complexity o(n)
