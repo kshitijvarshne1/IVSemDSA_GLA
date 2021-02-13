@@ -38,7 +38,6 @@ public class first {
 
     }
 }
-
 /*
  * Reverse the stack using 2 stack
  * */
