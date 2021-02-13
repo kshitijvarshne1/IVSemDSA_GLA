@@ -14,7 +14,31 @@ public class BalancedParenthesis {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String parenthesis = sc.nextLine();
-        System.out.println(check(parenthesis));
+        System.out.println(checkAllBrackets(parenthesis));
+    }
+
+    private static boolean checkAllBrackets(String parenthesis) {
+        Stack<Character> stack = new Stack();
+        for (int i = 0; i < parenthesis.length(); i++) {
+            if (parenthesis.charAt(i) == '(') {
+                stack.push('(');
+            } else if (parenthesis.charAt(i) == '{') {
+                stack.push('{');
+            } else if (parenthesis.charAt(i) == '[') {
+                stack.push('[');
+            } else if (parenthesis.charAt(i) == ')' || parenthesis.charAt(i) == '}' || parenthesis.charAt(i) == ']') {
+                if (!stack.empty() && stack.peek() == '(' && parenthesis.charAt(i) == ')') {
+                    stack.pop();
+                } else if (!stack.empty() && stack.peek() == '{' && parenthesis.charAt(i) == '}') {
+                    stack.pop();
+                } else if (!stack.empty() && stack.peek() == '[' && parenthesis.charAt(i) == ']') {
+                    stack.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+        return stack.empty();
     }
 
     private static boolean check(String parenthesis) {
@@ -32,5 +56,6 @@ public class BalancedParenthesis {
         }
         return stack.empty();
     }
+
 }
 
