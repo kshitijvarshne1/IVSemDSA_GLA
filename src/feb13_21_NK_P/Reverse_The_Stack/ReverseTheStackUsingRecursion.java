@@ -44,7 +44,6 @@ public class ReverseTheStackUsingRecursion {
         //recursively reverse the smaller stack
         reverseStack(stack);
         insertAtBottom(stack, x);
-
     }
 }
 
