@@ -44,4 +44,4 @@ public class StockSpanProblem {
         }
     }
 }
-
+//Time complexity:- o(n)
