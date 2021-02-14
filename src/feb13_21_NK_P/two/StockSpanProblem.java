@@ -8,5 +8,8 @@
 package feb13_21_NK_P.two;
 
 public class StockSpanProblem {
+    public static void main(String[] args) {
+
+    }
 }
 
