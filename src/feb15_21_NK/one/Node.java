@@ -8,5 +8,12 @@
 package feb15_21_NK.one;
 
 public class Node {
-}
+    int data;
+    Node next; // self reference structure
 
+    public Node(int d) {
+        data = d;
+        next = null;
+    }
+
+}
