@@ -16,8 +16,9 @@ public class Execution {
         stack.peek();
         stack.push(new Node(6));
         stack.peek();
-        stack.pop();
+        //stack.pop();
         stack.peek();
+        stack.print();
     }
 }
 

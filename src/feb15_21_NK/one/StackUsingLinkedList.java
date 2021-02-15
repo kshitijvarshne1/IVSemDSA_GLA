@@ -46,7 +46,7 @@ public class StackUsingLinkedList {
         }
         Node temp = top;
         while (temp != null) {
-            System.out.println(top.data);
+            System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
     }
