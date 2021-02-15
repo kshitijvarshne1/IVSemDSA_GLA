@@ -22,7 +22,7 @@ public class StackUsingLinkedList {
         return false;
     }
 
-    public void insert(Node newNode) {
+    public void push(Node newNode) {
         if (top == null) {
             top = newNode;
             return;
@@ -37,8 +37,27 @@ public class StackUsingLinkedList {
             return;
         }
         System.out.println(top.data);
-        top = top.next;
-
     }
+
+    public void print() {
+        if (isEmpty()) {
+            System.out.println("stack is empty");
+            return;
+        }
+        Node temp = top;
+        while (temp != null) {
+            System.out.println(top.data);
+            temp = temp.next;
+        }
+    }
+
+    public void pop() {
+        if (isEmpty()) {
+            System.out.println("stack is empty");
+            return;
+        }
+        top = top.next;
+    }
+
 }
 
