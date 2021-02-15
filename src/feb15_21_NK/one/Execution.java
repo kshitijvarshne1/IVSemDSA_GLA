@@ -18,7 +18,6 @@ public class Execution {
         stack.peek();
         stack.pop();
         stack.peek();
-
     }
 }
 
