@@ -8,5 +8,21 @@
 package feb15_21_NK.one;
 
 public class StackUsingLinkedList {
+    Node top;
+
+    public StackUsingLinkedList() {
+        top = null;
+    }
+
+    public boolean isEmpty() {
+        if (top == null) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isFull() {
+        return false;
+    }
 }
 
