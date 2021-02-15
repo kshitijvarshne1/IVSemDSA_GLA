@@ -15,14 +15,30 @@ public class StackUsingLinkedList {
     }
 
     public boolean isEmpty() {
-        if (top == null) {
-            return true;
-        }
-        return false;
+        return top == null;
     }
 
     public boolean isFull() {
         return false;
+    }
+
+    public void insert(Node newNode) {
+        if (top == null) {
+            top = newNode;
+            return;
+        }
+        newNode.next = top;
+        top = newNode;
+    }
+
+    public void peek() {
+        if (isEmpty()) {
+            System.out.println("stack is empty");
+            return;
+        }
+        System.out.println(top.data);
+        top = top.next;
+
     }
 }
 
