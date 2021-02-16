@@ -14,7 +14,7 @@ public class EvaluationOfPostfix {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String postfix = sc.nextLine();
-        System.out.println(Evaluation(postfix));
+        System.out.println("Postfix Evaluation :-  " + Evaluation(postfix));
     }
 
     private static int Evaluation(String postfix) {
