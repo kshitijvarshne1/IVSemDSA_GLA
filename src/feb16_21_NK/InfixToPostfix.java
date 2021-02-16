@@ -7,9 +7,33 @@
 
 package feb16_21_NK;
 
+import java.util.Scanner;
+import java.util.Stack;
+
 public class InfixToPostfix {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        System.out.println(InfixToPostfixConversion(input));
+    }
 
+    private static String InfixToPostfixConversion(String input) {
+        Stack stack = new Stack();
+        String result = "";
+
+        return result;
+    }
+
+    private static int precedence(char c) {
+        if (c == '^') {
+            return 3;
+        } else if (c == '*' || c == '/') {
+            return 2;
+        } else if (c == '+' || c == '-') {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }
 
