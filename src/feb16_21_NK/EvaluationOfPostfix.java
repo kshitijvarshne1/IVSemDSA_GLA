@@ -8,5 +8,8 @@
 package feb16_21_NK;
 
 public class EvaluationOfPostfix {
+    public static void main(String[] args) {
+
+    }
 }
 
