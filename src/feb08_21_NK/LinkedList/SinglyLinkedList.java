@@ -143,7 +143,7 @@ public class SinglyLinkedList {
             n = temp.data;
             temp.data = temp.next.data;
             temp.next.data = n;
-            temp = temp.next;
+            temp = temp.next.next;
         }
     }
 }

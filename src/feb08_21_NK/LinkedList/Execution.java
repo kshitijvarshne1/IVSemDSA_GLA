@@ -21,11 +21,15 @@ public class Execution {
         //SinglyLinkedList list3 = new SinglyLinkedList();
         //list3.head = merge(list1.head, list2.head);
         //list3.printSinglyLinkedList();
-        list1.printSinglyLinkedList();
+        /*list1.printSinglyLinkedList();
         list1.reverseLinkedList();
         list1.printSinglyLinkedList();
         list1.swap();
+        list1.printSinglyLinkedList();*/
         list1.printSinglyLinkedList();
+        list1.swap();
+        list1.printSinglyLinkedList();
+
     }
 
     public static Node merge(Node a, Node b) {
