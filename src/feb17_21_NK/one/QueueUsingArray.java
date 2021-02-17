@@ -16,14 +16,14 @@ public class QueueUsingArray {
     public QueueUsingArray(int size) {
         arr = new int[size];
         this.front = 0;
-        this.rear = 0;
+        this.rear = -1;
         this.size = size;
     }
 
     public void enqueue(int d) {
         if (!isFull()) {
-            arr[rear] = d;
             rear += 1;
+            arr[rear] = d;
             return;
         }
         System.out.println("Queue is full");
@@ -39,8 +39,9 @@ public class QueueUsingArray {
     }
 
     public boolean isEmpty() {
-        return rear == 0;
+        return rear == front - 1;
     }
+
 
     public boolean isFull() {
         return rear == size - 1;
