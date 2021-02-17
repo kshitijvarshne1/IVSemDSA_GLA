@@ -8,8 +8,8 @@
 package feb17_21_NK.two;
 
 public class Node {
-    int data;
-    Node next;
+    public int data;
+    public Node next;
 
     public Node(int d) {
         this.data = d;
