@@ -17,7 +17,6 @@ public class Execution {
         list.dequeue();
         list.dequeue();
         list.dequeue();
-
         list.dequeue();
         list.dequeue();
         list.dequeue();
