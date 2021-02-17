@@ -20,6 +20,24 @@ public class QueueUsingArray {
         this.size = size;
     }
 
+    public void enqueue(int d) {
+        if (!isFull()) {
+            arr[rear] = d;
+            rear += 1;
+            return;
+        }
+        System.out.println("Queue is full ");
+    }
+
+    public int dequeue() {
+        if (!isEmpty()) {
+            int k = front;
+            front += 1;
+            return arr[front];
+        }
+        return -1;
+    }
+
     public boolean isEmpty() {
         return rear == 0;
     }
