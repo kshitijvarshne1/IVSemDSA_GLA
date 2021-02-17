@@ -29,13 +29,13 @@ public class QueueUsingArray {
         System.out.println("Queue is full ");
     }
 
-    public int dequeue() {
+    public void dequeue() {
         if (!isEmpty()) {
-            int k = front;
+            System.out.println(arr[front]);
             front += 1;
-            return arr[front];
+            return;
         }
-        return -1;
+        System.out.println("Queue is Empty");
     }
 
     public boolean isEmpty() {
