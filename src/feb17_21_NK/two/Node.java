@@ -14,7 +14,6 @@ public class Node {
     public Node(int d) {
         this.data = d;
         this.next = null;
-        a
     }
 }
 
