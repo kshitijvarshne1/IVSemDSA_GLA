@@ -26,7 +26,7 @@ public class QueueUsingArray {
             rear += 1;
             return;
         }
-        System.out.println("Queue is full ");
+        System.out.println("Queue is full");
     }
 
     public void dequeue() {
