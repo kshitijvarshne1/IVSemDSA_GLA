@@ -42,7 +42,6 @@ public class QueueUsingArray {
         return rear == front - 1;
     }
 
-
     public boolean isFull() {
         return rear == size - 1;
     }
