@@ -13,8 +13,6 @@ public class MorseCode {
     public static void main(String[] args) {
         System.out.println(converter("ADITYA"));
         System.out.println(morseCodeToCode(".- -.. .. - -.-- .-"));
-
-
     }
 
     private static StringBuilder converter(String s) {
