@@ -21,8 +21,6 @@ public class Execution {
         list.dequeue();
         System.out.println(list.isFull());
         System.out.println(list.isEmpty());
-
-
     }
 }
 
