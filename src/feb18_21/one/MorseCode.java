@@ -29,13 +29,6 @@ public class MorseCode {
         return result;
     }
 
-    //    private static StringBuilder convert(String s){
-//        String[] morseCode={".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",
-//                ".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
-//        s.replaceAll("[A-Za-z]", "");
-//
-//        return s;
-//    }
     private static StringBuilder morseCodeToCode(String s) {
         StringBuilder result = new StringBuilder();
         HashMap<String, Character> morseCode = new HashMap<>();
