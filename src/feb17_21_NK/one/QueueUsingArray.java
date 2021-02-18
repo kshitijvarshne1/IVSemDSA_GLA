@@ -30,16 +30,24 @@ public class QueueUsingArray {
     }
 
     public void dequeue() {
-        if (!isEmpty()) {
+        if (front == rear) {
+            System.out.println("Dfd");
+            System.out.println(arr[front]);
+            this.front = 0;
+            this.rear = -1;
+            return;
+        } else if (!isEmpty() && rear != -1) {
+            System.out.println("Dc");
             System.out.println(arr[front]);
             front += 1;
             return;
+        } else {
+            System.out.println("Queue is Empty");
         }
-        System.out.println("Queue is Empty");
     }
 
     public boolean isEmpty() {
-        return rear == front - 1;
+        return rear != arr.length - 1;
     }
 
     public boolean isFull() {

@@ -13,13 +13,16 @@ public class Execution {
         for (int i = 1; i <= 5; i++) {
             list.enqueue(i);
         }
+        list.dequeue();
+        list.dequeue();
+        list.dequeue();
+        list.dequeue();
+        list.dequeue();
+        list.dequeue();
         System.out.println(list.isFull());
-        list.dequeue();
-        list.dequeue();
-        list.dequeue();
-        list.dequeue();
-        list.dequeue();
-        list.dequeue();
+        System.out.println(list.isEmpty());
+
+
     }
 }
 
