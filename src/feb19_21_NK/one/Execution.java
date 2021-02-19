@@ -33,7 +33,6 @@ public class Execution {
         list.dequeue();
         list.dequeue();
         System.out.println(list.isEmpty());
-
     }
 }
 
