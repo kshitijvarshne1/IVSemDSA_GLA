@@ -30,8 +30,24 @@ public class CircularQueueUsingArray {
         }
     }
 
+    public void dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+        } else if (front == rear) {
+            System.out.println(arr[front]);
+            front = rear = -1;
+        } else {
+            System.out.println(arr[front]);
+            front += 1;
+        }
+    }
+
     public boolean isFull() {
         return (rear + 1) % arr.length == front;
+    }
+
+    public boolean isEmpty() {
+        return front == -1 || rear != arr.length - 1 || front != rear - 1;
     }
 }
 
