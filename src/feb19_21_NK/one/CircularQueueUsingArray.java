@@ -38,7 +38,8 @@ public class CircularQueueUsingArray {
             front = rear = -1;
         } else {
             System.out.println(arr[front]);
-            front += 1;
+            front = (front + 1) % arr.length;
+
         }
     }
 
@@ -47,7 +48,7 @@ public class CircularQueueUsingArray {
     }
 
     public boolean isEmpty() {
-        return front == -1 || rear != arr.length - 1 || front != rear - 1;
+        return front == -1 || rear != arr.length - 1 || front == rear - 1;
     }
 }
 
