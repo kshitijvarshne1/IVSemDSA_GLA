@@ -85,6 +85,5 @@ public class DoublyLinkedList {
         }
         System.out.println();
     }
-
 }
 
