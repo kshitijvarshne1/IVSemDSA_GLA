@@ -42,8 +42,36 @@ public class DoublyLinkedList {
             tail = null;
             return;
         }
-        tail.prev.next = null;
-        tail.prev = null;
+        /*tail.prev.next = null;
+        tail.prev = null;*/
+        tail = tail.prev;
+        tail.next = null;
+    }
+
+    public void deleteAtBegin() {
+        if (head == null) {
+            return;
+        }
+        if (head.next == null) {
+            head = null;
+            tail = null;
+            return;
+        }
+        Node temp = head.next;
+        head.next = null;
+        head.next.prev = null;
+        head = temp;
+    }
+
+    public void print() {
+        if (head == null) {
+            return;
+        }
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.data + " -> ");
+            temp = temp.next;
+        }
     }
 
 }
