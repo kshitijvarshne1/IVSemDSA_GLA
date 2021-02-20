@@ -42,9 +42,8 @@ public class DoublyLinkedList {
             tail = null;
             return;
         }
-        /*tail.prev.next = null;
-        tail.prev = null;*/
         tail = tail.prev;
+        tail.next.prev = null;
         tail.next = null;
     }
 
@@ -58,8 +57,8 @@ public class DoublyLinkedList {
             return;
         }
         Node temp = head.next;
-        head.next = null;
         head.next.prev = null;
+        head.next = null;
         head = temp;
     }
 
@@ -69,9 +68,22 @@ public class DoublyLinkedList {
         }
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.data + " -> ");
+            System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
+        System.out.println();
+    }
+
+    public void printReverse() {
+        if (head == null) {
+            return;
+        }
+        Node temp = tail;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.prev;
+        }
+        System.out.println();
     }
 
 }
