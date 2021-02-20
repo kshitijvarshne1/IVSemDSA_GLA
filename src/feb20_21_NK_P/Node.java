@@ -8,5 +8,15 @@
 package feb20_21_NK_P;
 
 public class Node {
+    public Node prev;
+    public int data;
+    public Node next;
+
+    public Node(int d) {
+        this.prev = null;
+        this.data = d;
+        this.next = null;
+    }
+
 }
 
