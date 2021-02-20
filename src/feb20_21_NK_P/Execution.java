@@ -19,7 +19,6 @@ public class Execution {
         list.deleteAtEnd();
         list.print();
         list.printReverse();
-
     }
 }
 
