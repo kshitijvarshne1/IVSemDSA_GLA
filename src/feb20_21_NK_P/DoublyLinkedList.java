@@ -33,6 +33,18 @@ public class DoublyLinkedList {
         tail = newNode;
     }
 
+    public void deleteAtEnd() {
+        if (head == null) {
+            return;
+        }
+        if (head.next == null) {
+            head = null;
+            tail = null;
+            return;
+        }
+        tail.prev.next = null;
+        tail.prev = null;
+    }
 
 }
 
