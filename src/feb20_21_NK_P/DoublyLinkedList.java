@@ -14,8 +14,10 @@ public class DoublyLinkedList {
     public void insertAtBegin(Node newNode) {
         if (head == null) {
             head = newNode;
+            tail = newNode;
             return;
         }
+        head.prev = newNode;
         newNode.next = head;
         head = newNode;
     }
@@ -23,13 +25,14 @@ public class DoublyLinkedList {
     public void insertAtEnd(Node newNode) {
         if (head == null) {
             head = newNode;
+            tail = newNode;
             return;
         }
-        Node temp = head;
-        while (temp.next != null) {
-            temp = temp.next;
-        }
-        temp.next = newNode;
+        newNode.prev = tail;
+        tail.next = newNode;
+        tail = newNode;
     }
+
+
 }
 
