@@ -35,38 +35,20 @@ public class InfixToPostfix {
                     stack.pop();
                 }
             } else {
-                evaluate(stack, result, c);
-
+                while (!stack.empty() && precedence(c) <= precedence(stack.peek())) {
+                    result.append(stack.peek());
+                    stack.pop();
+                }
+                stack.push(c);
             }
         }
         while (!stack.empty()) {
             result.append(stack.peek());
             stack.pop();
         }
-
         return result;
     }
 
-    private static void evaluate(Stack<Character> stack, StringBuilder result, char c) {
-        if (!stack.empty() && precedence(stack.peek()) == precedence(c)) {
-            if (precedenceAssociativity(stack.peek(), c) == 1) {
-                result.append(stack.peek());
-                stack.pop();
-                stack.push(c);
-            } else {
-                stack.push(c);
-            }
-        } else if (precedence(stack.peek()) > precedence(c)) {
-            while (!stack.empty() && precedence(stack.peek()) > precedence(c)) {
-                result.append(stack.peek());
-                stack.pop();
-                evaluate(stack, result, stack.peek());
-            }
-            stack.push(c);
-        } else {
-            stack.push(c);
-        }
-    }
 
     private static int precedence(char c) {
         if (c == '^') {
@@ -79,18 +61,4 @@ public class InfixToPostfix {
             return -1;
         }
     }
-
-    private static int precedenceAssociativity(char a, char b) {
-        if (a == '+' && b == '-') {
-            return 1;
-        } else if (a == '*' && b == '/') {
-            return 1;
-        } else {
-            return -1;
-        }
-
-    }
 }
-
-
-//a+b*c-d/f+g
