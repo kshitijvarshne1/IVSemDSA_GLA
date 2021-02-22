@@ -49,7 +49,6 @@ public class InfixToPostfix {
         return result;
     }
 
-
     private static int precedence(char c) {
         if (c == '^') {
             return 3;
