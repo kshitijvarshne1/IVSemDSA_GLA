@@ -50,7 +50,9 @@ public class BalancedParenthesis {
     }
 }
 
-  /*  private static boolean checkAllBrackets(String parenthesis) {
+
+
+    /*private static boolean checkAllBrackets(String parenthesis) {
         Stack<Character> stack = new Stack();
         for (int i = 0; i < parenthesis.length(); i++) {
             if (parenthesis.charAt(i) == '(' || parenthesis.charAt(i) == '{' || parenthesis.charAt(i) == '[') {
