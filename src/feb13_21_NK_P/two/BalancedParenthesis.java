@@ -20,12 +20,8 @@ public class BalancedParenthesis {
     private static boolean checkAllBrackets(String parenthesis) {
         Stack<Character> stack = new Stack();
         for (int i = 0; i < parenthesis.length(); i++) {
-            if (parenthesis.charAt(i) == '(') {
-                stack.push('(');
-            } else if (parenthesis.charAt(i) == '{') {
-                stack.push('{');
-            } else if (parenthesis.charAt(i) == '[') {
-                stack.push('[');
+            if (parenthesis.charAt(i) == '(' || parenthesis.charAt(i) == '{' || parenthesis.charAt(i) == '[') {
+                stack.push(parenthesis.charAt(i));
             } else if (parenthesis.charAt(i) == ')' || parenthesis.charAt(i) == '}' || parenthesis.charAt(i) == ']') {
                 if (!stack.empty() && stack.peek() == '(' && parenthesis.charAt(i) == ')') {
                     stack.pop();
