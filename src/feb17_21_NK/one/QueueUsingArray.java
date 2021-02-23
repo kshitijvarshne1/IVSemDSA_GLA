@@ -31,7 +31,6 @@ public class QueueUsingArray {
 
     public void dequeue() {
         if (front == rear) {
-            System.out.println("Dfd");
             System.out.println(arr[front]);
             this.front = 0;
             this.rear = -1;
