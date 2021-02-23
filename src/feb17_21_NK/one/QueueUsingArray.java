@@ -37,7 +37,6 @@ public class QueueUsingArray {
             this.rear = -1;
             return;
         } else if (!isEmpty() && rear != -1) {
-            System.out.println("Dc");
             System.out.println(arr[front]);
             front += 1;
             return;
