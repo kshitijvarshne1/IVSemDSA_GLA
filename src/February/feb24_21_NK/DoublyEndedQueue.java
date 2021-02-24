@@ -72,5 +72,30 @@ public class DoublyEndedQueue {
         System.out.println("Dequeue is Empty");
     }
 
+    public int peek() {
+        if (!isEmpty()) {
+            return (int) head.data;
+        }
+        return -1;
+    }
+
+    public int peekEnd() {
+        if (!isEmpty()) {
+            return (int) tail.data;
+        }
+        return -1;
+    }
+
+    public void print() {
+        if (!isEmpty()) {
+            Node temp = head;
+            while (temp != tail) {
+                System.out.print(temp.data + " -> ");
+                temp = temp.next;
+            }
+            return;
+        }
+        System.out.println("Empty");
+    }
 }
 
