@@ -5,7 +5,7 @@
  *   File: CircularQueueUsingArray.java
  */
 
-package February.feb24_21_NK;
+package February.feb19_21_NK;
 
 public class CircularQueueUsingArray {
     public int[] arr;

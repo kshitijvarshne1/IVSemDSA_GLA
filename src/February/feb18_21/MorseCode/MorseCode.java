@@ -5,7 +5,7 @@
  *   File: MorseCode.java
  */
 
-package February.feb24_21_NK;
+package February.feb18_21.MorseCode;
 
 import java.util.HashMap;
 
