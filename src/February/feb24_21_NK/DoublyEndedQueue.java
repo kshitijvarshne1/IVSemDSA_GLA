@@ -40,5 +40,37 @@ public class DoublyEndedQueue {
         tail.next = newNode;
         tail = newNode;
     }
+
+    public void dequeueAtFirst() {
+        if (!isEmpty()) {
+            Node temp = head;
+            head = head.next;
+            //Only one node is present
+            if (head == null) {
+                tail = null;
+            } else {
+                head.prev = null;
+            }
+            return;
+        }
+        System.out.println("Dequeue is empty");
+    }
+
+    public void dequeueAtEnd() {
+        if (!isEmpty()) {
+            Node temp = tail;
+            tail = tail.prev;
+
+            //only one Node is present
+            if (tail == null) {
+                head = null;
+            } else {
+                tail.next = null;
+            }
+            return;
+        }
+        System.out.println("Dequeue is Empty");
+    }
+
 }
 
