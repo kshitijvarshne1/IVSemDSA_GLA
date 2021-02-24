@@ -22,7 +22,6 @@ public class Execution {
         list.print();
         System.out.println(list.peek());
         System.out.println(list.peekEnd());
-
     }
 }
 
