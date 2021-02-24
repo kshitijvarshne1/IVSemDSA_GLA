@@ -15,5 +15,30 @@ public class DoublyEndedQueue {
         this.head = null;
         this.tail = null;
     }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public void enqueueAtFront(Node newNode) {
+        if (isEmpty()) {
+            head = tail = newNode;
+            return;
+        }
+        newNode.next = head;
+        head.prev = newNode;
+        head = newNode;
+        return;
+    }
+
+    public void enqueueAtEnd(Node newNode) {
+        if (isEmpty()) {
+            head = tail = newNode;
+            return;
+        }
+        newNode.prev = tail;
+        tail.next = newNode;
+        tail = newNode;
+    }
 }
 
