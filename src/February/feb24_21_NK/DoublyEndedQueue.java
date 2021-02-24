@@ -8,5 +8,12 @@
 package February.feb24_21_NK;
 
 public class DoublyEndedQueue {
+    public Node head;
+    public Node tail;
+
+    public DoublyEndedQueue() {
+        this.head = null;
+        this.tail = null;
+    }
 }
 
