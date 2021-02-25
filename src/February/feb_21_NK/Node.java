@@ -8,5 +8,9 @@
 package February.feb_21_NK;
 
 public class Node {
+    public int data;
+    public Node next;
+    public int priority;
+
 }
 
