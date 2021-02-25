@@ -12,7 +12,7 @@ public class Node {
     public Node next;
     public int priority;
 
-    public Node(int data, Node next, int priority) {
+    public Node(int data, int priority) {
         this.data = data;
         this.next = null;
         this.priority = priority;
