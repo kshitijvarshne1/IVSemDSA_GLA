@@ -10,16 +10,17 @@ package February.feb_21_NK;
 public class PriorityQueueUsingLinkedList {
     public Node head;
 
-    public PriorityQueueUsingLinkedList(Node head) {
-        this.head = null;
+    public PriorityQueueUsingLinkedList() {
+        head = null;
     }
 
     public boolean isEmpty() {
         return head == null;
     }
 
-    public void dequeue(Node newNode) {
-        if (!isEmpty() && newNode.priority < head.priority) {
+    //Descending -> line no 22 -> '>' and line no28 -> '<='
+    public void enqueue(Node newNode) {
+        if (isEmpty() || newNode.priority < head.priority) {
             newNode.next = head;
             head = newNode;
             return;
@@ -36,7 +37,8 @@ public class PriorityQueueUsingLinkedList {
         if (!isEmpty()) {
             Node temp = head;
             while (temp != null) {
-                System.out.print(temp.data + "{ " + temp.priority + " }" + " -> ");
+                System.out.print(temp.data + " { " + temp.priority + " }" + " -> ");
+                temp = temp.next;
             }
             System.out.println();
             return;
@@ -44,5 +46,19 @@ public class PriorityQueueUsingLinkedList {
         System.out.println("Queue is empty");
     }
 
+    public void dequeue() {
+        if (!isEmpty()) {
+            head = head.next;
+            return;
+        }
+        System.out.println("Queue is empty");
+    }
+
+    public int peek() {
+        if (!isEmpty()) {
+            return head.data;
+        }
+        return -1;
+    }
 }
 
