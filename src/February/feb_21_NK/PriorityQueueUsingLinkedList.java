@@ -8,5 +8,11 @@
 package February.feb_21_NK;
 
 public class PriorityQueueUsingLinkedList {
+    public Node head;
+
+    public PriorityQueueUsingLinkedList(Node head) {
+        this.head = null;
+    }
+
 }
 
