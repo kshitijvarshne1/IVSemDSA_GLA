@@ -32,7 +32,6 @@ public class PriorityQueueDemo2 {
         }
         System.out.println();
         System.out.println(pq.peek());
-
     }
 }
 
