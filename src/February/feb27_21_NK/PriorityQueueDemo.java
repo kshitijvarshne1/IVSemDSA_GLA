@@ -22,8 +22,8 @@ public class PriorityQueueDemo {
             System.out.print(iterator.next() + " ");
         }
         System.out.println();
-        System.out.println(pq.peek());
-        System.out.println();
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
     }
 }
 
