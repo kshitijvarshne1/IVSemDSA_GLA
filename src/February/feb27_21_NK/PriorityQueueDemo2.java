@@ -8,5 +8,8 @@
 package February.feb27_21_NK;
 
 public class PriorityQueueDemo2 {
+    public static void main(String[] args) {
+
+    }
 }
 
