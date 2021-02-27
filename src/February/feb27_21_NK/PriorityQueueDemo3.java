@@ -30,8 +30,6 @@ public class PriorityQueueDemo3 {
         System.out.println(pq.poll());
         System.out.println(pq.poll());
         System.out.println(pq.poll());
-
-
     }
 }
 
