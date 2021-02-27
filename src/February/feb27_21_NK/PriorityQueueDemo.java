@@ -15,6 +15,7 @@ public class PriorityQueueDemo {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         pq.add(1);
         pq.add(3);
+        pq.add(4);
         pq.add(2);
         Iterator iterator = pq.iterator();
         while (iterator.hasNext()) {
