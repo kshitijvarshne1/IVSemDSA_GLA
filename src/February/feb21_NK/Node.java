@@ -5,7 +5,7 @@
  *   File: Node.java
  */
 
-package February.feb_21_NK;
+package February.feb21_NK;
 
 public class Node {
     public int data;

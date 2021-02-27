@@ -5,7 +5,7 @@
  *   File: PriorityQueueUsingLinkedList.java
  */
 
-package February.feb_21_NK;
+package February.feb21_NK;
 
 public class PriorityQueueUsingLinkedList {
     public Node head;
