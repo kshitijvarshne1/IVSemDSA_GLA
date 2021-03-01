@@ -20,6 +20,13 @@ public class Employee {
         this.id = id;
     }
 
+    public Employee() {
+        this.name = null;
+        this.designation = null;
+        this.salary = 0;
+        this.id = 0;
+    }
+
     public String getName() {
         return name;
     }
