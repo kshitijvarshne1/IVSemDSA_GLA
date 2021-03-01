@@ -8,5 +8,13 @@
 package March.Base;
 
 public class Node {
+    public Employee data;
+    public Node next;
+
+    public Node(Employee data) {
+        this.data = data;
+        this.next = null;
+    }
+
 }
 
