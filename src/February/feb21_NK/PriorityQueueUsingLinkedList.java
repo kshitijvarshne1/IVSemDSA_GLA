@@ -18,7 +18,7 @@ public class PriorityQueueUsingLinkedList {
         return head == null;
     }
 
-    //Descending -> line no 22 -> '>' and line no28 -> '<='
+    //Descending -> line no 22 -> '>' and line no28 -> '>='
     public void enqueue(Node newNode) {
         if (isEmpty() || newNode.priority < head.priority) {
             newNode.next = head;
