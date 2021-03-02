@@ -8,5 +8,52 @@
 package March.mar02_21.two;
 
 public class DoublyLinkedList {
+    public Node head;
+    public Node tail;
+
+    public DoublyLinkedList() {
+        this.head = null;
+        this.tail = null;
+    }
+
+    public void insertAtEnd(Node newNode) {
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+    }
+
+    public void insertAtBegin(Node newNode) {
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+
+        }
+    }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public void print() {
+        if (!isEmpty()) {
+            Node temp = head;
+            while (temp != null) {
+                System.out.print(temp.data + " -> ");
+                temp = temp.next;
+            }
+            System.out.println();
+        } else {
+            System.out.println("Empty");
+        }
+    }
 }
 
