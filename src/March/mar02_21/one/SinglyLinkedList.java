@@ -55,6 +55,14 @@ public class SinglyLinkedList {
         }
     }
 
+    public void deleteAtBegin() {
+        if (!isEmpty()) {
+            head = head.next;
+        } else {
+            System.out.println("empty");
+        }
+    }
+
     public void print() {
         if (!isEmpty()) {
             Node temp = head;
@@ -67,5 +75,6 @@ public class SinglyLinkedList {
             System.out.println("Empty");
         }
     }
+
 }
 
