@@ -8,5 +8,21 @@
 package February.feb09_21_NK.two;
 
 public class StackUsingArray {
+    int[] arr;
+    int top;
+
+    public StackUsingArray(int size) {
+        arr = new int[size];
+        this.top = -1;
+    }
+
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    public boolean isFull() {
+        return top == arr.length - 1;
+    }
+
 }
 
