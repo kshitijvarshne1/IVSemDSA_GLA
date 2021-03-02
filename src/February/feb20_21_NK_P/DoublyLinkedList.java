@@ -24,8 +24,8 @@ public class DoublyLinkedList {
 
     public void insertAtEnd(Node newNode) {
         if (head == null) {
-            head = newNode;
-            tail = newNode;
+            head = tail = newNode;
+
             return;
         }
         newNode.prev = tail;
