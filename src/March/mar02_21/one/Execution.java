@@ -18,6 +18,5 @@ public class Execution {
         ll.deleteAtBegin();
         ll.print();
     }
-
 }
 
