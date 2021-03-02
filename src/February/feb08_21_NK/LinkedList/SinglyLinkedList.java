@@ -97,6 +97,7 @@ public class SinglyLinkedList {
     //Using Runner pointer approach
     public void insertAtMiddle(Node newNode) {
         if (head == null && head.next == null) {
+            head.next = newNode;
             return;
         }
         Node slow = head;
