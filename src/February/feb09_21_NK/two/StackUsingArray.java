@@ -33,5 +33,13 @@ public class StackUsingArray {
         }
     }
 
+    public void pop() {
+        if (!isEmpty()) {
+            top -= 1;
+        } else {
+            System.out.println("UnderFLow");
+        }
+    }
+
 }
 
