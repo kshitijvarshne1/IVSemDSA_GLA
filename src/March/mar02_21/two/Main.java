@@ -15,9 +15,7 @@ public class Main {
         ll.insertAtBegin(new Node(9));
         ll.deleteAtBegin();
         ll.insertAtBegin(new Node(10));
-
         ll.print();
-
     }
 }
 
