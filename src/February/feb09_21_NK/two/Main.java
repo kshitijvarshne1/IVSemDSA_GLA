@@ -23,7 +23,6 @@ public class Main {
         st.pop();
         System.out.println(st.isFull());
         System.out.println(st.isEmpty());
-
     }
 }
 
