@@ -13,11 +13,11 @@ public class StackUsingArray {
 
     public StackUsingArray(int size) {
         arr = new int[size];
-        this.top = -1;
+        top = -1;
     }
 
     public boolean isEmpty() {
-        return top == -1;
+        return top != arr.length - 1;
     }
 
     public boolean isFull() {
@@ -26,7 +26,7 @@ public class StackUsingArray {
 
     public void push(int data) {
         if (!isFull()) {
-            top += 1;
+            this.top += 1;
             arr[top] = data;
         } else {
             System.out.println("OverFlow");
@@ -42,7 +42,7 @@ public class StackUsingArray {
     }
 
     public int peek() {
-        if (!isEmpty()) {
+        if (top != -1) {
             return arr[top];
         } else {
             return -1;
