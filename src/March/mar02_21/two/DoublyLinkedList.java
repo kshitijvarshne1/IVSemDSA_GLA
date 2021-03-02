@@ -43,6 +43,32 @@ public class DoublyLinkedList {
         return head == null;
     }
 
+    public void deleteAtBegin() {
+        if (isEmpty()) {
+            System.out.println("Empty");
+        } else if (head.next == null) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+
+        }
+    }
+
+    public void deleteAtEnd() {
+        if (isEmpty()) {
+            System.out.println("Empty");
+        } else if (head.next == null) {
+            head = null;
+            tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next.prev = null;
+            tail.next = null;
+        }
+    }
+
     public void print() {
         if (!isEmpty()) {
             Node temp = head;
@@ -55,5 +81,6 @@ public class DoublyLinkedList {
             System.out.println("Empty");
         }
     }
+
 }
 
