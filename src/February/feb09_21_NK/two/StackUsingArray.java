@@ -24,5 +24,14 @@ public class StackUsingArray {
         return top == arr.length - 1;
     }
 
+    public void push(int data) {
+        if (!isFull()) {
+            top += 1;
+            arr[top] = data;
+        } else {
+            System.out.println("OverFlow");
+        }
+    }
+
 }
 
