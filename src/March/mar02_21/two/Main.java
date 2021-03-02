@@ -8,5 +8,16 @@
 package March.mar02_21.two;
 
 public class Main {
+    public static void main(String[] args) {
+        DoublyLinkedList ll = new DoublyLinkedList();
+        ll.insertAtEnd(new Node(2));
+        ll.insertAtEnd(new Node(4));
+        ll.insertAtBegin(new Node(9));
+        ll.deleteAtBegin();
+        ll.insertAtBegin(new Node(10));
+
+        ll.print();
+
+    }
 }
 
