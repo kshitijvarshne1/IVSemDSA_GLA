@@ -41,5 +41,12 @@ public class StackUsingArray {
         }
     }
 
+    public int peek() {
+        if (!isEmpty()) {
+            return arr[top];
+        } else {
+            return -1;
+        }
+    }
 }
 
