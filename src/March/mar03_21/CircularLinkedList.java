@@ -8,5 +8,12 @@
 package March.mar03_21;
 
 public class CircularLinkedList {
+    public Node head;
+    public Node tail;
+
+    public CircularLinkedList() {
+        this.head = null;
+        this.tail = null;
+    }
 }
 
