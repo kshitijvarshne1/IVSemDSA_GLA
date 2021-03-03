@@ -37,10 +37,10 @@ public class CircularLinkedList {
             System.out.println("Empty");
         } else {
             Node temp = head;
-            while (temp.next != head) {
+            do {
                 System.out.print(temp.data + " -> ");
                 temp = temp.next;
-            }
+            } while (temp != head);
             System.out.println();
         }
     }
