@@ -75,5 +75,28 @@ public class SinglyLinkedList {
             System.out.println("Empty");
         }
     }
+
+    public void sorting() {
+        if (!isEmpty()) {
+            Node current = head;
+            Node index = null;
+
+            while (current != null) {
+                index = current.next;
+                while (index != null) {
+                    if (current.data > index.data) {
+                        int temp = current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        } else {
+            System.out.println("Empty");
+        }
+
+    }
 }
 
