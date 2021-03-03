@@ -28,6 +28,22 @@ public class CircularLinkedList {
         }
     }
 
+    public void insertAtBegin(Node newNode) {
+        if (isEmpty()) {
+            head = newNode;
+            newNode.next = head;
+        } else {
+            Node temp = head;
+            while (temp.next != head) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+            newNode.next = head;
+            head = newNode;
+
+        }
+    }
+
     public boolean isEmpty() {
         return head == null;
     }
