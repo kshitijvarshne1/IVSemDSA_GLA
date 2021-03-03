@@ -13,8 +13,10 @@ public class Main {
         ll.insertAtEnd(new Node(2));
         ll.insertAtEnd(new Node(4));
         ll.insertAtBegin(new Node(9));
-        ll.deleteAtBegin();
+        //ll.deleteAtBegin();
         ll.insertAtBegin(new Node(10));
+        ll.print();
+        ll.sorting();
         ll.print();
     }
 }
