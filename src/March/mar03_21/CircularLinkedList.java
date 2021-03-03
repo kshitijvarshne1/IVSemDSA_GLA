@@ -9,11 +9,27 @@ package March.mar03_21;
 
 public class CircularLinkedList {
     public Node head;
-    public Node tail;
 
     public CircularLinkedList() {
         this.head = null;
-        this.tail = null;
+    }
+
+    public void insertAtEnd(Node newNode) {
+        if (isEmpty()) {
+            head = newNode;
+            newNode.next = head;
+        } else {
+            Node temp = head;
+            while (temp.next != head) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+            newNode.next = head;
+        }
+    }
+
+    public boolean isEmpty() {
+        return head == null;
     }
 }
 
