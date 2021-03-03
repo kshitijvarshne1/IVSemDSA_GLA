@@ -10,12 +10,10 @@ package March.mar03_21;
 public class Node {
     public int data;
     public Node next;
-    public Node pre;
 
     public Node(int data) {
         this.data = data;
         this.next = null;
-        this.pre = null;
     }
 }
 
