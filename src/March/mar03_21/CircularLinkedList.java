@@ -31,5 +31,18 @@ public class CircularLinkedList {
     public boolean isEmpty() {
         return head == null;
     }
+
+    public void print() {
+        if (isEmpty()) {
+            System.out.println("Empty");
+        } else {
+            Node temp = head;
+            while (temp.next != head) {
+                System.out.print(temp.data + " -> ");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
+    }
 }
 
