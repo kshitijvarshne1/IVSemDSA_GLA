@@ -96,7 +96,6 @@ public class SinglyLinkedList {
         } else {
             System.out.println("Empty");
         }
-
     }
 }
 
