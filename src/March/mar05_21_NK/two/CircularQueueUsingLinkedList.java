@@ -22,7 +22,7 @@ public class CircularQueueUsingLinkedList {
         return head == null;
     }
 
-    public void dequeue(Node newNode) {
+    public void enqueue(Node newNode) {
         if (isEmpty()) {
             head = newNode;
             tail = newNode;
