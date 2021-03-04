@@ -43,6 +43,5 @@ public class StackUsingLinkedList {
             top = top.next;
         }
     }
-
 }
 
