@@ -13,7 +13,6 @@ public class Main {
         ll.insertAtEnd(new Node(5));
         ll.print();
         ll.deleteAtBegin();
-
         ll.print();
 
     }
