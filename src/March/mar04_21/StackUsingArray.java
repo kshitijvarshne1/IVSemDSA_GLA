@@ -25,8 +25,8 @@ public class StackUsingArray {
     }
 
     public void push(int data) {
-        if (isEmpty()) {
-            System.out.println("Empty");
+        if (isFull()) {
+            System.out.println("Full");
         } else {
             top += 1;
             arr[top] = data;
@@ -39,6 +39,14 @@ public class StackUsingArray {
         } else {
             System.out.println(arr[top]);
             top -= 1;
+        }
+    }
+
+    public void peek() {
+        if (isEmpty()) {
+            System.out.println("Empty");
+        } else {
+            System.out.println(arr[top]);
         }
     }
 }
