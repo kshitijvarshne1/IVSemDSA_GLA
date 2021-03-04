@@ -51,7 +51,7 @@ public class CircularQueueUsingArray {
     }
 
     public boolean isFull() {
-        if ((front == 0 && rear == arr.length - 1) || (front == (rear + 1) % arr.length)) {
+        if (front == (rear + 1) % arr.length) {
             return true;
         } else {
             return false;
