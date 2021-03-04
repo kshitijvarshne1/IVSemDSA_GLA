@@ -8,5 +8,38 @@
 package March.mar05_21_NK.one;
 
 public class CircularQueueUsingArray {
+    public int[] arr;
+    public int front;
+    public int rear;
+
+    public CircularQueueUsingArray(int size) {
+        arr = new int[size];
+        this.front = -1;
+        this.rear = -1;
+    }
+
+    public void enqueue(int data) {
+        if (front == -1 && rear == -1) {
+            front = rear = 0;
+            arr[rear] = data;
+        } else if ((rear + 1) % arr.length == front) {
+            System.out.println("Queue is full");
+        } else {
+            rear = (rear + 1) % arr.length;
+            arr[rear] = data;
+        }
+    }
+
+    public void dequeue() {
+        if (front == -1 && rear == -1) {
+            System.out.println("Underflow");
+        } else if (front == rear) {
+            System.out.println(arr[front]);
+            front = rear = -1;
+        } else {
+            System.out.println(arr[front]);
+            front = (front + 1) % arr.length;
+        }
+    }
 }
 
