@@ -23,5 +23,14 @@ public class StackUsingArray {
     public boolean isFull() {
         return arr.length - 1 == top;
     }
+
+    public void push(int data) {
+        if (isEmpty()) {
+            System.out.println("Empty");
+        } else {
+            top += 1;
+            arr[top] = data;
+        }
+    }
 }
 
