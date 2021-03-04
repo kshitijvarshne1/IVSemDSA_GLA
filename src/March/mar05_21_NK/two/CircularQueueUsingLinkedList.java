@@ -7,6 +7,16 @@
 
 package March.mar05_21_NK.two;
 
+import March.mar03_21_NK.Node;
+
 public class CircularQueueUsingLinkedList {
+    public Node head;
+    public Node tail;
+
+    public CircularQueueUsingLinkedList() {
+        this.head = null;
+        this.tail = null;
+    }
+
 }
 
