@@ -37,8 +37,17 @@ public class QueueUsingLinkedList {
         }
     }
 
+    public void peek() {
+        if (front == null) {
+            System.out.println("Empty");
+        } else {
+            System.out.println(front.data);
+        }
+    }
+
     public boolean isFull() {
         return false;
     }
+
 }
 
