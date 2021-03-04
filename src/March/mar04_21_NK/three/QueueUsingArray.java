@@ -67,6 +67,5 @@ public class QueueUsingArray {
             System.out.println();
         }
     }
-
 }
 
