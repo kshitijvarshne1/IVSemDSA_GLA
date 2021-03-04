@@ -53,6 +53,5 @@ public class CircularQueueUsingLinkedList {
             System.out.println(head.data);
         }
     }
-
 }
 
