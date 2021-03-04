@@ -8,5 +8,13 @@
 package March.mar04_21_NK.four;
 
 public class Main {
+    public static void main(String[] args) {
+        QueueUsingLinkedList ll = new QueueUsingLinkedList();
+        ll.enqueue(new Node(1));
+        ll.enqueue(new Node(2));
+        ll.dequeue();
+        ll.dequeue();
+        ll.dequeue();
+    }
 }
 
