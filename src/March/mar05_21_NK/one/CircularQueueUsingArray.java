@@ -48,7 +48,6 @@ public class CircularQueueUsingArray {
         } else {
             System.out.println(arr[front]);
         }
-
     }
 }
 
