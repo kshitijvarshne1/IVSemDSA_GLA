@@ -48,6 +48,5 @@ public class QueueUsingLinkedList {
     public boolean isFull() {
         return false;
     }
-
 }
 
