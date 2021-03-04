@@ -61,6 +61,17 @@ public class CircularLinkedList {
         }
     }
 
+    public void deleteAtBegin() {
+        if (isEmpty()) {
+            System.out.println("Empty");
+        } else if (head.next == head) {
+            head = tail = null;
+        } else {
+            head = head.next;
+            tail.next = head;
+        }
+    }
+
     public void print() {
         if (isEmpty()) {
             System.out.println("Empty");
