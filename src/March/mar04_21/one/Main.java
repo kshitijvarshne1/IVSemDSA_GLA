@@ -5,7 +5,7 @@
  *   File: Main.java
  */
 
-package March.mar04_21;
+package March.mar04_21.one;
 
 public class Main {
     public static void main(String[] args) {

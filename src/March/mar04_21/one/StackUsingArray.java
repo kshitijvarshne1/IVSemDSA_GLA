@@ -5,7 +5,7 @@
  *   File: StackUsingArray.java
  */
 
-package March.mar04_21;
+package March.mar04_21.one;
 
 public class StackUsingArray {
     int[] arr;
