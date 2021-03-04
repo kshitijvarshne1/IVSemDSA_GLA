@@ -41,5 +41,14 @@ public class CircularQueueUsingArray {
             front = (front + 1) % arr.length;
         }
     }
+
+    public void peek() {
+        if (front == -1 && rear == -1) {
+            System.out.println("Empty");
+        } else {
+            System.out.println(arr[front]);
+        }
+
+    }
 }
 
