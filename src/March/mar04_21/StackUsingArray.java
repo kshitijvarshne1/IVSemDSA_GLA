@@ -15,5 +15,9 @@ public class StackUsingArray {
         arr = new int[size];
         this.top = -1;
     }
+
+    public boolean isEmpty() {
+        return top == -1;
+    }
 }
 
