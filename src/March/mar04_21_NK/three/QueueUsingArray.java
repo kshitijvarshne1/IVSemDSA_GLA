@@ -25,7 +25,7 @@ public class QueueUsingArray {
     public void enqueue(int data) {
         if (isFull()) {
             System.out.println("Overflow");
-        } else if (front == rear) {
+        } else if (front == -1 && rear == -1) {
             front = rear = 0;
             arr[front] = data;
         } else {
@@ -39,7 +39,7 @@ public class QueueUsingArray {
             System.out.println("Underflow");
         } else if (front == rear) {
             System.out.println(arr[front]);
-            front = rear - 1;
+            front = rear = -1;
         } else {
             System.out.println(arr[front]);
             front += 1;
@@ -50,7 +50,7 @@ public class QueueUsingArray {
         if (rear == -1 && front == -1) {
             System.out.println("Queue is Empty");
         } else {
-            System.out.println(arr[rear]);
+            System.out.println(arr[front]);
         }
     }
 
