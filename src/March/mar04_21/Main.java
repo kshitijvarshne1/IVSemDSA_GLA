@@ -18,7 +18,7 @@ public class Main {
         st.push(4);
         st.push(5);
         st.push(6);
-        st.push(8);
+        st.peek();
         System.out.println(st.isEmpty());
         System.out.println(st.isFull());
         st.pop();
