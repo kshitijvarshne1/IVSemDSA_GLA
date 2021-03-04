@@ -8,5 +8,13 @@
 package March.mar04_21_NK.two;
 
 public class Main {
+    public static void main(String[] args) {
+        StackUsingLinkedList stack = new StackUsingLinkedList();
+        stack.push(new Node(4));
+        stack.push(new Node(5));
+        stack.peek();
+        stack.pop();
+        stack.peek();
+    }
 }
 
