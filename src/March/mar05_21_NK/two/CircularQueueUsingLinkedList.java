@@ -39,8 +39,10 @@ public class CircularQueueUsingLinkedList {
         if (isEmpty()) {
             System.out.println("Empty");
         } else if (head.next == head) {
+            System.out.println(head.data);
             head = tail = null;
         } else {
+            System.out.println(head.data);
             head = head.next;
             tail.next = head;
         }
