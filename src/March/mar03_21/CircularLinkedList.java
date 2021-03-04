@@ -46,11 +46,18 @@ public class CircularLinkedList {
         return head == null;
     }
 
-    public void delete() {
+    public void deleteAtEnd() {
         if (isEmpty()) {
             System.out.println("Empty");
+        } else if (head.next == head) {
+            head = null;
+            tail = null;
         } else {
-
+            Node temp = head;
+            while (temp.next.next != head) {
+                temp = temp.next;
+            }
+            temp.next = head;
         }
     }
 
