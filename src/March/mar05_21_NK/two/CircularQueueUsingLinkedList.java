@@ -35,6 +35,24 @@ public class CircularQueueUsingLinkedList {
         }
     }
 
+    public void dequeue() {
+        if (isEmpty()) {
+            System.out.println("Empty");
+        } else if (head.next == head) {
+            head = tail = null;
+        } else {
+            head = head.next;
+            tail.next = head;
+        }
+    }
+
+    public void peek() {
+        if (isEmpty()) {
+            System.out.println("Underflow");
+        } else {
+            System.out.println(head.data);
+        }
+    }
 
 }
 
