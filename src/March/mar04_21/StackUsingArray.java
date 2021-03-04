@@ -1,0 +1,19 @@
+/*   Created by IntelliJ IDEA.
+ *   Author: Kshitij Varshney (kshitijvarshne1)
+ *   Date: 04-Mar-21
+ *   Time: 8:27 PM
+ *   File: StackUsingArray.java
+ */
+
+package March.mar04_21;
+
+public class StackUsingArray {
+    int[] arr;
+    int top;
+
+    public StackUsingArray(int size) {
+        arr = new int[size];
+        this.top = -1;
+    }
+}
+
