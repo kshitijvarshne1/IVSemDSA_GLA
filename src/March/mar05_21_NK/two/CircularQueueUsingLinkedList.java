@@ -29,11 +29,12 @@ public class CircularQueueUsingLinkedList {
             newNode.next = head;
             tail.next = head;
         } else {
-            newNode.next = head;
-            head = newNode;
+            tail.next = newNode;
+            tail = tail.next;
             tail.next = head;
         }
     }
+
 
 }
 
