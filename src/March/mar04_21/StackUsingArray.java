@@ -19,5 +19,9 @@ public class StackUsingArray {
     public boolean isEmpty() {
         return top == -1;
     }
+
+    public boolean isFull() {
+        return arr.length - 1 == top;
+    }
 }
 
