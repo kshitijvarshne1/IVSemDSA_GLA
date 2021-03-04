@@ -51,11 +51,7 @@ public class CircularQueueUsingArray {
     }
 
     public boolean isFull() {
-        if (front == (rear + 1) % arr.length) {
-            return true;
-        } else {
-            return false;
-        }
+        return front == (rear + 1) % arr.length;
     }
 
     public void print() {
@@ -67,6 +63,8 @@ public class CircularQueueUsingArray {
                 System.out.print(arr[i] + " ");
                 i = (i + 1) % arr.length;
             }
+            System.out.print(arr[i]);
+            System.out.println();
         }
     }
 }
