@@ -44,7 +44,7 @@ public class StackUsingArray {
 
     public void peek() {
         if (isEmpty()) {
-            System.out.println("Empty");
+            System.out.println("Stack is Empty");
         } else {
             System.out.println(arr[top]);
         }
