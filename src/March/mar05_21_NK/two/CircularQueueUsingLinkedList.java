@@ -18,5 +18,22 @@ public class CircularQueueUsingLinkedList {
         this.tail = null;
     }
 
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public void dequeue(Node newNode) {
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+            newNode.next = head;
+            tail.next = head;
+        } else {
+            newNode.next = head;
+            head = newNode;
+            tail.next = head;
+        }
+    }
+
 }
 
