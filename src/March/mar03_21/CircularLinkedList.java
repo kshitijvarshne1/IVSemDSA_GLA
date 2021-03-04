@@ -48,7 +48,7 @@ public class CircularLinkedList {
 
     public void deleteAtEnd() {
         if (isEmpty()) {
-            System.out.println("Empty");
+            System.out.println("Linked list Empty");
         } else if (head.next == head) {
             head = null;
             tail = null;
