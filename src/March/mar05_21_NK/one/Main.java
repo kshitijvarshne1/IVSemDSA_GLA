@@ -21,7 +21,6 @@ public class Main {
         cc.enqueue(1);
         System.out.println(cc.isFull());
         cc.print();
-
     }
 }
 
