@@ -32,5 +32,14 @@ public class StackUsingArray {
             arr[top] = data;
         }
     }
+
+    public void pop() {
+        if (isEmpty()) {
+            System.out.println("Empty");
+        } else {
+            System.out.println(arr[top]);
+            top -= 1;
+        }
+    }
 }
 
