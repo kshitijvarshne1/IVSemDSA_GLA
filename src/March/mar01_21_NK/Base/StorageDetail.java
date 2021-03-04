@@ -5,7 +5,7 @@
  *   File: StorageDetail.java
  */
 
-package March.mar01_21.Base;
+package March.mar01_21_NK.Base;
 
 public class StorageDetail {
     public Node head;

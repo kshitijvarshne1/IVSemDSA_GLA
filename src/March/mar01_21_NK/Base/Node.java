@@ -1,17 +1,17 @@
 /*   Created by IntelliJ IDEA.
  *   Author: Kshitij Varshney (kshitijvarshne1)
- *   Date: 02-Mar-21
- *   Time: 7:38 PM
+ *   Date: 01-Mar-21
+ *   Time: 10:23 AM
  *   File: Node.java
  */
 
-package March.mar02_21.one;
+package March.mar01_21_NK.Base;
 
 public class Node {
-    public int data;
+    public Employee data;
     public Node next;
 
-    public Node(int data) {
+    public Node(Employee data) {
         this.data = data;
         this.next = null;
     }

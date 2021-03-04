@@ -5,7 +5,7 @@
  *   File: DoublyLinkedList.java
  */
 
-package March.mar02_21.two;
+package March.mar02_21_NK.two;
 
 public class DoublyLinkedList {
     public Node head;

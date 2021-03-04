@@ -5,7 +5,7 @@
  *   File: StringOne.java
  */
 
-package March.mar01_21;
+package March.mar01_21_NK;
 
 import java.util.Arrays;
 import java.util.Scanner;

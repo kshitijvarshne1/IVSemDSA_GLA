@@ -5,7 +5,7 @@
  *   File: SinglyLinkedList.java
  */
 
-package March.mar02_21.one;
+package March.mar02_21_NK.one;
 
 public class SinglyLinkedList {
     public Node head;

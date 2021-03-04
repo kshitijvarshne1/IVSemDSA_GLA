@@ -1,11 +1,11 @@
 /*   Created by IntelliJ IDEA.
  *   Author: Kshitij Varshney (kshitijvarshne1)
- *   Date: 03-Mar-21
- *   Time: 10:12 PM
+ *   Date: 04-Mar-21
+ *   Time: 9:20 PM
  *   File: Node.java
  */
 
-package March.mar03_21;
+package March.mar04_21_NK.two;
 
 public class Node {
     public int data;
