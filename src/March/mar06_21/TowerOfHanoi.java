@@ -22,7 +22,6 @@ public class TowerOfHanoi {
             System.out.println(n + " " + s + " -> " + d);
             towerOfHanoi(n - 1, h, s, d);
         }
-
     }
 }
 
