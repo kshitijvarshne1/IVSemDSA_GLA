@@ -20,7 +20,7 @@ public class PriorityQueueUsingLinkedList {
 
     public void enqueue(Node newNode) {
         if (isEmpty() || newNode.priority < head.priority) {
-            newNode.next = head.next;
+            newNode.next = head;
             head = newNode;
         } else {
             Node temp = head;
