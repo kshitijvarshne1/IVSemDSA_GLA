@@ -58,6 +58,7 @@ public class CircularLinkedList {
                 temp = temp.next;
             }
             temp.next = head;
+            tail = temp;
         }
     }
 
