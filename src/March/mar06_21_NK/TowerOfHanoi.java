@@ -5,7 +5,7 @@
  *   File: TowerOfHanoi.java
  */
 
-package March.mar06_21;
+package March.mar06_21_NK;
 
 import java.util.Scanner;
 
