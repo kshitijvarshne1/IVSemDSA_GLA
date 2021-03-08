@@ -11,7 +11,7 @@ public class Node {
     public Student data;
     public Node next;
 
-    public Node(int data) {
+    public Node(Student data) {
         this.data = data;
         this.next = null;
     }
