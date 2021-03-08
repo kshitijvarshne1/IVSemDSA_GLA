@@ -8,5 +8,13 @@
 package March.mar08_21_NK;
 
 public class Node {
+    public Student data;
+    public Node next;
+
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+
 }
 
