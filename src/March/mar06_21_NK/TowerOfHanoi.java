@@ -13,7 +13,7 @@ public class TowerOfHanoi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int numberOfDisc = sc.nextInt();
-        towerOfHanoi(numberOfDisc, 'A', 'H', 'D');
+        towerOfHanoi(numberOfDisc, 'A', 'H', 'B');
     }
 
     public static void towerOfHanoi(int n, char s, char h, char d) {
