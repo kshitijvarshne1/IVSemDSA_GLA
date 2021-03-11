@@ -18,6 +18,15 @@ public class Execution {
         ll.sorting();
         ;
         ll.print();
+        System.out.println(countNumberOfNodes(ll.head));
     }
+
+    private static int countNumberOfNodes(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        return 1 + countNumberOfNodes(node.next);
+    }
+
 }
 
