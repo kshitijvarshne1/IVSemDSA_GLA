@@ -27,7 +27,5 @@ public class Execution {
         }
         return 1 + countNumberOfNodes(node.next);
     }
-
-
 }
 
