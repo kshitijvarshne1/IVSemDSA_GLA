@@ -16,7 +16,6 @@ public class Execution {
         ll.insertAtEnd(new Node(2));
         ll.print();
         ll.sorting();
-        ;
         ll.print();
         System.out.println(countNumberOfNodes(ll.head));
     }
