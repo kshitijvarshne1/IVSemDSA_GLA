@@ -98,6 +98,9 @@ public class SinglyLinkedList {
         }
     }
 
+    public void reverse() {
+
+    }
 
 }
 
