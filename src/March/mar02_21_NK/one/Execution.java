@@ -23,8 +23,6 @@ public class Execution {
         ll.sorting();
         ll.reverse();
         ll.print();
-
-
     }
 
     private static int countNumberOfNodes(Node node) {
