@@ -97,5 +97,19 @@ public class SinglyLinkedList {
             System.out.println("Empty");
         }
     }
+
+    public Node getMiddle() {
+        if (head == null) {
+            return head;
+        }
+        Node slow = head;
+        Node fast = head;
+
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
+    }
 }
 
