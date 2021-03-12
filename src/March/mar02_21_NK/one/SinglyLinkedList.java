@@ -111,5 +111,23 @@ public class SinglyLinkedList {
         }
         return slow;
     }
+
+    public Node sortedMerge(Node a, Node b) {
+        Node result = null;
+        if (a == null) {
+            return b;
+        }
+        if (b == null) {
+            return a;
+        }
+        if (a.data <= b.data) {
+            result = a;
+            result.next = sortedMerge(a.next, b);
+        } else {
+            result = b;
+            result.next = sortedMerge(a, b.next);
+        }
+        return result;
+    }
 }
 
