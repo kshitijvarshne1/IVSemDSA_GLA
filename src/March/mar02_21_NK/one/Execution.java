@@ -15,9 +15,12 @@ public class Execution {
         ll.insertAtEnd(new Node(6));
         ll.insertAtEnd(new Node(2));
         ll.print();
-        ll.sorting();
+        //ll.sorting();
         ll.print();
         System.out.println(countNumberOfNodes(ll.head));
+        mergeSort(ll.head);
+        ll.print();
+
     }
 
     private static int countNumberOfNodes(Node node) {
@@ -25,6 +28,52 @@ public class Execution {
             return 0;
         }
         return 1 + countNumberOfNodes(node.next);
+    }
+
+    public static Node getMiddle(Node a) {
+        if (a == null) {
+            return a;
+        }
+        Node slow = a;
+        Node fast = a;
+
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public static Node sortedMerge(Node a, Node b) {
+        Node result = null;
+        if (a == null) {
+            return b;
+        }
+        if (b == null) {
+            return a;
+        }
+        if (a.data <= b.data) {
+            result = a;
+            result.next = sortedMerge(a.next, b);
+        } else {
+            result = b;
+            result.next = sortedMerge(a, b.next);
+        }
+        return result;
+    }
+
+    public static Node mergeSort(Node a) {
+        if (a == null || a.next == null) {
+            return a;
+        }
+        Node middle = getMiddle(a);
+        Node nextOfMiddle = middle.next;
+        middle.next = null;
+
+        Node left = mergeSort(a);
+        Node right = mergeSort(nextOfMiddle);
+        Node sortedList = sortedMerge(left, right);
+        return sortedList;
     }
 }
 
