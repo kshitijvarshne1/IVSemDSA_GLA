@@ -18,8 +18,12 @@ public class Execution {
         //ll.sorting();
         ll.print();
         System.out.println(countNumberOfNodes(ll.head));
-        mergeSort(ll.head);
+        //mergeSort(ll.head);
         ll.print();
+        ll.sorting();
+        ll.reverse();
+        ll.print();
+
 
     }
 
