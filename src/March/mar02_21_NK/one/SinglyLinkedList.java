@@ -98,12 +98,12 @@ public class SinglyLinkedList {
         }
     }
 
-    public Node getMiddle() {
-        if (head == null) {
-            return head;
+    public Node getMiddle(Node a) {
+        if (a == null) {
+            return a;
         }
-        Node slow = head;
-        Node fast = head;
+        Node slow = a;
+        Node fast = a;
 
         while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
@@ -129,5 +129,20 @@ public class SinglyLinkedList {
         }
         return result;
     }
+
+    public Node mergeSort(Node a) {
+        if (a == null || a.next == null) {
+            return a;
+        }
+        Node middle = getMiddle(a);
+        Node nextOfMiddle = middle.next;
+        middle.next = null;
+
+        Node left = mergeSort(a);
+        Node right = mergeSort(nextOfMiddle);
+        Node sortedList = sortedMerge(left, right);
+        return sortedList;
+    }
+
 }
 
