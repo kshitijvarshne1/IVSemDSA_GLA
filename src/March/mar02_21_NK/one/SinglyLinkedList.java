@@ -98,51 +98,6 @@ public class SinglyLinkedList {
         }
     }
 
-    public Node getMiddle(Node a) {
-        if (a == null) {
-            return a;
-        }
-        Node slow = a;
-        Node fast = a;
-
-        while (fast.next != null && fast.next.next != null) {
-            slow = slow.next;
-            fast = fast.next;
-        }
-        return slow;
-    }
-
-    public Node sortedMerge(Node a, Node b) {
-        Node result = null;
-        if (a == null) {
-            return b;
-        }
-        if (b == null) {
-            return a;
-        }
-        if (a.data <= b.data) {
-            result = a;
-            result.next = sortedMerge(a.next, b);
-        } else {
-            result = b;
-            result.next = sortedMerge(a, b.next);
-        }
-        return result;
-    }
-
-    public Node mergeSort(Node a) {
-        if (a == null || a.next == null) {
-            return a;
-        }
-        Node middle = getMiddle(a);
-        Node nextOfMiddle = middle.next;
-        middle.next = null;
-
-        Node left = mergeSort(a);
-        Node right = mergeSort(nextOfMiddle);
-        Node sortedList = sortedMerge(left, right);
-        return sortedList;
-    }
 
 }
 
