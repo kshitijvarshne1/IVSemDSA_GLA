@@ -29,11 +29,8 @@ public class Main {
         l1.print();
         l2.print();
         Node mergePoint = findMergePoint(l1.head, l2.head);
-        System.out.println("Merge point :-" + mergePoint);
+        System.out.println("Merge point :- " + mergePoint);
         System.out.println(mergePoint.data);
-        System.out.println(length(l1.head));
-        System.out.println(length(l2.head));
-
     }
 
     private static int length(Node a) {
