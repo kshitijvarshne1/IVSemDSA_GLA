@@ -51,7 +51,6 @@ public class Main {
     private static Node findMergePoint(Node a, Node b) {
         Node x, y;
         int k;
-
         if (length(a) < length(b)) {
             x = a;
             y = b;
@@ -61,12 +60,10 @@ public class Main {
         }
 
         k = length(y) - length(x);
-        System.out.println(k);
         while (k > 0) {
             y = y.next;
             k = k - 1;
         }
-        System.out.println(y.data);
         while (x != null && y != null) {
             if (x == y) {
                 return x;
