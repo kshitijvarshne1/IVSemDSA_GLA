@@ -5,7 +5,7 @@
  *   File: Node.java
  */
 
-package March.mar12_21_NK;
+package March.mar13_21_NK;
 
 public class Node {
     public int data;
@@ -15,5 +15,4 @@ public class Node {
         this.data = data;
         this.next = null;
     }
-
 }
