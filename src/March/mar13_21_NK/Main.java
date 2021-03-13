@@ -20,25 +20,35 @@ public class Main {
         l1.insertAtEnd(new Node(33));
         l2.insertAtEnd(new Node(6));
         l2.insertAtEnd(new Node(7));
+        Node m = new Node(111);
+        l1.insertAtEnd(m);
+        l2.insertAtEnd(m);
         l2.insertAtEnd(new Node(4));
         l2.insertAtEnd(new Node(8));
         l2.insertAtEnd(new Node(9));
         l1.print();
         l2.print();
-        System.out.println(findMergePoint(l1.head, l2.head));
-
+        Node mergePoint = findMergePoint(l1.head, l2.head);
+        System.out.println("Merge point :-" + mergePoint);
+        System.out.println(mergePoint.data);
+        System.out.println(length(l1.head));
+        System.out.println(length(l2.head));
 
     }
 
     private static int length(Node a) {
-        if (a == null) {
-            return 0;
+        int c = 0;
+        if (a != null) {
+            Node temp = a;
+            while (temp != null) {
+                temp = temp.next;
+                c = c + 1;
+            }
         }
-        return 1 + length(a.next);
+        return c;
     }
 
-    //Method is incomplete
-    private static int findMergePoint(Node a, Node b) {
+    private static Node findMergePoint(Node a, Node b) {
         Node x, y;
         int k;
 
@@ -52,17 +62,19 @@ public class Main {
 
         k = length(y) - length(x);
         System.out.println(k);
-        while (k > 1) {
+        while (k > 0) {
             y = y.next;
             k = k - 1;
         }
+        System.out.println(y.data);
         while (x != null && y != null) {
-            System.out.println(x.data + "  " + y.data);
-            if (x.data == y.data) {
-                return x.data;
+            if (x == y) {
+                return x;
             }
+            x = x.next;
+            y = y.next;
         }
-        return -1;
+        return null;
     }
 }
 
