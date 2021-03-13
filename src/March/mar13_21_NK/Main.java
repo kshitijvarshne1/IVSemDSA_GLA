@@ -46,6 +46,9 @@ public class Main {
     }
 
     private static Node findMergePoint(Node a, Node b) {
+        if (a == null || b == null) {
+            return null;
+        }
         Node x, y;
         int k;
         if (length(a) < length(b)) {
