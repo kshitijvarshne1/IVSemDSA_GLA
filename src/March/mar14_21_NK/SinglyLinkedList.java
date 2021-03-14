@@ -8,5 +8,28 @@
 package March.mar14_21_NK;
 
 public class SinglyLinkedList {
+    public Node head;
+
+    public SinglyLinkedList() {
+        this.head = null;
+    }
+
+    public void insertAtEnd(Node newNode) {
+        if (isEmpty()) {
+            head = newNode;
+        } else {
+            Node temp = head;
+            while (temp.getNext() != null) {
+                temp = temp.getNext();
+            }
+            temp.setNext(newNode);
+        }
+    }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+
 }
 
