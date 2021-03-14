@@ -8,6 +8,7 @@
 package March.mar14_21_NK;
 
 public class Main {
+    // code is incomplete
     public static void main(String[] args) {
         SinglyLinkedList ll = new SinglyLinkedList();
         ll.insertAtEnd(new Node(1));
@@ -39,6 +40,5 @@ public class Main {
         }
         return null;
     }
-
 }
 
