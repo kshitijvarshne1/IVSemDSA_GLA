@@ -34,7 +34,7 @@ public class SinglyLinkedList {
         if (!isEmpty()) {
             Node temp = head;
             while (temp != null) {
-                System.out.print(temp.getData() + " ");
+                System.out.print(temp.getData() + " -> ");
                 temp = temp.getNext();
             }
             System.out.println();
