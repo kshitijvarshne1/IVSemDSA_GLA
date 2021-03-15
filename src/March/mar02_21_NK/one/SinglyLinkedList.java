@@ -125,5 +125,21 @@ public class SinglyLinkedList {
         }
         return false;
     }
+
+    public int length() {
+        int c = 0;
+        if (!isEmpty()) {
+            Node temp = head;
+            while (temp != null) {
+                c += 1;
+                temp = temp.next;
+            }
+        }
+        return c;
+    }
+
+    public void addNodeOnKPosition(int k, Node newNode) {
+
+    }
 }
 
