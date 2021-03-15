@@ -139,7 +139,26 @@ public class SinglyLinkedList {
     }
 
     public void addNodeOnKPosition(int k, Node newNode) {
-
+        if (k == 0) {
+            newNode.next = head;
+            head = newNode;
+        } else if (k >= length()) {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        } else {
+            int c = 0;
+            Node temp = head;
+            while (c != k - 1) {
+                c += 1;
+                temp = temp.next;
+            }
+            newNode.next = temp;
+            temp.next = newNode;
+        }
     }
+
 }
 
