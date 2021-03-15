@@ -143,6 +143,7 @@ public class SinglyLinkedList {
             newNode.next = head;
             head = newNode;
         } else if (k >= length()) {
+            // the position is greater then the length of linked list it simply add newNode the in the last of linked list
             Node temp = head;
             while (temp.next != null) {
                 temp = temp.next;
@@ -155,10 +156,9 @@ public class SinglyLinkedList {
                 c += 1;
                 temp = temp.next;
             }
-            newNode.next = temp;
+            newNode.next = temp.next;
             temp.next = newNode;
         }
     }
-
 }
 
