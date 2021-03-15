@@ -125,6 +125,5 @@ public class SinglyLinkedList {
         }
         return false;
     }
-
 }
 
