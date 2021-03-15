@@ -31,6 +31,8 @@ public class Execution {
         ll.print();
         ll.addNodeOnKPosition(2, new Node(4343));
         ll.print();
+        ll.addNodeOnKPosition(100, new Node(3331));
+        ll.print();
 
     }
 
