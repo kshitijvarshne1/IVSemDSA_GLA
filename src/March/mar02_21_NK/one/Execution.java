@@ -35,7 +35,6 @@ public class Execution {
         ll.print();
         ll.addNodeOnKPosition(7, new Node(100011));
         ll.print();
-
     }
 
     private static int countNumberOfNodes(Node node) {
