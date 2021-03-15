@@ -27,6 +27,11 @@ public class Execution {
         ll.print();
         ll.addNodeOnKPosition(0, new Node(111));
         ll.print();
+        ll.addNodeOnKPosition(1, new Node(1222));
+        ll.print();
+        ll.addNodeOnKPosition(2, new Node(4343));
+        ll.print();
+
     }
 
     private static int countNumberOfNodes(Node node) {
