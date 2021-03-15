@@ -19,11 +19,13 @@ public class Execution {
         //ll.print();
         //System.out.println(countNumberOfNodes(ll.head));
         //mergeSort(ll.head);
-        ll.print();
+        //ll.print();
         //ll.sorting();
         //ll.reverse();
         //ll.print();
         //System.out.println(ll.search(new Node(5)));
+        ll.print();
+        ll.addNodeOnKPosition(0, new Node(111));
         ll.print();
     }
 
