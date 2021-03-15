@@ -113,5 +113,18 @@ public class SinglyLinkedList {
         }
     }
 
+    public boolean search(Node newNode) {
+        if (!isEmpty()) {
+            Node temp = head;
+            while (temp != null) {
+                if (temp.data == newNode.data) {
+                    return true;
+                }
+                temp = temp.next;
+            }
+        }
+        return false;
+    }
+
 }
 
