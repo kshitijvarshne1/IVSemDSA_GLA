@@ -24,7 +24,6 @@ public class Execution {
         ll.reverse();
         ll.print();
         System.out.println(ll.search(new Node(5)));
-
     }
 
     private static int countNumberOfNodes(Node node) {
