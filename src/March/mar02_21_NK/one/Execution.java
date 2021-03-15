@@ -14,16 +14,17 @@ public class Execution {
         ll.insertAtBegin(new Node(4));
         ll.insertAtEnd(new Node(6));
         ll.insertAtEnd(new Node(2));
-        ll.print();
+        //ll.print();
         //ll.sorting();
-        ll.print();
-        System.out.println(countNumberOfNodes(ll.head));
+        //ll.print();
+        //System.out.println(countNumberOfNodes(ll.head));
         //mergeSort(ll.head);
         ll.print();
-        ll.sorting();
-        ll.reverse();
+        //ll.sorting();
+        //ll.reverse();
+        //ll.print();
+        //System.out.println(ll.search(new Node(5)));
         ll.print();
-        System.out.println(ll.search(new Node(5)));
     }
 
     private static int countNumberOfNodes(Node node) {
