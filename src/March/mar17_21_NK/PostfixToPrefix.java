@@ -15,7 +15,6 @@ public class PostfixToPrefix {
         Scanner sc = new Scanner(System.in);
         String postfix = sc.next();
         String result = convertPostfixToPrefix(postfix);
-
         System.out.println(result);
     }
 
@@ -52,7 +51,6 @@ public class PostfixToPrefix {
         }
         return false;
     }
-
 }
 
 
