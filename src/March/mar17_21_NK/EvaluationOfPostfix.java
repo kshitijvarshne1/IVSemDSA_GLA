@@ -7,6 +7,16 @@
 
 package March.mar17_21_NK;
 
+import java.util.Scanner;
+
 public class EvaluationOfPostfix {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String postfix = sc.nextLine();
+        // System.out.println("Postfix Evaluation :-  " + Evaluation(postfix));
+    }
+
+
 }
+
 
