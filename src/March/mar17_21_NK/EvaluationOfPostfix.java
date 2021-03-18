@@ -16,7 +16,6 @@ public class EvaluationOfPostfix {
         String postfix = sc.nextLine();
         // System.out.println("Postfix Evaluation :-  " + Evaluation(postfix));
     }
-
     private static int Evaluation(String postfix) {
         Stack<Integer> stack = new Stack();
         for (int i = 0; i < postfix.length(); i++) {
@@ -48,8 +47,6 @@ public class EvaluationOfPostfix {
         }
         return stack.pop();
     }
-
-
 }
 
 
