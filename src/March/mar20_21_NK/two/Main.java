@@ -5,7 +5,7 @@
  *   File: Main.java
  */
 
-package March.mar20_21.two;
+package March.mar20_21_NK.two;
 
 import java.util.Arrays;
 
@@ -24,7 +24,7 @@ public class Main {
         }
         /*System.out.println(Arrays.toString(people));
         System.out.println();
-        Arrays.sort(people);
+         Arrays.sort(people);
         System.out.println(Arrays.toString(people));*/
         // Arrays.sort(people);
         System.out.println(Arrays.toString(people));

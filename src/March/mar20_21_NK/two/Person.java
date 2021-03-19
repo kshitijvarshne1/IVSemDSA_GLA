@@ -5,7 +5,7 @@
  *   File: Person.java
  */
 
-package March.mar20_21.two;
+package March.mar20_21_NK.two;
 
 import java.util.Comparator;
 import java.util.Objects;
