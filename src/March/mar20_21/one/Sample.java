@@ -6,7 +6,6 @@
  */
 
 package March.mar20_21.one;
-
 import java.util.ArrayList;
 
 public class Sample {
@@ -17,6 +16,13 @@ public class Sample {
         ar.add(1, 4);
         ar.add(4);
         System.out.println(ar.toString());
+
+        int a1 = 4;
+        int a2 = 0;
+        try {
+            System.out.println(a1 / a2);
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
-
