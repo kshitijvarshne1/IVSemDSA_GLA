@@ -7,6 +7,8 @@
 
 package March.mar20_21.two;
 
+import java.util.Objects;
+
 public class Person {
     private int id;
     private String name;
@@ -41,5 +43,28 @@ public class Person {
     public void setAge(byte age) {
         this.age = age;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return getId() == person.getId() && getAge() == person.getAge() && Objects.equals(getName(), person.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getAge());
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
 }
 
