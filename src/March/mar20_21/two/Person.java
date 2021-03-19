@@ -9,7 +9,7 @@ package March.mar20_21.two;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private int id;
     private String name;
     private byte age;
@@ -66,5 +66,9 @@ public class Person {
                 '}';
     }
 
+    @Override
+    public int compareTo(Person otherPerson) {
+        return Integer.compare(this.id, otherPerson.id);
+    }
 }
 
