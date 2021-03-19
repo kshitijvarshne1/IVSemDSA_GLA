@@ -7,9 +7,10 @@
 
 package March.mar20_21.two;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Person implements Comparable<Person> {
+public class Person implements Comparator<Person> {
     private int id;
     private String name;
     private byte age;
@@ -45,6 +46,11 @@ public class Person implements Comparable<Person> {
     }
 
     @Override
+    public int compare(Person o1, Person o2) {
+        return Integer.compare(o1.id, o2.id);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -66,9 +72,9 @@ public class Person implements Comparable<Person> {
                 '}';
     }
 
-    @Override
+    /*@Override
     public int compareTo(Person otherPerson) {
         return Integer.compare(this.id, otherPerson.id);
-    }
+    }*/
 }
 
