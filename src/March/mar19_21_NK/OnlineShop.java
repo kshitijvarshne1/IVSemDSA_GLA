@@ -24,5 +24,19 @@ public class OnlineShop {
         }
         return smartPhoneList;
     }
+
+    public List<SmartPhone> findBudgetSmartPhones(Set<SmartPhone> smartPhones) {
+        List<SmartPhone> newlist = new ArrayList<>();
+        for (SmartPhone smartPhone : smartPhones) {
+            if (smartPhone.getPrice() >= 10000) {
+                newlist.add(smartPhone);
+            }
+        }
+        if (newlist.isEmpty()) {
+            newlist.add(new SmartPhone(123456789, "Nokia", 100000, (byte) 5));
+        }
+        return newlist;
+    }
+
 }
 
