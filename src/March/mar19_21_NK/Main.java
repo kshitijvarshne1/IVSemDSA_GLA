@@ -28,7 +28,12 @@ public class Main {
         for (SmartPhone smartPhone : result) {
             System.out.println(smartPhone);
         }
-
+        System.out.println("                         ");
+        List<SmartPhone> result1 = onlineShop.findBudgetSmartPhones(dbcMobileWala);
+        for (SmartPhone smartPhone : result1) {
+            System.out.println(smartPhone);
+        }
     }
+
 }
 
