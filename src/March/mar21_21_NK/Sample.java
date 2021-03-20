@@ -16,6 +16,5 @@ public class Sample {
         Matcher matcher = pattern.matcher("1234 5678 9876");
         System.out.println(matcher.matches());
     }
-
 }
 
