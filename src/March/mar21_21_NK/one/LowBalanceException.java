@@ -7,6 +7,10 @@
 
 package March.mar21_21_NK.one;
 
-public class LowBalanceException {
+public class LowBalanceException extends Exception {
+    public LowBalanceException(String message) {
+        super(message);
+    }
+
 }
 
