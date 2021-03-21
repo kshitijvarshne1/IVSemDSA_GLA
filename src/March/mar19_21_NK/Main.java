@@ -15,12 +15,12 @@ public class Main {
     public static void main(String[] args) {
         Set<SmartPhone> dbcMobileWala = new HashSet<>();
         dbcMobileWala.add(new SmartPhone(12345678, "Neeraj khanna", 15000, (byte) 6));
-        dbcMobileWala.add(new SmartPhone(12345678, "dbc", 12000, (byte) 6));
-        dbcMobileWala.add(new SmartPhone(12345678, "Sharad", 9000, (byte) 4));
-        dbcMobileWala.add(new SmartPhone(12345678, "Vaibhav", 11000, (byte) 7));
-        dbcMobileWala.add(new SmartPhone(12345678, "Mandeep", 10002, (byte) 7));
-        dbcMobileWala.add(new SmartPhone(12345678, "Vinay", 12000, (byte) 6));
-        dbcMobileWala.add(new SmartPhone(12345678, "Pankaj", 11000, (byte) 3));
+        dbcMobileWala.add(new SmartPhone(12345618, "dbc", 12000, (byte) 6));
+        dbcMobileWala.add(new SmartPhone(12342678, "Sharad", 9000, (byte) 4));
+        dbcMobileWala.add(new SmartPhone(12245678, "Vaibhav", 11000, (byte) 7));
+        dbcMobileWala.add(new SmartPhone(12145678, "Mandeep", 10002, (byte) 7));
+        dbcMobileWala.add(new SmartPhone(22345678, "Vinay", 12000, (byte) 6));
+        dbcMobileWala.add(new SmartPhone(32345678, "Pankaj", 11000, (byte) 3));
         dbcMobileWala.add(new SmartPhone(98765432, "Suresh", 1500000, (byte) 8));
 
         OnlineShop onlineShop = new OnlineShop();
@@ -33,6 +33,9 @@ public class Main {
         for (SmartPhone smartPhone : result1) {
             System.out.println(smartPhone);
         }
+        System.out.println();
+        System.out.println(onlineShop.searchPhone(dbcMobileWala, 12345678));
     }
+
 }
 
