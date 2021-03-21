@@ -8,9 +8,9 @@
 package March.mar21_21_NK.one;
 
 public class MobilePhone {
-    public int balance;
+    public float balance;
 
-    public MobilePhone(int balance) {
+    public MobilePhone(float balance) {
         this.balance = balance;
     }
 
@@ -18,13 +18,11 @@ public class MobilePhone {
         if (this.balance <= 1.5) {
             throw new LowBalanceException("Balance is low");
         } else {
-            getLoan();
+            System.out.println(message);
+            this.balance -= 1.5;
         }
     }
 
-    public void getLoan() {
-        this.balance += 10;
-    }
 
 }
 
