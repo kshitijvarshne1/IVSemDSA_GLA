@@ -37,5 +37,15 @@ public class OnlineShop {
         }
         return newlist;
     }
+
+    public SmartPhone searchPhone(Set<SmartPhone> smartPhones, long IMEINumber) {
+        for (SmartPhone smartPhone : smartPhones) {
+            if (smartPhone.getIMEINumber() == IMEINumber) {
+                return smartPhone;
+            }
+        }
+        return null;
+    }
+
 }
 
