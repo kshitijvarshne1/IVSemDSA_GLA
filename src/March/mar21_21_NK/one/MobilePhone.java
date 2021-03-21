@@ -22,7 +22,5 @@ public class MobilePhone {
             this.balance -= 1.5;
         }
     }
-
-
 }
 
