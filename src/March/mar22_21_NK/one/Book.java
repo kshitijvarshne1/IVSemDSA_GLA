@@ -8,23 +8,23 @@
 package March.mar22_21_NK.one;
 
 public class Book implements Comparable<Book> {
-    private String isbn;
+    private int isbn;
     private String bookName;
     private String author;
     private String Subject;
 
-    public Book(String isbn, String bookName, String author, String subject) {
+    public Book(int isbn, String bookName, String author, String subject) {
         this.isbn = isbn;
         this.bookName = bookName;
         this.author = author;
         Subject = subject;
     }
 
-    public String getIsbn() {
+    public int getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(int isbn) {
         this.isbn = isbn;
     }
 
@@ -55,7 +55,7 @@ public class Book implements Comparable<Book> {
     @Override
     public String toString() {
         return "Book{" +
-                "isbn='" + isbn + '\'' +
+                "isbn=" + isbn +
                 ", bookName='" + bookName + '\'' +
                 ", author='" + author + '\'' +
                 ", Subject='" + Subject + '\'' +

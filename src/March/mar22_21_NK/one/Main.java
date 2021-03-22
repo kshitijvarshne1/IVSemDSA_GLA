@@ -7,17 +7,19 @@
 
 package March.mar22_21_NK.one;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Set<Book> books = new HashSet<>();
-        books.add(new Book("1234", "amandeep", "Amandeep", "BSex"));
-        books.add(new Book("1234", "amandeepkifirstSetting", "Amandeep", "Sexpichewala"));
-        books.add(new Book("1234", "amandeep", "Amandeep", "ASexAage wala"));
-        books.add(new Book("1234", "amandeep", "Amandeepkabeta", "CSex"));
-        books.add(new Book("1234", "amandeepkisetting", "Amandeep", "DSex"));
+        List<Book> books = new ArrayList<>();
+        books.add(new Book(2234, "amandeep", "Amandeep", "Java"));
+        books.add(new Book(3234, "Rahul", "Amandeep", "Python"));
+        books.add(new Book(4234, "amandeep", "Amandeep", "C"));
+        books.add(new Book(34, "amandeep", "Amandeepkabeta", "C++"));
+        books.add(new Book(1734, "aman", "Amandeep", "DSA"));
+        System.out.println(books);
+        books.sort(Book::compareTo);
         System.out.println(books);
     }
 }
