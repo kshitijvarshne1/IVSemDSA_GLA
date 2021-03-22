@@ -66,6 +66,5 @@ public class Book implements Comparable<Book> {
     public int compareTo(Book o) {
         return String.valueOf(this.Subject).compareTo(o.getSubject());
     }
-
 }
 
