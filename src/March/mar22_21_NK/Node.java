@@ -17,6 +17,5 @@ public class Node {
         this.left = null;
         this.right = null;
     }
-
 }
 
