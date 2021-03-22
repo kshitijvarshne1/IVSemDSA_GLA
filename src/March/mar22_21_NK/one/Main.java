@@ -20,7 +20,5 @@ public class Main {
         books.add(new Book("1234", "amandeepkisetting", "Amandeep", "DSex"));
         System.out.println(books);
     }
-
-
 }
 
