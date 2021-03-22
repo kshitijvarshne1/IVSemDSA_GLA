@@ -13,12 +13,5 @@ public class BinaryTree {
     public BinaryTree(Node root) {
         this.root = null;
     }
-
-    public void insertANode(Node newNode) {
-        if (root == null) {
-            root = newNode;
-        }
-
-    }
 }
 
