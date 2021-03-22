@@ -7,7 +7,7 @@
 
 package March.mar22_21_NK.one;
 
-public class Book {
+public class Book implements Comparable<Book> {
     private String isbn;
     private String bookName;
     private String author;
@@ -59,7 +59,12 @@ public class Book {
                 ", bookName='" + bookName + '\'' +
                 ", author='" + author + '\'' +
                 ", Subject='" + Subject + '\'' +
-                '}';
+                '}' + '\n';
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return String.valueOf(this.Subject).compareTo(o.getSubject());
     }
 
 }

@@ -7,6 +7,20 @@
 
 package March.mar22_21_NK.one;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
+    public static void main(String[] args) {
+        Set<Book> books = new HashSet<>();
+        books.add(new Book("1234", "amandeep", "Amandeep", "BSex"));
+        books.add(new Book("1234", "amandeepkifirstSetting", "Amandeep", "Sexpichewala"));
+        books.add(new Book("1234", "amandeep", "Amandeep", "ASexAage wala"));
+        books.add(new Book("1234", "amandeep", "Amandeepkabeta", "CSex"));
+        books.add(new Book("1234", "amandeepkisetting", "Amandeep", "DSex"));
+        System.out.println(books);
+    }
+
+
 }
 
