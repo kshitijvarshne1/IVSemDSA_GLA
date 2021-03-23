@@ -18,7 +18,6 @@ public class Main {
         bst.inorder();
         System.out.println();
         bst.postorder();
-
     }
 }
 
