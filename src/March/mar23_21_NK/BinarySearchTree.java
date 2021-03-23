@@ -15,7 +15,7 @@ public class BinarySearchTree {
     }
 
     public void insert(Node newNode) {
-        root = insert(this.root, newNode);
+        this.root = insert(this.root, newNode);
     }
 
     private Node insert(Node root, Node newNode) {
