@@ -69,6 +69,5 @@ public class BinarySearchTree {
         postorder(node.right);
         System.out.print(node.data + " ");
     }
-
 }
 
