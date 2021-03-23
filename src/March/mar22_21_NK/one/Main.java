@@ -29,7 +29,7 @@ public class Main {
         /*System.out.println(sortedList);*/
 
         List<?> a = books.stream().sorted(Comparator.comparing(Book::getSubject)).collect(Collectors.toList());
-        ;//comparator - how you want to sort it.collect(Collectors.toList());
+
         System.out.println(a);
     }
 }
