@@ -8,5 +8,11 @@
 package March.mar23_21_NK;
 
 public class BinarySearchTree {
+    public Node root;
+
+    public BinarySearchTree() {
+        this.root = root;
+    }
+
 }
 
