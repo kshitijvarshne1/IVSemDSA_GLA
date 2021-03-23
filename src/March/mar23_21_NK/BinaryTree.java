@@ -8,5 +8,10 @@
 package March.mar23_21_NK;
 
 public class BinaryTree {
+    public Node root;
+
+    public BinaryTree() {
+        this.root = null;
+    }
 }
 
