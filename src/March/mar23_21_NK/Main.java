@@ -12,7 +12,7 @@ public class Main {
         BinarySearchTree bst = new BinarySearchTree();
         bst.insert(new Node(5));
         bst.insert(new Node(2));
-        bst.insert(new Node(3));
+        bst.insert(new Node(9));
         bst.preorder();
         System.out.println();
         bst.inorder();
