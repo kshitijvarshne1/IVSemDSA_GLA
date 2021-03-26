@@ -105,5 +105,16 @@ public class BinarySearchTree {
         }
         return root;
     }
+
+    public void maxNode() {
+        System.out.println(findMaxNode(this.root).data);
+    }
+
+    private Node findMaxNode(Node root) {
+        if (root.right != null) {
+            return findMinNode(root.right);
+        }
+        return root;
+    }
 }
 
