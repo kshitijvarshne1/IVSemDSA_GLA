@@ -94,5 +94,17 @@ public class BinarySearchTree {
         postorderPrinting(root.right);
         System.out.print(root.data + " ");
     }
+
+    public void minNode() {
+        System.out.println(findMinNode(this.root).data);
+    }
+
+    private Node findMinNode(Node root) {
+        if (root.left != null) {
+            return findMinNode(root.left);
+        }
+        return root;
+    }
+
 }
 
