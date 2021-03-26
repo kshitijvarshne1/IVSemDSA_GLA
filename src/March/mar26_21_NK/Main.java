@@ -20,6 +20,8 @@ public class Main {
         bt.inorder();
         System.out.println();
         bt.postorder();
+        System.out.println();
+        bt.minNode();
     }
 }
 
