@@ -8,5 +8,24 @@
 package March.mar26_21_NK;
 
 public class BinarySearchTree {
+    public Node root;
+
+    public BinarySearchTree() {
+        this.root = null;
+    }
+
+    public void insert(Node newNode) {
+        insertANode(this.root, newNode);
+    }
+
+    private void insertANode(Node root, Node newNode) {
+        if (root == null) {
+            root = newNode;
+        } else if (newNode.data <= root.data) {
+            insertANode(root.left, newNode);
+        } else {
+            insertANode(root.right, newNode);
+        }
+    }
 }
 
