@@ -15,6 +15,31 @@ public class BinarySearchTree {
     }
 
     public void insert(Node newNode) {
+        if (this.root == null) {
+            root = newNode;
+        } else {
+            Node temp = this.root;
+            Node parent = null;
+            while (true) {
+                parent = temp;
+                if (newNode.data <= temp.data) {
+                    temp = temp.left;
+                    if (temp == null) {
+                        parent.left = newNode;
+                        return;
+                    }
+                } else {
+                    temp = temp.right;
+                    if (temp == null) {
+                        parent.right = newNode;
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
+    public void insertRecursive(Node newNode) {
         this.root = insertANode(this.root, newNode);
     }
 
