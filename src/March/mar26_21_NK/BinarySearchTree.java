@@ -27,5 +27,18 @@ public class BinarySearchTree {
             insertANode(root.right, newNode);
         }
     }
+
+    public void preorder() {
+        preorderPrinting(this.root);
+    }
+
+    private void preorderPrinting(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + " ");
+        preorderPrinting(root.left);
+        preorderPrinting(root.right);
+    }
 }
 
