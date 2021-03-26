@@ -15,17 +15,19 @@ public class BinarySearchTree {
     }
 
     public void insert(Node newNode) {
-        insertANode(this.root, newNode);
+        this.root = insertANode(this.root, newNode);
     }
 
-    private void insertANode(Node root, Node newNode) {
+    private Node insertANode(Node root, Node newNode) {
         if (root == null) {
             root = newNode;
+            return root;
         } else if (newNode.data <= root.data) {
-            insertANode(root.left, newNode);
+            root.left = insertANode(root.left, newNode);
         } else {
-            insertANode(root.right, newNode);
+            root.right = insertANode(root.right, newNode);
         }
+        return root;
     }
 
     public void preorder() {
@@ -39,6 +41,32 @@ public class BinarySearchTree {
         System.out.print(root.data + " ");
         preorderPrinting(root.left);
         preorderPrinting(root.right);
+    }
+
+    public void inorder() {
+        inorderPrinting(this.root);
+    }
+
+    private void inorderPrinting(Node root) {
+        if (root == null) {
+            return;
+        }
+        inorderPrinting(root.left);
+        System.out.print(root.data + " ");
+        inorderPrinting(root.right);
+    }
+
+    public void postorder() {
+        postorderPrinting(this.root);
+    }
+
+    private void postorderPrinting(Node root) {
+        if (root == null) {
+            return;
+        }
+        postorderPrinting(root.left);
+        postorderPrinting(root.right);
+        System.out.print(root.data + " ");
     }
 }
 
