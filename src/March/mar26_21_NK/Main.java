@@ -24,7 +24,7 @@ public class Main {
         bt.minNode();
         bt.maxNode();
         System.out.println(bt.isBST());
-        System.out.println(bt.search(new Node(8)));
+        System.out.println(bt.search(new Node(12)));
     }
 }
 
