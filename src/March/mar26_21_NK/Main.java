@@ -25,6 +25,5 @@ public class Main {
         bt.maxNode();
         System.out.println(bt.isBST());
     }
-
 }
 
