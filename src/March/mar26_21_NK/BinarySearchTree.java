@@ -130,5 +130,24 @@ public class BinarySearchTree {
         }
         return false;
     }
+
+    public boolean search(Node newNode) {
+        return searchTheNode(this.root, newNode);
+    }
+
+    private boolean searchTheNode(Node root, Node newNode) {
+        if (root == null) {
+            return false;
+        }
+        if (root.data == newNode.data) {
+            return true;
+        }
+        if (root.data <= newNode.data) {
+            return searchTheNode(root.left, newNode);
+        } else {
+            return searchTheNode(root.right, newNode);
+        }
+    }
+
 }
 
