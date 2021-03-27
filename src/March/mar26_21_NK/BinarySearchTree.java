@@ -142,12 +142,11 @@ public class BinarySearchTree {
         if (root.data == newNode.data) {
             return true;
         }
-        if (root.data <= newNode.data) {
+        if (newNode.data <= root.data) {
             return searchTheNode(root.left, newNode);
         } else {
             return searchTheNode(root.right, newNode);
         }
     }
-
 }
 
