@@ -23,6 +23,8 @@ public class Main {
         System.out.println();
         bt.minNode();
         bt.maxNode();
+        System.out.println(bt.isBST());
     }
+
 }
 
