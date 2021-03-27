@@ -116,5 +116,20 @@ public class BinarySearchTree {
         }
         return root;
     }
+
+    public boolean isBST() {
+        return checkIsBST(this.root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    private boolean checkIsBST(Node root, int minValue, int maxValue) {
+        if (root == null) {
+            return true;
+        }
+        if (root.data >= minValue && root.data <= maxValue && checkIsBST(root.left, minValue, root.data) && checkIsBST(root.right, root.data, maxValue)) {
+            return true;
+        }
+        return false;
+    }
+
 }
 
