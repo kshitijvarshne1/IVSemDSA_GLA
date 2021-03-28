@@ -17,6 +17,5 @@ public class Node<T> {
         this.left = left;
         this.right = right;
     }
-
 }
 
