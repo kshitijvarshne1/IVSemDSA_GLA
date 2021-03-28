@@ -7,15 +7,15 @@
 
 package March.mar29_21_NK;
 
-public class Node<T> {
-    public T data;
-    public Node<T> left;
-    public Node<T> right;
+public class Node {
+    public int data;
+    public Node left;
+    public Node right;
 
-    public Node(T data, Node<T> left, Node<T> right) {
+    public Node(int data) {
         this.data = data;
-        this.left = left;
-        this.right = right;
+        this.left = null;
+        this.right = null;
     }
 }
 

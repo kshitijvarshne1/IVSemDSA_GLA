@@ -43,6 +43,5 @@ public class BinarySearchTree {
         System.out.print(root.data + " ");
         inorderPrinting(root.right);
     }
-
 }
 
