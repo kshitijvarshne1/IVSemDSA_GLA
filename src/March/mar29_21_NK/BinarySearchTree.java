@@ -123,5 +123,21 @@ public class BinarySearchTree {
         return 1 + Integer.max(lHeight, rHeight);
     }
 
+    public int diameter() {
+        return calculateDiameter(this.root);
+    }
+
+    private int calculateDiameter(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int lHeight = calculateHeight(root.left);
+        int rHeight = calculateHeight(root.right);
+        int currDiameter = lHeight + rHeight + 1;
+        int lDiameter = calculateDiameter(root.left);
+        int rDiameter = calculateDiameter(root.right);
+        return Integer.max(currDiameter, Integer.max(lDiameter, rDiameter));
+    }
+
 }
 
