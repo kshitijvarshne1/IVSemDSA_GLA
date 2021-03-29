@@ -109,6 +109,5 @@ public class BinarySearchTree {
         System.out.print(root.data + " ");
         printLeftView(root.left);
     }
-
 }
 
