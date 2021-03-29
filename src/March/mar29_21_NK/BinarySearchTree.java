@@ -85,6 +85,5 @@ public class BinarySearchTree {
             root.data += root.right.data;
         }
     }
-
 }
 
