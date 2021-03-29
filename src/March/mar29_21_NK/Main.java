@@ -22,6 +22,5 @@ public class Main {
         System.out.println(bTree.countNodes());
         System.out.println(bTree.sumOfNodes());
     }
-
 }
 
