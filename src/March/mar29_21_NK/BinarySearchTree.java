@@ -67,6 +67,5 @@ public class BinarySearchTree {
             return root.data + sumOfAllNodes(root.left) + sumOfAllNodes(root.right);
         }
     }
-
 }
 
