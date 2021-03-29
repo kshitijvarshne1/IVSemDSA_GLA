@@ -127,6 +127,7 @@ public class BinarySearchTree {
         return calculateDiameter(this.root);
     }
 
+    //0(n^2)
     private int calculateDiameter(Node root) {
         if (root == null) {
             return 0;
@@ -138,6 +139,5 @@ public class BinarySearchTree {
         int rDiameter = calculateDiameter(root.right);
         return Integer.max(currDiameter, Integer.max(lDiameter, rDiameter));
     }
-
 }
 
