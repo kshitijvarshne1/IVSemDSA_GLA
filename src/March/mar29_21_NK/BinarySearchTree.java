@@ -55,5 +55,18 @@ public class BinarySearchTree {
             return 1 + countAllNodes(root.left) + countAllNodes(root.right);
         }
     }
+
+    public int sumOfNodes() {
+        return sumOfAllNodes(this.root);
+    }
+
+    private int sumOfAllNodes(Node root) {
+        if (root == null) {
+            return 0;
+        } else {
+            return root.data + sumOfAllNodes(root.left) + sumOfAllNodes(root.right);
+        }
+    }
+
 }
 
