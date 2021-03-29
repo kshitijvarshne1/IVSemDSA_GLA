@@ -25,6 +25,8 @@ public class Main {
         bTree.inorder();
         System.out.println();
         bTree.rightView();
+        System.out.println();
+        bTree.leftView();
     }
 
 }
