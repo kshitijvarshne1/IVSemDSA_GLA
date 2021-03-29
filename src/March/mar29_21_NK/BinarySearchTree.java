@@ -43,5 +43,17 @@ public class BinarySearchTree {
         System.out.print(root.data + " ");
         inorderPrinting(root.right);
     }
+
+    public int countNodes() {
+        return countAllNodes(this.root);
+    }
+
+    private int countAllNodes(Node root) {
+        if (root == null) {
+            return 0;
+        } else {
+            return 1 + countAllNodes(root.left) + countAllNodes(root.right);
+        }
+    }
 }
 
