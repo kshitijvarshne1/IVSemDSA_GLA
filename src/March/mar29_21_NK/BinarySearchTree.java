@@ -67,5 +67,24 @@ public class BinarySearchTree {
             return root.data + sumOfAllNodes(root.left) + sumOfAllNodes(root.right);
         }
     }
+
+    public void sumReplace() {
+        sumReplaceTechnique(this.root);
+    }
+
+    private void sumReplaceTechnique(Node root) {
+        if (root == null) {
+            return;
+        }
+        sumReplaceTechnique(root.left);
+        sumReplaceTechnique(root.right);
+        if (root.left != null) {
+            root.data += root.left.data;
+        }
+        if (root.right != null) {
+            root.data += root.right.data;
+        }
+    }
+
 }
 
