@@ -18,6 +18,8 @@ public class Main {
         bTree.insert(new Node(101));
         bTree.insert(new Node(107));
         bTree.inorder();
+        System.out.println();
+        System.out.println(bTree.countNodes());
     }
 }
 
