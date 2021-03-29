@@ -20,6 +20,8 @@ public class Main {
         bTree.inorder();
         System.out.println();
         System.out.println(bTree.countNodes());
+        System.out.println(bTree.sumOfNodes());
     }
+
 }
 
