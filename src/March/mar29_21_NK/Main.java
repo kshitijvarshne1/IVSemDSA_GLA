@@ -23,6 +23,8 @@ public class Main {
         System.out.println(bTree.sumOfNodes());
         bTree.sumReplace();
         bTree.inorder();
+        System.out.println();
+        bTree.rightView();
     }
 
 }
