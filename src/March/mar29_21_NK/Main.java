@@ -27,6 +27,9 @@ public class Main {
         bTree.rightView();
         System.out.println();
         bTree.leftView();
+        System.out.println();
+        System.out.println(bTree.height());
     }
+
 }
 
