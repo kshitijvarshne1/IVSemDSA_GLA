@@ -109,5 +109,19 @@ public class BinarySearchTree {
         System.out.print(root.data + " ");
         printLeftView(root.left);
     }
+
+    public int height() {
+        return calculateHeight(this.root);
+    }
+
+    private int calculateHeight(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int lHeight = calculateHeight(root.left);
+        int rHeight = calculateHeight(root.right);
+        return 1 + Integer.max(lHeight, rHeight);
+    }
+
 }
 
