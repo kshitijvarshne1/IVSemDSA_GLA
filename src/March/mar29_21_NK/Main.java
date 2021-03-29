@@ -8,5 +8,16 @@
 package March.mar29_21_NK;
 
 public class Main {
+    public static void main(String[] args) {
+        BinarySearchTree bTree = new BinarySearchTree();
+        bTree.insert(new Node(100));
+        bTree.insert(new Node(98));
+        bTree.insert(new Node(97));
+        bTree.insert(new Node(105));
+        bTree.insert(new Node(99));
+        bTree.insert(new Node(101));
+        bTree.insert(new Node(107));
+        bTree.inorder();
+    }
 }
 
