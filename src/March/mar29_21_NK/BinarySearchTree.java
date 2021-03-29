@@ -85,5 +85,17 @@ public class BinarySearchTree {
             root.data += root.right.data;
         }
     }
+
+    public void rightView() {
+        printRightView(this.root);
+    }
+
+    private void printRightView(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + " ");
+        printRightView(root.right);
+    }
 }
 
