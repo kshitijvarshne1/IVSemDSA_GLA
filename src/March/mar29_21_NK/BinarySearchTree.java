@@ -148,7 +148,7 @@ public class BinarySearchTree {
     }
 
     private void printLevelOrderTraversal(Node root) {
-        if (root != null) {
+        if (root == null) {
             return;
         }
         Queue<Node> q = new LinkedList<>();
@@ -167,7 +167,6 @@ public class BinarySearchTree {
                 }
             } else if (!q.isEmpty()) {
                 q.add(null);
-            } else {
                 System.out.println();
             }
         }
