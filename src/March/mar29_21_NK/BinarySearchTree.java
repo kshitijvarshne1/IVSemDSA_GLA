@@ -97,8 +97,24 @@ public class BinarySearchTree {
         if (root == null) {
             return;
         }
-        System.out.print(root.data + " ");
-        printRightView(root.right);
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            int n = q.size();
+            for (int i = 0; i < n; i++) {
+                Node curr = q.peek();
+                q.remove();
+                if (i == n - 1) {
+                    System.out.print(curr.data + " ");
+                }
+                if (curr.left != null) {
+                    q.add(curr.left);
+                }
+                if (curr.right != null) {
+                    q.add(curr.right);
+                }
+            }
+        }
     }
 
     public void leftView() {
@@ -106,11 +122,7 @@ public class BinarySearchTree {
     }
 
     private void printLeftView(Node root) {
-        if (root == null) {
-            return;
-        }
-        System.out.print(root.data + " ");
-        printLeftView(root.left);
+
     }
 
     public int height() {
