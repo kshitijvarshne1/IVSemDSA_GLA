@@ -30,7 +30,8 @@ public class Main {
         bTree.levelOrderTraverse();
         System.out.println();
         bTree.rightView();
-        System.out.println();
+        bTree.leftView();
     }
+
 }
 
