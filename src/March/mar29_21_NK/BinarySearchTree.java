@@ -7,6 +7,9 @@
 
 package March.mar29_21_NK;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
     Node root;
 
@@ -139,5 +142,36 @@ public class BinarySearchTree {
         int rDiameter = calculateDiameter(root.right);
         return Integer.max(currDiameter, Integer.max(lDiameter, rDiameter));
     }
+
+    public void levelOrderTraverse() {
+        printLevelOrderTraversal(this.root);
+    }
+
+    private void printLevelOrderTraversal(Node root) {
+        if (root != null) {
+            return;
+        }
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        q.add(null);
+        while (!q.isEmpty()) {
+            Node temp = q.peek();
+            q.remove();
+            if (temp != null) {
+                System.out.print(temp.data + " ");
+                if (temp.left != null) {
+                    q.add(temp.left);
+                }
+                if (temp.right != null) {
+                    q.add(temp.right);
+                }
+            } else if (!q.isEmpty()) {
+                q.add(null);
+            } else {
+                System.out.println();
+            }
+        }
+    }
+
 }
 
