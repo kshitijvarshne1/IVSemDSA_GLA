@@ -7,26 +7,29 @@
 
 package March.mar06_21_NK;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Fibonacci {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        System.out.println(fibonacci(n));
-        for (int i = 0; i < n + 1; i++) {
-            System.out.print(fibonacci(i) + " ");
+        sc.close();
+        //System.out.println(fibonacci(BigInteger.valueOf(n)));
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci(BigInteger.valueOf(i)) + " ");
         }
+
     }
 
-    private static int fibonacci(int n) {
-        if (n == 0) {
-            return 0;
+    public static BigInteger fibonacci(BigInteger n) {
+        if (n.compareTo(BigInteger.ZERO) == 0) {
+            return BigInteger.ZERO;
+        } else if (n.compareTo(BigInteger.valueOf(1)) == 0) {
+            return BigInteger.ONE;
+        } else {
+            return fibonacci(n.subtract(BigInteger.ONE)).add(fibonacci(n.subtract(BigInteger.valueOf(2))));
         }
-        if (n == 1 || n == 2) {
-            return 1;
-        }
-        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
 
