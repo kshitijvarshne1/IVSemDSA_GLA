@@ -19,17 +19,17 @@ public class Main {
         bTree.insert(new Node(107));
         bTree.inorder();
         System.out.println();
+        /*System.out.println();
         System.out.println(bTree.countNodes());
         System.out.println(bTree.sumOfNodes());
         bTree.sumReplace();
         bTree.inorder();
         System.out.println();
-        bTree.rightView();
+        *//*System.out.println(bTree.height());
+        System.out.println(bTree.diameter());*/
+        bTree.levelOrderTraverse();
         System.out.println();
-        bTree.leftView();
-        System.out.println();
-        System.out.println(bTree.height());
-        System.out.println(bTree.diameter());
+
     }
 }
 
