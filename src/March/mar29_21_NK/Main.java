@@ -29,6 +29,8 @@ public class Main {
         System.out.println(bTree.diameter());*/
         bTree.levelOrderTraverse();
         System.out.println();
+        bTree.rightView();
+        System.out.println();
 
     }
 }
