@@ -32,6 +32,5 @@ public class Main {
         bTree.rightView();
         bTree.leftView();
     }
-
 }
 
