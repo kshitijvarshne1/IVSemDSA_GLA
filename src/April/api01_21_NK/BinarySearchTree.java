@@ -52,5 +52,20 @@ public class BinarySearchTree {
         System.out.print(root.data + " ");
         inorderPrinting(root.right);
     }
+    //find minimum and maximum data in binary search tree
+
+    public int minData() {
+        return findMinData(this.root);
+    }
+
+    private int findMinData(Node root) {
+        if (root == null) {
+            return -1;
+        }
+        while (root.left != null) {
+            root = root.left;
+        }
+        return root.data;
+    }
 }
 
