@@ -120,7 +120,6 @@ public class BinarySearchTree {
         }
         System.out.println();
     }
-
     public void bfsPrintLevelByLevel() {
         if (root != null) {
             Queue<Node> q = new LinkedList<>();
@@ -144,4 +143,5 @@ public class BinarySearchTree {
             }
         }
     }
+
 }
