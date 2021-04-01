@@ -22,7 +22,7 @@ public class BinarySearchTree {
             root = newNode;
         } else {
             Node temp = this.root;
-            Node parent = null;
+            Node parent;
             while (true) {
                 parent = temp;
                 if (newNode.data <= temp.data) {
@@ -144,4 +144,17 @@ public class BinarySearchTree {
         }
     }
 
+    public boolean isBST() {
+        return checkIsBST(this.root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    private boolean checkIsBST(Node root, int minValue, int maxValue) {
+        if (root == null) {
+            return true;
+        }
+        if (root.data >= minValue && root.data <= maxValue && checkIsBST(root.left, minValue, root.data) && checkIsBST(root.right, root.data, maxValue)) {
+            return true;
+        }
+        return false;
+    }
 }
