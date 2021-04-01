@@ -88,9 +88,11 @@ public class BinarySearchTree {
         return findHeight(this.root);
     }
 
+    //Here we counting no of edges in the tree that why on leaf node or empty tree the height is -1 ::-- showing correct definition of tree
+    // But when we counting number of nodes then we return on leaf node and empty node is zero
     private int findHeight(Node root) {
         if (root == null) {
-            return 0;
+            return -1;
         }
         return 1 + Integer.max(findHeight(root.left), findHeight(root.right));
     }
