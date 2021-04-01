@@ -7,6 +7,9 @@
 
 package April.api01_21_NK;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
     public Node root;
 
@@ -90,11 +93,55 @@ public class BinarySearchTree {
 
     //Here we counting no of edges in the tree that why on leaf node or empty tree the height is -1 ::-- showing correct definition of tree
     // But when we counting number of nodes then we return on leaf node and empty node is zero
+    // O(n) n -> no of nodes
     private int findHeight(Node root) {
         if (root == null) {
             return -1;
         }
         return 1 + Integer.max(findHeight(root.left), findHeight(root.right));
     }
-}
 
+    //O(n) n-> number of nodes
+    public void bfs() {
+        if (root != null) {
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            while (!q.isEmpty()) {
+                Node visitedNode = q.peek();
+                System.out.print(visitedNode.data + " ");
+                q.remove();
+                if (visitedNode.left != null) {
+                    q.add(visitedNode.left);
+                }
+                if (visitedNode.right != null) {
+                    q.add(visitedNode.right);
+                }
+            }
+        }
+        System.out.println();
+    }
+
+    public void bfsPrintLevelByLevel() {
+        if (root != null) {
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while (!q.isEmpty()) {
+                Node visitedNode = q.peek();
+                q.remove();
+                if (visitedNode != null) {
+                    System.out.print(visitedNode.data + " ");
+                    if (visitedNode.left != null) {
+                        q.add(visitedNode.left);
+                    }
+                    if (visitedNode.right != null) {
+                        q.add(visitedNode.right);
+                    }
+                } else if (!q.isEmpty()) {
+                    System.out.println();
+                    q.add(null);
+                }
+            }
+        }
+    }
+}
