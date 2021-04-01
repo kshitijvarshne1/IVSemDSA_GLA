@@ -19,6 +19,10 @@ public class Main {
         btree.insert(new Node(106));
         btree.inorder();
         System.out.println(btree.minData());
+        System.out.println(btree.minDataUsingRecursion());
+        System.out.println(btree.height());
+        btree.bfs();
+        btree.bfsPrintLevelByLevel();
     }
 }
 
