@@ -17,20 +17,23 @@ public class BinarySearchTree {
     public void insert(Node newNode) {
         if (root == null) {
             root = newNode;
+            return;
         } else {
             Node temp = this.root;
-            Node parent;
+            Node parent = null;
             while (true) {
                 parent = temp;
                 if (newNode.data <= temp.data) {
                     temp = temp.left;
                     if (temp == null) {
                         parent.left = newNode;
+                        return;
                     }
                 } else {
                     temp = temp.right;
                     if (temp == null) {
                         parent.right = newNode;
+                        return;
                     }
                 }
             }
@@ -39,6 +42,7 @@ public class BinarySearchTree {
 
     public void inorder() {
         inorderPrinting(this.root);
+        System.out.println();
     }
 
     private void inorderPrinting(Node root) {
