@@ -8,5 +8,17 @@
 package April.api01_21_NK;
 
 public class Main {
+    public static void main(String[] args) {
+        BinarySearchTree btree = new BinarySearchTree();
+        btree.insert(new Node(100));
+        btree.insert(new Node(96));
+        btree.insert(new Node(95));
+        btree.insert(new Node(97));
+        btree.insert(new Node(105));
+        btree.insert(new Node(103));
+        btree.insert(new Node(106));
+        btree.inorder();
+
+    }
 }
 
