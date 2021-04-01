@@ -83,5 +83,16 @@ public class BinarySearchTree {
             return findMinDataUsingRecursion(root.left);
         }
     }
+
+    public int height() {
+        return findHeight(this.root);
+    }
+
+    private int findHeight(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        return 1 + Integer.max(findHeight(root.left), findHeight(root.right));
+    }
 }
 
