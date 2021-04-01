@@ -67,5 +67,21 @@ public class BinarySearchTree {
         }
         return root.data;
     }
+
+    //Using Recursion
+
+    public int minDataUsingRecursion() {
+        return findMinDataUsingRecursion(this.root);
+    }
+
+    private int findMinDataUsingRecursion(Node root) {
+        if (root == null) {
+            return -1;
+        } else if (root.left == null) {
+            return root.data;
+        } else {
+            return findMinDataUsingRecursion(root.left);
+        }
+    }
 }
 
