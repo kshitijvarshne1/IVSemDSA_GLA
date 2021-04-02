@@ -120,6 +120,7 @@ public class BinarySearchTree {
         }
         System.out.println();
     }
+
     public void bfsPrintLevelByLevel() {
         if (root != null) {
             Queue<Node> q = new LinkedList<>();
@@ -142,6 +143,7 @@ public class BinarySearchTree {
                 }
             }
         }
+        System.out.println();
     }
 
     public boolean isBST() {
@@ -152,9 +154,49 @@ public class BinarySearchTree {
         if (root == null) {
             return true;
         }
-        if (root.data >= minValue && root.data <= maxValue && checkIsBST(root.left, minValue, root.data) && checkIsBST(root.right, root.data, maxValue)) {
-            return true;
-        }
-        return false;
+        return root.data >= minValue && root.data <= maxValue && checkIsBST(root.left, minValue, root.data) && checkIsBST(root.right, root.data, maxValue);
     }
+
+    /*
+     * Case 1:- No child
+     * Case 2:- 1 child
+     * case 3:- 2 child
+     * */
+    public void deleteANode(Node node) {
+        deleteANodeFromBST(this.root, node);
+    }
+
+    private Node deleteANodeFromBST(Node root, Node node) {
+        if (root == null) {
+            return null;
+        } else if (node.data < root.data) {
+            root.left = deleteANodeFromBST(root.left, node);
+        } else if (node.data > root.data) {
+            root.right = deleteANodeFromBST(root.right, node);
+        } else {
+            //case 1:- no child
+            if (root.left == null && root.right == null) {
+                root = null;
+                return root;
+            }
+            //case 2: one child
+            // case i-> has only left child
+            else if (root.left != null && root.right == null) {
+                return root.left;
+            }
+            // case ii-> has only right child
+            else if (root.left == null && root.right != null) {
+                return root.right;
+            }
+            // case 3: 2 child
+            else {
+
+                node.data = findMinData(root.right);
+                root.right = deleteANodeFromBST(root.right, new Node(root.data));
+            }
+        }
+        return root;
+    }
+
+
 }
