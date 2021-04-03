@@ -157,7 +157,6 @@ public class BinarySearchTree {
         return root.data >= minValue && root.data <= maxValue && checkIsBST(root.left, minValue, root.data) && checkIsBST(root.right, root.data, maxValue);
     }
 
-
     /*
      * Case 1:- No child
      * Case 2:- 1 child
