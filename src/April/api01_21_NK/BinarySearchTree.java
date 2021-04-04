@@ -174,27 +174,36 @@ public class BinarySearchTree {
         } else if (node.data > root.data) {
             root.right = deleteANodeFromBST(root.right, node);
         } else {
-            //case 1:- no child
-            if (root.left == null && root.right == null) {
-                root = null;
-                return root;
+            // case 3: 2 child
+            if (root.left != null && root.right != null) {
+                int lmax = findMaxData(root.left);
+                root.data = lmax;
+                root.left = deleteANodeFromBST(root.left, new Node(lmax));
+                return node;
+
             }
             //case 2: one child
             // case i-> has only left child
-            else if (root.left != null && root.right == null) {
+            else if (root.left != null) {
                 return root.left;
             }
             // case ii-> has only right child
-            else if (root.left == null && root.right != null) {
+            else if (root.right != null) {
                 return root.right;
             }
-            // case 3: 2 child
+            //case 1:- no child
             else {
-
-                node.data = findMinData(root.right);
-                root.right = deleteANodeFromBST(root.right, new Node(root.data));
+                return null;
             }
         }
         return root;
+    }
+
+    public int findMaxData(Node root) {
+        if (root.right != null) {
+            return findMinData(root.right);
+        } else {
+            return root.data;
+        }
     }
 }
