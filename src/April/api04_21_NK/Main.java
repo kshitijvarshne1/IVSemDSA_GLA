@@ -20,6 +20,5 @@ public class Main {
         btree.inorder();
         //System.out.println(btree.root.right.right.data);
     }
-
 }
 
