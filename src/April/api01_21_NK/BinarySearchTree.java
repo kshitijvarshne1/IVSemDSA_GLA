@@ -180,7 +180,6 @@ public class BinarySearchTree {
                 root.data = lmax;
                 root.left = deleteANodeFromBST(root.left, new Node(lmax));
                 return node;
-
             }
             //case 2: one child
             // case i-> has only left child
