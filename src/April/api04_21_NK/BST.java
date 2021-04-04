@@ -95,6 +95,5 @@ public class BST<T extends Comparable<T>> {
             System.out.println(post);
         }
     }
-
 }
 

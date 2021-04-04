@@ -18,7 +18,6 @@ public class Main {
         btree.insert(new Node<>(102));
         btree.insert(new Node<>(107));
         btree.inorder();
-        //System.out.println(btree.root.right.right.data);
         btree.printPreInPostUsingIterative();
     }
 }
