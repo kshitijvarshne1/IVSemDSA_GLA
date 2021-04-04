@@ -7,6 +7,15 @@
 
 package April.api04_21_NK;
 
-public class BST {
+public class BST<T> {
+    public Node<T> root;
+
+    public BST() {
+        this.root = null;
+    }
+
+    public boolean isEmpty() {
+        return root == null;
+    }
 }
 
