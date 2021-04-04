@@ -19,14 +19,14 @@ public class BST<T extends Comparable<T>> {
     }
 
     public void insert(Node<T> newNode) {
-        if (isEmpty()) {
-            this.root = newNode;
+        if (root == null) {
+            root = newNode;
         } else {
-            Node<T> current = this.root;
+            Node<T> current = root;
             Node<T> parent;
             while (true) {
                 parent = current;
-                if (newNode.data.compareTo(newNode.data) < 0) {
+                if (current.data.compareTo(newNode.data) > 0) {
                     current = current.left;
                     if (current == null) {
                         parent.left = newNode;
@@ -43,13 +43,14 @@ public class BST<T extends Comparable<T>> {
         }
     }
 
+
     public void inorder() {
         inorderPrinting(this.root);
         System.out.println();
     }
 
     private void inorderPrinting(Node<T> root) {
-        if (isEmpty()) {
+        if (root == null) {
             return;
         } else {
             inorderPrinting(root.left);
@@ -57,5 +58,6 @@ public class BST<T extends Comparable<T>> {
             inorderPrinting(root.right);
         }
     }
+
 }
 
