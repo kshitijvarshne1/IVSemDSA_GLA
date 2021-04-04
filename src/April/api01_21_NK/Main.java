@@ -22,6 +22,5 @@ public class Main {
         btree.deleteANode(new Node(100));
         btree.bfsPrintLevelByLevel();
     }
-
 }
 
