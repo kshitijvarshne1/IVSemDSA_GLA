@@ -8,5 +8,13 @@
 package April.api04_21_NK;
 
 public class Pair {
+    public Node data;
+    public int state;
+
+    public Pair(Node data, int state) {
+        this.data = data;
+        this.state = state;
+    }
+
 }
 
