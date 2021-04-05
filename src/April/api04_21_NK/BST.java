@@ -7,6 +7,8 @@
 
 package April.api04_21_NK;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 public class BST<T extends Comparable<T>> {
     public Node<T> root;
@@ -93,6 +95,35 @@ public class BST<T extends Comparable<T>> {
             System.out.println(pre);
             System.out.println(in);
             System.out.println(post);
+        }
+    }
+
+    public void levelOrderTraverse() {
+        printLevelOrderTraversal(this.root);
+    }
+
+    private void printLevelOrderTraversal(Node root) {
+        if (root == null) {
+            return;
+        }
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        q.add(null);
+        while (!q.isEmpty()) {
+            Node temp = q.peek();
+            q.remove();
+            if (temp != null) {
+                System.out.print(temp.data + " ");
+                if (temp.left != null) {
+                    q.add(temp.left);
+                }
+                if (temp.right != null) {
+                    q.add(temp.right);
+                }
+            } else if (!q.isEmpty()) {
+                q.add(null);
+                System.out.println();
+            }
         }
     }
 }
