@@ -20,6 +20,7 @@ public class Main {
         btree.inorder();
         btree.printPreInPostUsingIterative();
         btree.levelOrderTraverse();
+        System.out.println(btree.size());
     }
 }
 

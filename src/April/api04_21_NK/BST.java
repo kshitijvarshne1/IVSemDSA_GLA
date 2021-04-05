@@ -102,15 +102,15 @@ public class BST<T extends Comparable<T>> {
         printLevelOrderTraversal(this.root);
     }
 
-    private void printLevelOrderTraversal(Node root) {
+    private void printLevelOrderTraversal(Node<T> root) {
         if (root == null) {
             return;
         }
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node<T>> q = new LinkedList<>();
         q.add(root);
         q.add(null);
         while (!q.isEmpty()) {
-            Node temp = q.peek();
+            Node<T> temp = q.peek();
             q.remove();
             if (temp != null) {
                 System.out.print(temp.data + " ");
