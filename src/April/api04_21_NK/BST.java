@@ -139,5 +139,6 @@ public class BST<T extends Comparable<T>> {
         }
         return 1 + sizeOfBST(root.left) + sizeOfBST(root.right);
     }
+
 }
 
