@@ -125,7 +125,19 @@ public class BST<T extends Comparable<T>> {
                 System.out.println();
             }
         }
+        System.out.println();
     }
 
+    // Size -> Count no of nodes
+    public int size() {
+        return sizeOfBST(this.root);
+    }
+
+    private int sizeOfBST(Node<T> root) {
+        if (root == null) {
+            return 0;
+        }
+        return 1 + sizeOfBST(root.left) + sizeOfBST(root.right);
+    }
 }
 
