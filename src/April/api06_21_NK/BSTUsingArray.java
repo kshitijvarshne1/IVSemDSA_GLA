@@ -44,5 +44,18 @@ public class BSTUsingArray {
             }
         }
     }
+
+    public void inorder() {
+        inorder(0);
+    }
+
+    private void inorder(int root) {
+        if (arr[root] == null) {
+            return;
+        }
+        insert(root * 2 + 1);
+        System.out.print(arr[root] + " ");
+        insert(root * 2 + 2);
+    }
 }
 
