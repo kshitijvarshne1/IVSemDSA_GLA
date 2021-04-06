@@ -57,5 +57,6 @@ public class BSTUsingArray {
         System.out.print(arr[root] + " ");
         insert(root * 2 + 2);
     }
+
 }
 
