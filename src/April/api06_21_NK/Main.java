@@ -13,6 +13,5 @@ public class Main {
         btree.insert(5);
         btree.inorder();
     }
-
 }
 
