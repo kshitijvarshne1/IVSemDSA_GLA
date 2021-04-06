@@ -8,5 +8,11 @@
 package April.api06_21_NK;
 
 public class Main {
+    public static void main(String[] args) {
+        BSTUsingArray btree = new BSTUsingArray(100);
+        btree.insert(5);
+        btree.inorder();
+    }
+
 }
 
