@@ -38,5 +38,18 @@ public class BinarySearchTree {
             }
         }
     }
+
+    public void inorder() {
+        inordePrint(this.root);
+    }
+
+    private void inordePrint(Node root) {
+        if (root == null) {
+            return;
+        }
+        inordePrint(root.left);
+        System.out.print(root.data + " ");
+        inordePrint(root.right);
+    }
 }
 
