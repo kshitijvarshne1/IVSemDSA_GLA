@@ -179,7 +179,7 @@ public class BinarySearchTree {
                 int lmax = findMaxData(root.left);
                 root.data = lmax;
                 root.left = deleteANodeFromBST(root.left, new Node(lmax));
-                return node;
+                return root;
             }
             //case 2: one child
             // case i-> has only left child
@@ -200,7 +200,7 @@ public class BinarySearchTree {
 
     public int findMaxData(Node root) {
         if (root.right != null) {
-            return findMinData(root.right);
+            return findMaxData(root.right);
         } else {
             return root.data;
         }
