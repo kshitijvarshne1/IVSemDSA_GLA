@@ -18,6 +18,9 @@ public class Main {
         btree.insert(new Node(105));
         btree.insert(new Node(115));
         btree.inorder();
+        btree.delete(new Node(100));
+        btree.inorder();
     }
+
 }
 
