@@ -52,5 +52,46 @@ public class BST {
         System.out.print(root.data + " ");
         inorder(root.right);
     }
+
+    public void delete(Node node) {
+        delete(this.root, node);
+    }
+
+    private Node delete(Node root, Node node) {
+        if (root == null) {
+            return null;
+        } else if (node.data < root.data) {
+            delete(root.left, node);
+        } else if (node.data > root.data) {
+            delete(root.right, node);
+        } else {
+            // element is in BST
+            // case 1:-
+            if (root.left != null && root.right != null) {
+                int pre
+            }
+            // case 2:- i ->left of tree is not null
+            else if (root.left != null) {
+                return root.left;
+            }
+            // case 2:- ii ->
+            else if (root.right != null) {
+                return root.right;
+            }
+            // case 3 : - leaf node
+            else {
+                return null;
+            }
+        }
+        return root;
+    }
+
+    public int findMaxData(Node root) {
+        if (root.right != null) {
+            return findMaxData(root.right);
+        } else {
+            return root.data;
+        }
+    }
 }
 
