@@ -21,6 +21,5 @@ public class Main {
         btree.delete(new Node(100));
         btree.inorder();
     }
-
 }
 
