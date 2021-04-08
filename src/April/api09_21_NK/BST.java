@@ -108,8 +108,8 @@ public class BST {
                 stack.push((current));
                 current = current.left;
             } else {
-                Node temp = stack.pop();
-                System.out.print(temp.data + " ");
+                current = stack.pop();
+                System.out.print(current.data + " ");
                 current = current.right;
             }
         }
