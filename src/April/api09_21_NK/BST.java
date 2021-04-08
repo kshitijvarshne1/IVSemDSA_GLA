@@ -7,6 +7,8 @@
 
 package April.api09_21_NK;
 
+import java.util.Stack;
+
 public class BST {
     public Node root;
 
@@ -95,6 +97,23 @@ public class BST {
         } else {
             return root.data;
         }
+    }
+
+    public void inorderIterative() {
+        Stack<Node> stack = new Stack<>();
+
+        Node current = this.root;
+        while (!stack.isEmpty() || current != null) {
+            if (current != null) {
+                stack.push((current));
+                current = current.left;
+            } else {
+                Node temp = stack.pop();
+                System.out.print(temp.data + " ");
+                current = current.right;
+            }
+        }
+        System.out.println();
     }
 
 }
