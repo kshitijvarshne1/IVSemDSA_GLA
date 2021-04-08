@@ -68,7 +68,10 @@ public class BST {
             // element is in BST
             // case 1:-
             if (root.left != null && root.right != null) {
-                int pre
+                int predecessor = findMaxData(root.left);
+                root.data = predecessor;
+                delete(root.left, new Node(predecessor));
+                return root;
             }
             // case 2:- i ->left of tree is not null
             else if (root.left != null) {
