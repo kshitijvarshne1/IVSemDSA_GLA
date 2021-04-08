@@ -20,6 +20,7 @@ public class Main {
         btree.inorder();
         //btree.delete(new Node(100));
         btree.inorderIterative();
+        btree.prorderIterative();
     }
 }
 
