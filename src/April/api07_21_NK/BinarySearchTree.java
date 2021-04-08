@@ -61,9 +61,9 @@ public class BinarySearchTree {
         if (root == null) {
             return null;
         } else if (newNode.data < root.data) {
-            deleteANode(root.left, newNode);
+            root.left = deleteANode(root.left, newNode);
         } else if (newNode.data > root.data) {
-            deleteANode(root.right, newNode);
+            root.right = deleteANode(root.right, newNode);
         } else {
             // case 1:- two child
             if (root.left != null && root.right != null) {

@@ -61,23 +61,23 @@ public class BST {
         if (root == null) {
             return null;
         } else if (node.data < root.data) {
-            delete(root.left, node);
+            root.left = delete(root.left, node);
         } else if (node.data > root.data) {
-            delete(root.right, node);
+            root.right = delete(root.right, node);
         } else {
             // element is in BST
             // case 1:-
             if (root.left != null && root.right != null) {
-                int predecessor = findMaxData(root.left);
-                root.data = predecessor;
-                delete(root.left, new Node(predecessor));
+                int lmax = findMaxData(root.left);
+                root.data = lmax;
+                root.left = delete(root.left, new Node(lmax));
                 return root;
             }
             // case 2:- i ->left of tree is not null
             else if (root.left != null) {
                 return root.left;
             }
-            // case 2:- ii ->
+            // case 2:- ii -> right of tree is not null
             else if (root.right != null) {
                 return root.right;
             }
