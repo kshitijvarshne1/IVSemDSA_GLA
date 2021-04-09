@@ -14,7 +14,7 @@ public class Main {
         btree.insert(new Node(95));
         btree.insert(new Node(110));
         btree.inorder();
-        System.out.println(btree.precedessor(new Node(100)));
+        System.out.println(btree.predecessor(new Node(100)));
     }
 }
 

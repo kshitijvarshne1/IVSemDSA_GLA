@@ -55,11 +55,11 @@ public class BST {
         System.out.println();
     }
 
-    public int precedessor(Node key) {
-        return precedessor(this.root, key);
+    public int predecessor(Node key) {
+        return predecessor(this.root, key);
     }
 
-    private int precedessor(Node root, Node key) {
+    private int predecessor(Node root, Node key) {
         if (root == null) {
             return -1;
         }
@@ -75,10 +75,10 @@ public class BST {
             }
         }
         if (key.data < root.data) {
-            precedessor(root.left, key);
+            predecessor(root.left, key);
         } else {
             pre = root;
-            precedessor(root.right, key);
+            predecessor(root.right, key);
         }
         return pre.data;
     }
