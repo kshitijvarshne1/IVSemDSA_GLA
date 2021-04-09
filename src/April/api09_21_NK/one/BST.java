@@ -55,7 +55,7 @@ public class BST {
                 // find max data in left sub tree
                 int temp = findMaxData(root.left);
                 root.data = temp;
-                root = delete(root.left, new Node(temp));
+                root.left = delete(root.left, new Node(temp));
                 return root;
             } else if (root.left != null) {
                 return root.left;
@@ -69,10 +69,11 @@ public class BST {
     }
 
     private int findMaxData(Node root) {
-        if (root == null) {
-            return -1;
+        if (root.right != null) {
+            return findMaxData(root.right);
+        } else {
+            return root.data;
         }
-        return findMaxData(root.right);
     }
 
     static Node pre = null;
