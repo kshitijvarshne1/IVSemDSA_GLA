@@ -39,6 +39,43 @@ public class BST {
         }
     }
 
+    public void delete(Node key) {
+        delete(this.root, key);
+    }
+
+    private Node delete(Node root, Node key) {
+        if (root == null) {
+            return null;
+        } else if (key.data < root.data) {
+            root.left = delete(root.left, key);
+        } else if (key.data > root.data) {
+            root.right = delete(root.right, key);
+        } else {
+            if (root.left != null && root.right != null) {
+                // find max data in left sub tree
+                int temp = findMaxData(root.left);
+                root.data = temp;
+                root = delete(root.left, new Node(temp));
+                return root;
+            } else if (root.left != null) {
+                return root.left;
+            } else if (root.right != null) {
+                return root.right;
+            } else {
+                return null;
+            }
+        }
+        return root;
+
+    }
+
+    private int findMaxData(Node root) {
+        if (root == null) {
+            return -1;
+        }
+        return findMaxData(root.right);
+    }
+
     static Node pre = null;
 
     private void inorder(Node root) {
