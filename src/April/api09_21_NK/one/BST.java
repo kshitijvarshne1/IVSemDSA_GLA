@@ -22,7 +22,7 @@ public class BST {
             Node current = this.root;
             while (true) {
                 parent = current;
-                if (current.data <= root.data) {
+                if (newNode.data <= current.data) {
                     current = current.left;
                     if (current == null) {
                         parent.left = newNode;
