@@ -11,7 +11,32 @@ public class BST {
     public Node root;
 
     public BST() {
-        this.root = root;
+        this.root = null;
+    }
+
+    public void insert(Node newNode) {
+        if (root == null) {
+            root = newNode;
+        } else {
+            Node parent;
+            Node current = this.root;
+            while (true) {
+                parent = current;
+                if (current.data <= root.data) {
+                    current = current.left;
+                    if (current == null) {
+                        parent.left = newNode;
+                        return;
+                    }
+                } else {
+                    current = current.right;
+                    if (current == null) {
+                        parent.right = newNode;
+                        return;
+                    }
+                }
+            }
+        }
     }
 }
 
