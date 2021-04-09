@@ -13,8 +13,14 @@ public class Main {
         btree.insert(new Node(100));
         btree.insert(new Node(95));
         btree.insert(new Node(110));
+        btree.insert(new Node(92));
+        btree.insert(new Node(97));
+        btree.insert(new Node(105));
+        btree.insert(new Node(115));
         btree.inorder();
-        System.out.println(btree.predecessor(new Node(100)));
+        btree.delete(new Node(105));
+        btree.inorder();
     }
+
 }
 
