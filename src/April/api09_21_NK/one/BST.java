@@ -51,5 +51,35 @@ public class BST {
         System.out.print(root.data + " ");
         inorder(root.right);
     }
+
+    static Node suce = null;
+
+    public int successor(Node key) {
+        return successor(this.root, key);
+    }
+
+    private int successor(Node root, Node key) {
+        if (root == null) {
+            return -1;
+        }
+        if (root.data == key.data) {
+            // go for left subtree to find max
+            if (root.left != null) {
+                Node temp = root.left;
+                while (temp.right != null) {
+                    temp = temp.right;
+                }
+                suce = temp;
+                return suce.data;
+            }
+        }
+        if (key.data < root.data) {
+            suce = root;
+            successor(root.left, key);
+        } else {
+            successor(root.right, key);
+        }
+        return suce.data;
+    }
 }
 
