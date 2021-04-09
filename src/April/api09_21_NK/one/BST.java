@@ -38,5 +38,18 @@ public class BST {
             }
         }
     }
+
+    public void inorder() {
+        inorder(this.root);
+    }
+
+    private void inorder(Node root) {
+        if (root == null) {
+            return;
+        }
+        inorder(root.left);
+        System.out.print(root.data + " ");
+        inorder(root.right);
+    }
 }
 
