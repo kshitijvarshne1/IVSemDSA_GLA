@@ -39,9 +39,7 @@ public class BST {
         }
     }
 
-    public void inorder() {
-        inorder(this.root);
-    }
+    static Node pre = null;
 
     private void inorder(Node root) {
         if (root == null) {
@@ -52,13 +50,16 @@ public class BST {
         inorder(root.right);
     }
 
-    static Node suce = null;
-
-    public int successor(Node key) {
-        return successor(this.root, key);
+    public void inorder() {
+        inorder(this.root);
+        System.out.println();
     }
 
-    private int successor(Node root, Node key) {
+    public int precedessor(Node key) {
+        return precedessor(this.root, key);
+    }
+
+    private int precedessor(Node root, Node key) {
         if (root == null) {
             return -1;
         }
@@ -69,17 +70,17 @@ public class BST {
                 while (temp.right != null) {
                     temp = temp.right;
                 }
-                suce = temp;
-                return suce.data;
+                pre = temp;
+                return pre.data;
             }
         }
         if (key.data < root.data) {
-            suce = root;
-            successor(root.left, key);
+            precedessor(root.left, key);
         } else {
-            successor(root.right, key);
+            pre = root;
+            precedessor(root.right, key);
         }
-        return suce.data;
+        return pre.data;
     }
 }
 
