@@ -66,7 +66,6 @@ public class BST {
             }
         }
         return root;
-
     }
 
     private int findMaxData(Node root) {
