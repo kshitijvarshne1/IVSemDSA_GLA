@@ -8,6 +8,11 @@
 package April.api_10_21;
 
 public class BST {
+    public Node root;
+
+    public BST() {
+        this.root = null;
+    }
 
 }
 
