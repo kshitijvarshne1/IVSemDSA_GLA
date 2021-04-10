@@ -37,5 +37,19 @@ public class BST {
         }
         return root;
     }
+
+    public void inorder() {
+        inorder(this.root);
+    }
+
+    private void inorder(Node root) {
+        if (root == null) {
+            return;
+        } else {
+            inorder(root.left);
+            System.out.print(root.data);
+            inorder(root.right);
+        }
+    }
 }
 
