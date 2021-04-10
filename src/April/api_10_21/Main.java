@@ -24,6 +24,5 @@ public class Main {
         bstree.inorder();
         bstree.bfs();
     }
-
 }
 
