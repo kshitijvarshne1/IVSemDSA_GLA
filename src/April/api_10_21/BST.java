@@ -14,5 +14,28 @@ public class BST {
         this.root = null;
     }
 
+    public void insert(Node newNode) {
+        insert(this.root, newNode);
+    }
+
+    private Node insert(Node root, Node newNode) {
+        if (root == null) {
+            root = newNode;
+            return root;
+        } else if (newNode.data <= root.data) {
+            if (root.left == null) {
+                root.left = newNode;
+            } else {
+                insert(root.left, newNode);
+            }
+        } else {
+            if (root.right == null) {
+                root.right = newNode;
+            } else {
+                insert(root.right, newNode);
+            }
+        }
+        return root;
+    }
 }
 
