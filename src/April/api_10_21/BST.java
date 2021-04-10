@@ -7,6 +7,9 @@
 
 package April.api_10_21;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BST {
     public Node root;
 
@@ -15,7 +18,7 @@ public class BST {
     }
 
     public void insert(Node newNode) {
-        insert(this.root, newNode);
+        this.root = insert(this.root, newNode);
     }
 
     private Node insert(Node root, Node newNode) {
@@ -40,6 +43,7 @@ public class BST {
 
     public void inorder() {
         inorder(this.root);
+        System.out.println();
     }
 
     private void inorder(Node root) {
@@ -47,8 +51,33 @@ public class BST {
             return;
         } else {
             inorder(root.left);
-            System.out.print(root.data);
+            System.out.print(root.data + " ");
             inorder(root.right);
+        }
+    }
+
+    public void bfs() {
+        if (root != null) {
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while (!q.isEmpty()) {
+                Node temp = q.remove();
+                if (temp != null) {
+                    System.out.print(temp.data + " ");
+                    if (temp.left != null) {
+                        q.add(temp.left);
+                    }
+                    if (temp.right != null) {
+                        q.add(temp.right);
+                    }
+                } else if (!q.isEmpty()) {
+                    q.add(null);
+                    System.out.println();
+                }
+
+
+            }
         }
     }
 }
