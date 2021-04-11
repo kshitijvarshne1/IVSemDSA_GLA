@@ -79,7 +79,9 @@ public class BST {
         }
     }
 
+    // Naive sol-> o(n) n -> no of nodes
     // floor of key means a node equal to key or closest to node
+    // Time O(h) h-> height, space o(1)
     public Node floor(int key) {
         Node result = null;
         if (root != null) {
@@ -93,6 +95,26 @@ public class BST {
                 } else {
                     result = temp;
                     temp = temp.right;
+                }
+            }
+        }
+        return result;
+    }
+    // ceil of key means a node which is just greater than or equal to key
+
+    public Node ceil(int key) {
+        Node result = null;
+        if (root != null) {
+            Node temp = root;
+            while (temp != null) {
+                if (temp.data == key) {
+                    return temp;
+                }
+                if (temp.data < key) {
+                    temp = temp.right;
+                } else {
+                    result = temp;
+                    temp = temp.left;
                 }
             }
         }
