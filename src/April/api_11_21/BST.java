@@ -75,6 +75,7 @@ public class BST {
                     System.out.println();
                 }
             }
+            System.out.println();
         }
     }
 

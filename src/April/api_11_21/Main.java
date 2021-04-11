@@ -23,6 +23,7 @@ public class Main {
         bstree.insert(new Node(98));
         bstree.inorder();
         bstree.bfs();
+        System.out.println(bstree.floor(99).data);
     }
 
 }
