@@ -78,5 +78,25 @@ public class BST {
         }
     }
 
+    // floor of key means a node equal to key or closest to node
+    public Node floor(int key) {
+        Node result = null;
+        if (root != null) {
+            Node temp = this.root;
+            while (temp != null) {
+                if (key == temp.data) {
+                    return temp;
+                }
+                if (temp.data > key) {
+                    temp = temp.left;
+                } else {
+                    result = temp;
+                    temp = temp.right;
+                }
+            }
+        }
+        return result;
+    }
+
 }
 
