@@ -43,6 +43,7 @@ public class BST {
 
     public void inorder() {
         inorder(this.root);
+        System.out.println();
     }
 
     private void inorder(Node root) {
@@ -50,7 +51,7 @@ public class BST {
             return;
         }
         inorder(root.left);
-        System.out.println(root.data + " ");
+        System.out.print(root.data + " ");
         inorder(root.right);
     }
 
@@ -62,7 +63,7 @@ public class BST {
             while (!q.isEmpty()) {
                 Node temp = q.remove();
                 if (temp != null) {
-                    System.out.println(temp.data + " ");
+                    System.out.print(temp.data + " ");
                     if (temp.left != null) {
                         q.add(temp.left);
                     }
