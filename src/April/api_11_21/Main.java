@@ -24,6 +24,7 @@ public class Main {
         bstree.inorder();
         bstree.bfs();
         System.out.println(bstree.floor(99).data);
+        System.out.println(bstree.ceil(91).data);
     }
 
 }
