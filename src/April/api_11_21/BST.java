@@ -7,6 +7,9 @@
 
 package April.api_11_21;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BST {
     public Node root;
 
@@ -33,6 +36,29 @@ public class BST {
                         parent.right = newNode;
                         return;
                     }
+                }
+            }
+        }
+    }
+
+    public void bfs() {
+        if (root != null) {
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while (!q.isEmpty()) {
+                Node temp = q.remove();
+                if (temp != null) {
+                    System.out.println(temp.data + " ");
+                    if (temp.left != null) {
+                        q.add(temp.left);
+                    }
+                    if (temp.right != null) {
+                        q.add(temp.right);
+                    }
+                } else if (!q.isEmpty()) {
+                    q.add(null);
+                    System.out.println();
                 }
             }
         }
