@@ -19,6 +19,5 @@ public class Node {
         this.right = null;
         this.height = 0;
     }
-
 }
 
