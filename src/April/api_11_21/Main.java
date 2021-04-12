@@ -23,8 +23,22 @@ public class Main {
         bstree.insert(new Node(98));
         bstree.inorder();
         bstree.bfs();
-        System.out.println(bstree.floor(99).data);
-        System.out.println(bstree.ceil(91).data);
+        /*System.out.println(bstree.floor(99).data);
+        System.out.println(bstree.ceil(91).data);*/
+        System.out.println(bstree.root.left.right.right.data);
+        System.out.println(successor(bstree.root.left.right.right));
+    }
+
+    public static Node successor(Node root) {
+        if (root == null) {
+            return null;
+        } else {
+            Node temp = root.right;
+            while (temp.left != null) {
+                temp = temp.left;
+            }
+            return temp;
+        }
     }
 }
 
