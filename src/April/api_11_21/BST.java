@@ -120,5 +120,18 @@ public class BST {
         }
         return result;
     }
-}
 
+    public Node LCA(int d1, int d2) {
+        return FindLCA(this.root, d1, d2);
+    }
+
+    private Node FindLCA(Node root, int d1, int d2) {
+        if (d1 < root.data && d2 < root.data) {
+            FindLCA(root.left, d1, d2);
+        } else if (d1 > root.data && d2 > root.data) {
+            FindLCA(root.right, d1, d1);
+        }
+        return root;
+    }
+
+}
