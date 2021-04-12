@@ -8,5 +8,10 @@
 package April.api_12_21_NK;
 
 public class AVL {
+    public Node root;
+
+    public AVL() {
+        this.root = null;
+    }
 }
 
