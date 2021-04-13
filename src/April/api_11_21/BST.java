@@ -121,16 +121,30 @@ public class BST {
         return result;
     }
 
-    public Node LCA(int d1, int d2) {
-        return FindLCA(this.root, d1, d2);
+    // it is iterative approach , it can done by recursion
+    // here i already let that both data d1 and d2 should present in Binary search tree
+    public int LCA(int d1, int d2) {
+        Node temp = root;
+        if (temp != null) {
+            while (true) {
+                if (temp.data == d1 || temp.data == d2) {
+                    return temp.data;
+                }
+                if (d1 < temp.data && d2 < temp.data) {
+                    if (temp.left != null) {
+                        temp = temp.left;
+                    }
+                } else if (d1 > temp.data && d2 > temp.data) {
+                    if (temp.right != null) {
+                        temp = temp.right;
+                    }
+                } else {
+                    return temp.data;
+                }
+            }
+        } else {
+            return -1;
+        }
     }
 
-    private Node FindLCA(Node root, int d1, int d2) {
-        if (d1 < root.data && d2 < root.data) {
-            FindLCA(root.left, d1, d2);
-        } else if (d1 > root.data && d2 > root.data) {
-            FindLCA(root.right, d1, d1);
-        }
-        return root;
-    }
 }
