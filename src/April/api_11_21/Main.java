@@ -27,7 +27,7 @@ public class Main {
         System.out.println(bstree.ceil(91).data);*/
         /*System.out.println(bstree.root.left.right.right.data);
         System.out.println(successor(bstree.root.left.right.right));*/
-        System.out.println(bstree.LCA(96, 98).data);
+        System.out.println(bstree.LCA(85, 111));
     }
 
     public static Node successor(Node root) {
