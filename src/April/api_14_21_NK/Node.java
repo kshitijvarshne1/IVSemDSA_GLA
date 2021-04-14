@@ -7,6 +7,15 @@
 
 package April.api_14_21_NK;
 
-public class Node {
+public class Node<E> {
+    private E data;
+    private Node<E> left;
+    private Node<E> right;
+
+    public Node(E data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
 }
 
