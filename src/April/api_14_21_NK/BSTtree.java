@@ -22,7 +22,7 @@ public class BSTtree<E extends Comparable<E>> {
             Node<E> parent;
             while (current != null) {
                 parent = current;
-                if (newNode.getData().compareTo(current.getData()) < 0) {
+                if (newNode.getData().compareTo(current.getData()) <= 0) {
                     current = current.getLeft();
                     if (current == null) {
                         parent.setLeft(newNode);
@@ -35,6 +35,20 @@ public class BSTtree<E extends Comparable<E>> {
                 }
             }
         }
+    }
+
+    public void inorder() {
+        inorder(this.root);
+        System.out.println();
+    }
+
+    private void inorder(Node<E> root) {
+        if (root == null) {
+            return;
+        }
+        inorder(root.getLeft());
+        System.out.print(root.getData() + " ");
+        inorder(root.getRight());
     }
 }
 
