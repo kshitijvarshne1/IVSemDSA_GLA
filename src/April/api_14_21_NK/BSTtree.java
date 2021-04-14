@@ -50,5 +50,19 @@ public class BSTtree<E extends Comparable<E>> {
         System.out.print(root.getData() + " ");
         inorder(root.getRight());
     }
+
+    public void inorderReverse() {
+        inorderReverse(this.root);
+        System.out.println();
+    }
+
+    private void inorderReverse(Node<E> root) {
+        if (root == null) {
+            return;
+        }
+        inorderReverse(root.getRight());
+        System.out.print(root.getData() + " ");
+        inorderReverse(root.getLeft());
+    }
 }
 
