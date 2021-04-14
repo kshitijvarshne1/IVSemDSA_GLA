@@ -13,5 +13,28 @@ public class BSTtree<E extends Comparable<E>> {
     public BSTtree() {
         this.root = null;
     }
+
+    public void insert(Node<E> newNode) {
+        if (root == null) {
+            root = newNode;
+        } else {
+            Node<E> current = this.root;
+            Node<E> parent;
+            while (current != null) {
+                parent = current;
+                if (newNode.getData().compareTo(current.getData()) < 0) {
+                    current = current.getLeft();
+                    if (current == null) {
+                        parent.setLeft(newNode);
+                    }
+                } else {
+                    current = current.getRight();
+                    if (current == null) {
+                        parent.setRight(newNode);
+                    }
+                }
+            }
+        }
+    }
 }
 
