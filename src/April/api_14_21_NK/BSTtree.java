@@ -7,6 +7,11 @@
 
 package April.api_14_21_NK;
 
-public class BSTtree {
+public class BSTtree<E extends Comparable<E>> {
+    public Node<E> root;
+
+    public BSTtree() {
+        this.root = null;
+    }
 }
 
