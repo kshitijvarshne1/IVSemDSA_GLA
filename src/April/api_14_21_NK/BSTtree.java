@@ -86,24 +86,29 @@ public class BSTtree<E extends Comparable<E>> {
                 root.setData(successor);
                 root.setRight(delete(root.getRight(), new Node<>(successor)));
                 return root;
-            } else if (root.getRight() == null || root.getLeft() == null) {
+            }
+            //It handle both condition 1:- when any one child is null
+            //                         2:- when we want to delete leaf node
+            else if (root.getRight() == null || root.getLeft() == null) {
                 if (root.getLeft() == null) {
                     return root.getRight();
                 } else {
                     return root.getLeft();
                 }
-            } else {
+            } //Not necessary because above condition can handle below condition
+            /*else {
+                System.out.println("Fdfdcvdfdv");
                 return null;
-            }
+            }*/
         }
         return root;
     }
 
     private E minRight(Node<E> right) {
-        if (root.getLeft() != null) {
-            return minRight(root.getLeft());
+        if (right.getLeft() != null) {
+            return minRight(right.getLeft());
         } else {
-            return root.getData();
+            return right.getData();
         }
     }
 
@@ -127,7 +132,7 @@ public class BSTtree<E extends Comparable<E>> {
                     System.out.println();
                 }
             }
-
+            System.out.println();
         }
     }
 }

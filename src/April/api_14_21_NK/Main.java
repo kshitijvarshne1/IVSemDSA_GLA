@@ -27,7 +27,7 @@ public class Main {
         bstree.inorder();
         bstree.inorderReverse();
         bstree.bfs();
-        bstree.delete(new Node<>(85));
+        bstree.delete(new Node<>(5));
         bstree.bfs();
     }
 
