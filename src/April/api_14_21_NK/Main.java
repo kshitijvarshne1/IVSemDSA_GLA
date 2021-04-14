@@ -24,6 +24,7 @@ public class Main {
         bstree.inorder();
         bstree.insert(new Node<>(115));
         bstree.inorder();
+        bstree.inorderReverse();
     }
 }
 
