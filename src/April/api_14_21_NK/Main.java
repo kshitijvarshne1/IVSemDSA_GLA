@@ -23,8 +23,13 @@ public class Main {
         bstree.insert(new Node<>(105));
         bstree.inorder();
         bstree.insert(new Node<>(115));
+        bstree.insert(new Node<>(5));
         bstree.inorder();
         bstree.inorderReverse();
+        bstree.bfs();
+        bstree.delete(new Node<>(85));
+        bstree.bfs();
     }
+
 }
 
