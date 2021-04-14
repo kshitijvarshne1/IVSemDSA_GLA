@@ -7,7 +7,7 @@
 
 package April.api_14_21_NK;
 
-public class Node<E> {
+public class Node<E extends Comparable<E>> {
     private E data;
     private Node<E> left;
     private Node<E> right;
