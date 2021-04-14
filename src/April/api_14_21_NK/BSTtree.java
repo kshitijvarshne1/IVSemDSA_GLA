@@ -64,5 +64,45 @@ public class BSTtree<E extends Comparable<E>> {
         System.out.print(root.getData() + " ");
         inorderReverse(root.getLeft());
     }
+
+    public void delete(Node<E> newNode) {
+        this.root = delete(this.root, newNode);
+    }
+
+    private Node<E> delete(Node<E> root, Node<E> newNode) {
+        if (root == null) {
+            return root;
+        } else if (newNode.getData().compareTo(root.getData()) < 0) {
+            root.setLeft(delete(root.getLeft(), newNode));
+        } else if (newNode.getData().compareTo(root.getData()) > 0) {
+            root.setRight(delete(root.getRight(), newNode));
+        } else {
+            // two child
+            if (root.getLeft() != null && root.getRight() != null) {
+                E successor = minRight(root.getRight());
+                root.setData(successor);
+                root.setRight(delete(root.getRight(), new Node<>(successor)));
+                return root;
+            } else if (root.getRight() == null || root.getLeft() == null) {
+                if (root.getLeft() == null) {
+                    return root.getRight();
+                } else {
+                    return root.getLeft();
+                }
+            } else {
+                return null;
+            }
+        }
+        return root;
+    }
+
+    private E minRight(Node<E> right) {
+        if (root.getLeft() != null) {
+            return minRight(root.getLeft());
+        } else {
+            return root.getData();
+        }
+    }
+
 }
 
