@@ -113,49 +113,57 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
                 }
             }
             if (current != null) {
-                if (isLeafNode(current)) {
+                if (current.getLeft() != null && current.getRight() != null) {
+                    Node<E> successor = getSuccessor(current);
+                    //delete successor
+                    delete(successor.getData());
+                    successor.setLeft(current.getLeft());
+                    successor.setRight(current.getRight());
+                    //root case
                     if (parent == null) {
-                        root = null;
+                        root = successor;
                     } else {
                         if (data.compareTo(parent.getData()) < 0) {
+                            parent.setLeft(successor);
+                        } else {
+                            parent.setRight(successor);
+                        }
+                    }
+                } else if (isLeftChild(current)) {
+                    if (current.getData().compareTo(parent.getData()) < 0) {
+                        if (current.getLeft() != null) {
+                            parent.setLeft(current.getLeft());
+                        } else {
                             parent.setLeft(null);
+                        }
+                    } else {
+                        if (current.getLeft() != null) {
+                            parent.setLeft(current.getLeft());
+                        } else {
+                            parent.setLeft(null);
+                        }
+                    }
+                } else if (isRightChild(current)) {
+                    if (current.getData().compareTo(parent.getData()) < 0) {
+                        if (current.getRight() != null) {
+                            parent.setLeft(current.getRight());
+                        } else {
+                            parent.setLeft(null);
+                        }
+                    } else {
+                        if (current.getRight() != null) {
+                            parent.setRight(current.getRight());
                         } else {
                             parent.setRight(null);
                         }
                     }
-                }
-            } else if (isLeftChild(current)) {
-                if (parent == null) {
-                    root = root.getLeft();
                 } else {
-                    if (data.compareTo(parent.getData()) < 0) {
-                        parent.setLeft(current.getLeft());
+                    if (current == root) {
+                        root = null;
+                    } else if (data.compareTo(parent.getLeft().getData()) == 0) {
+                        parent.setLeft(null);
                     } else {
-                        parent.setRight(current.getLeft());
-                    }
-                }
-            } else if (isRightChild(current)) {
-                if (parent == null) {
-                    root = root.getRight();
-                } else {
-                    if (data.compareTo(parent.getData()) < 0) {
-                        parent.setLeft(current.getRight());
-                    } else {
-                        parent.setRight(current.getRight());
-                    }
-                }
-            } else {
-                Node<E> successor = getSuccessor(current);
-                delete(successor.getData());
-                successor.setLeft(current.getLeft());
-                successor.setRight(current.getRight());
-                if (parent == null) {
-                    root = successor;
-                } else {
-                    if (data.compareTo(parent.getData()) < 0) {
-                        parent.setLeft(successor);
-                    } else {
-                        parent.setRight(successor);
+                        parent.setRight(null);
                     }
                 }
             }

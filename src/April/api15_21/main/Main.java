@@ -19,6 +19,7 @@ public class Main {
         bstree.insert(95);
         bstree.insert(105);
         bstree.insert(115);
+        bstree.insert(97);
         bstree.inOrder(bstree.root);
         System.out.println();
         bstree.preOrder(bstree.root);
@@ -26,7 +27,9 @@ public class Main {
         bstree.postOrder(bstree.root);
         System.out.println();
         System.out.println(bstree.height(bstree.root));
-        System.out.println(bstree.search(85));
+        bstree.delete(110);
+        bstree.inOrder(bstree.root);
+        System.out.println();
     }
 }
 
