@@ -145,12 +145,10 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
                     }
                 }
             } else {
-                Node<E> suceessor = getSuccessor(current);
                 Node<E> successor = getSuccessor(current);
                 delete(successor.getData());
                 successor.setLeft(current.getLeft());
                 successor.setRight(current.getRight());
-                //root case
                 if (parent == null) {
                     root = successor;
                 } else {

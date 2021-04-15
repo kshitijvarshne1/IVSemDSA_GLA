@@ -26,8 +26,7 @@ public class Main {
         bstree.postOrder(bstree.root);
         System.out.println();
         System.out.println(bstree.height(bstree.root));
-        System.out.println();
-        System.out.println(bstree.height(bstree.root));
+        System.out.println(bstree.search(85));
     }
 }
 
