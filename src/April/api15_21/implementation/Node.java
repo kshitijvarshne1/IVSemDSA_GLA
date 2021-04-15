@@ -41,6 +41,5 @@ public class Node<E extends Comparable<E>> implements April.api15_21.myinterface
     public void setRight(Node<E> right) {
         this.right = right;
     }
-
 }
 
