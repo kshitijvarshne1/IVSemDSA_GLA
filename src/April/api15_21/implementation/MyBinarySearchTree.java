@@ -7,21 +7,20 @@
 
 package April.api15_21.implementation;
 
-
 import April.api15_21.myinterface.BinarySearchTreeADT;
 
 public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearchTreeADT<E> {
     public Node<E> root;
 
+
     public MyBinarySearchTree() {
         this.root = null;
     }
 
-
     @Override
     public void insert(E data) {
-        if (root == null) {
-            root = new Node<>(data);
+        if (this.root == null) {
+            this.root = new Node<>(data);
         } else {
             Node<E> parent;
             Node<E> current = root;
@@ -49,22 +48,30 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
     }
 
     @Override
-    public void inOrder(April.api15_21.myinterface.Node<E> node) {
+    public void inOrder(Node<E> node) {
+        if (node != null) {
+            inOrder(node.getLeft());
+            System.out.print(node.getData() + " ");
+            inOrder(node.getRight());
+        }
+    }
+
+    @Override
+    public void preOrder(Node<E> node) {
+        if (node != null) {
+            System.out.print(node.getData() + " ");
+            preOrder(node.getLeft());
+            preOrder(node.getRight());
+        }
+    }
+
+    @Override
+    public void postOrder(Node<E> node) {
 
     }
 
     @Override
-    public void preOrder(April.api15_21.myinterface.Node<E> node) {
-
-    }
-
-    @Override
-    public void postOrder(April.api15_21.myinterface.Node<E> node) {
-
-    }
-
-    @Override
-    public void reverseInOrder(April.api15_21.myinterface.Node<E> node) {
+    public void reverseInOrder(Node<E> node) {
 
     }
 
@@ -74,8 +81,10 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
     }
 
     @Override
-    public int height(April.api15_21.myinterface.Node<E> node) {
+    public int height(Node<E> node) {
         return 0;
     }
+
+
 }
 
