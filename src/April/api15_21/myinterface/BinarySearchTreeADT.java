@@ -5,15 +5,15 @@ public interface BinarySearchTreeADT<E extends Comparable<E>> {
 
     boolean search(E searchElement);
 
-    void inOrder(Node<E> node);
+    void inOrder(April.api15_21.implementation.Node<E> node);
 
-    void preOrder(Node<E> node);
+    void preOrder(April.api15_21.implementation.Node<E> node);
 
-    void postOrder(Node<E> node);
+    void postOrder(April.api15_21.implementation.Node<E> node);
 
-    void reverseInOrder(Node<E> node);
+    void reverseInOrder(April.api15_21.implementation.Node<E> node);
 
     void delete(E data);
 
-    int height(Node<E> node);
+    int height(April.api15_21.implementation.Node<E> node);
 }
