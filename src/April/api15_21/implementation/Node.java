@@ -17,5 +17,30 @@ public class Node<E extends Comparable<E>> implements April.api15_21.myinterface
         this.left = null;
         this.right = null;
     }
+
+    public int getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
+    public Node<E> getLeft() {
+        return left;
+    }
+
+    public void setLeft(Node<E> left) {
+        this.left = left;
+    }
+
+    public Node<E> getRight() {
+        return right;
+    }
+
+    public void setRight(Node<E> right) {
+        this.right = right;
+    }
+
 }
 
