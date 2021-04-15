@@ -7,6 +7,15 @@
 
 package April.api15_21.implementation;
 
-public class Node {
+public class Node<E extends Comparable<E>> implements April.api15_21.myinterface.Node {
+    private int data;
+    private Node<E> left;
+    private Node<E> right;
+
+    public Node(int data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
 }
 
