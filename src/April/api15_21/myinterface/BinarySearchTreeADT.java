@@ -16,5 +16,4 @@ public interface BinarySearchTreeADT<E extends Comparable<E>> {
     void delete(E data);
 
     int height(Node<E> node);
-
 }
