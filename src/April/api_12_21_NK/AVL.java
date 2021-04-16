@@ -13,5 +13,10 @@ public class AVL {
     public AVL() {
         this.root = null;
     }
+
+    public int max(int lhs, int rhs) {
+        return lhs > rhs ? lhs : rhs;
+    }
+
 }
 
