@@ -81,7 +81,7 @@ public class AVL {
         }
         newNode.right = root;
         root.height = 1 + max(height(root.left), height(root.right));
-        newNode.height = 1 + max(height(newNode.left), root.height);
+        newNode.height = 1 + max(height(newNode.left), height(newNode.right));
 
         return newNode;
     }
@@ -94,6 +94,9 @@ public class AVL {
             root.right = null;
         }
         newNode.left = root;
+        root.height = 1 + max(height(root.left), height(root.right));
+        newNode.height = 1 + max(height(newNode.left), height(newNode.right));
+
         return newNode;
     }
 

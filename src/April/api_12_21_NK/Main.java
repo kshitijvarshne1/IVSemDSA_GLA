@@ -14,7 +14,7 @@ public class Main {
         tree.bfs();
         tree.insert(new Node(95));
         tree.bfs();
-        tree.insert(new Node(96));
+        tree.insert(new Node(91));
         tree.bfs();
     }
 }
