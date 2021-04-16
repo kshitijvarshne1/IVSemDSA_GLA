@@ -7,6 +7,9 @@
 
 package April.api_12_21_NK;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class AVL {
     public Node root;
 
@@ -39,7 +42,7 @@ public class AVL {
                     root = rightRightRotation(root);
                 } else {
                     //LR problem
-                    root = doubleRotationWithleftChild(root);
+                    root = doubleRotationWithLeftChild(root);
                 }
             }
         } else if (newNode.data > root.data) {
@@ -64,7 +67,7 @@ public class AVL {
         return leftLeftRotation(root);
     }
 
-    private Node doubleRotationWithleftChild(Node root) {
+    private Node doubleRotationWithLeftChild(Node root) {
         root.left = leftLeftRotation(root.left);
         return rightRightRotation(root);
     }
@@ -85,6 +88,30 @@ public class AVL {
         }
         newNode.left = root;
         return newNode;
+    }
+
+    public void bsf() {
+        if (root != null) {
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while (!q.isEmpty()) {
+                Node temp = q.remove();
+                if (temp != null) {
+                    System.out.print(temp.data + " ");
+                    if (temp.left != null) {
+                        q.add(temp.left);
+                    }
+                    if (temp.right != null) {
+                        q.add(temp.right);
+                    }
+                } else if (!q.isEmpty()) {
+                    System.out.println();
+                    q.add(null);
+                }
+
+            }
+        }
     }
 }
 
