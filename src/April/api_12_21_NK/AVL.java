@@ -18,5 +18,8 @@ public class AVL {
         return lhs > rhs ? lhs : rhs;
     }
 
+    public int height(Node node) {
+        return node == null ? -1 : node.height;
+    }
 }
 
