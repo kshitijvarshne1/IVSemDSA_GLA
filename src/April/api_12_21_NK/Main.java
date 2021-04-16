@@ -8,5 +8,14 @@
 package April.api_12_21_NK;
 
 public class Main {
+    public static void main(String[] args) {
+        AVL tree = new AVL();
+        tree.insert(new Node(100));
+        tree.bfs();
+        tree.insert(new Node(95));
+        tree.bfs();
+        tree.insert(new Node(96));
+        tree.bfs();
+    }
 }
 

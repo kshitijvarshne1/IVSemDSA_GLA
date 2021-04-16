@@ -41,7 +41,7 @@ public class AVL {
                     // Problem :- LL
                     root = rightRightRotation(root);
                 } else {
-                    //LR problem
+                    // LR problem
                     root = doubleRotationWithLeftChild(root);
                 }
             }
@@ -50,15 +50,15 @@ public class AVL {
             if (height(root.left) - height(root.right) == -2) {
                 if (newNode.data > root.right.data) {
                     // right skewed tree
-                    //Problem :- RR
+                    // Problem :- RR
                     root = leftLeftRotation(root);
                 } else {
-                    //RL Problem
+                    // RL Problem
                     root = doubleRotationWithRightChild(root);
                 }
             }
         }
-        root.height = max(height(root.left), height(root.right)) + 1;
+        root.height = 1 + max(height(root.left), height(root.right));
         return root;
     }
 
@@ -76,8 +76,13 @@ public class AVL {
         Node newNode = root.left;
         if (root.left.right != null) {
             root.left = root.left.right;
+        } else {
+            root.left = null;
         }
         newNode.right = root;
+        root.height = 1 + max(height(root.left), height(root.right));
+        newNode.height = 1 + max(height(newNode.left), root.height);
+
         return newNode;
     }
 
@@ -85,12 +90,14 @@ public class AVL {
         Node newNode = root.right;
         if (root.right.left != null) {
             root.right = root.right.left;
+        } else {
+            root.right = null;
         }
         newNode.left = root;
         return newNode;
     }
 
-    public void bsf() {
+    public void bfs() {
         if (root != null) {
             Queue<Node> q = new LinkedList<>();
             q.add(root);
@@ -111,6 +118,7 @@ public class AVL {
                 }
 
             }
+            System.out.println();
         }
     }
 }
