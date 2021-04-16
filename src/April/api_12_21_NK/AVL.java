@@ -39,14 +39,29 @@ public class AVL {
                     root = rightRightRotation(root);
                 } else {
                     //LR problem
-                    root = doubleRotationWithlaftChild(root);
+                    root = doubleRotationWithleftChild(root);
                 }
             }
         } else if (newNode.data > root.data) {
             root.right = insert(root.right, newNode);
+            if (height(root.left) - height(root.right) == -2) {
+                if (newNode.data > root.right.data) {
+                    // right skewed tree
+                    //Problem :- RR
+                    root = leftLeftRotation(root);
+                } else {
+                    //RL Problem
+                    root = doubleRotationWithRightChild(root);
+                }
+            }
         }
         root.height = max(height(root.left), height(root.right)) + 1;
         return root;
+    }
+
+    private Node doubleRotationWithRightChild(Node root) {
+        root.right = rightRightRotation(root.right);
+        return leftLeftRotation(root);
     }
 
     private Node doubleRotationWithleftChild(Node root) {
