@@ -37,6 +37,9 @@ public class AVL {
                     // left skewed tree
                     // Problem :- LL
                     root = rightRightRotation(root);
+                } else {
+                    //LR problem
+                    root =
                 }
             }
         } else if (newNode.data > root.data) {
@@ -52,6 +55,15 @@ public class AVL {
             root.left = root.left.right;
         }
         newNode.right = root;
+        return newNode;
+    }
+
+    private Node leftLeftRotation(Node root) {
+        Node newNode = root.right;
+        if (root.right.left != null) {
+            root.right = root.right.left;
+        }
+        newNode.left = root;
         return newNode;
     }
 }
