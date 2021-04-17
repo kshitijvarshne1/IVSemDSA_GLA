@@ -15,11 +15,11 @@ public class Node {
     public int height;
 
     //Constructor
-    public Node(int data, int height) {
+    public Node(int data) {
         this.data = data;
         this.left = null;
         this.right = null;
-        this.height = height;
+        this.height = 0;
     }
 }
 
