@@ -43,7 +43,7 @@ public class AVL {
                     root = RRRotation(root);
                 } else {
                     // LR problem
-                    root = doubleRotationWithRightChild(root);
+                    root = doubleRotationWithLeftChild(root);
                 }
             }
         } else if (newNode.data > root.data) {
@@ -61,8 +61,9 @@ public class AVL {
         return root;
     }
 
-    private Node doubleRotationWithRightChild(Node root) {
-
+    private Node doubleRotationWithLeftChild(Node root) {
+        root.left = LLRotation(root.left);
+        return RRRotation(root);
     }
 
     private Node RRRotation(Node root) {
