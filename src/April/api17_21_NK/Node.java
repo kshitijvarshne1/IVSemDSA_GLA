@@ -21,6 +21,5 @@ public class Node {
         this.right = null;
         this.height = height;
     }
-
 }
 
