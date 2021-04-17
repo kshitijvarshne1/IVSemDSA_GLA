@@ -17,5 +17,9 @@ public class AVL {
     public AVL() {
         this.root = null;
     }
+
+    public int height(Node node) {
+        return node == null ? -1 : node.height;
+    }
 }
 
