@@ -21,5 +21,9 @@ public class AVL {
     public int height(Node node) {
         return node == null ? -1 : node.height;
     }
+
+    public int max(int lhs, int rhs) {
+        return lhs > rhs ? lhs : rhs;
+    }
 }
 
