@@ -7,6 +7,15 @@
 
 package April.api17_21_NK;
 
+//A -> Adelson
+//V -> Velsky
+//L -> Landis
+
 public class AVL {
+    public Node root;
+
+    public AVL() {
+        this.root = null;
+    }
 }
 
