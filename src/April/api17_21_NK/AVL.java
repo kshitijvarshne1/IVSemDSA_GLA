@@ -11,6 +11,9 @@ package April.api17_21_NK;
 //V -> Velsky
 //L -> Landis
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class AVL {
     public Node root;
 
@@ -98,5 +101,30 @@ public class AVL {
         newNode.height = 1 + max(height(newNode.left), height(newNode.right));
         return newNode;
     }
+
+    public void bfs() {
+        if (root != null) {
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while (!q.isEmpty()) {
+                Node temp = q.remove();
+                if (temp != null) {
+                    System.out.print(temp.data + " ");
+                    if (temp.left != null) {
+                        q.add(temp.left);
+                    }
+                    if (temp.right != null) {
+                        q.add(temp.right);
+                    }
+                } else if (!q.isEmpty()) {
+                    System.out.println();
+                    q.add(null);
+                }
+            }
+            System.out.println();
+        }
+    }
+
 }
 
