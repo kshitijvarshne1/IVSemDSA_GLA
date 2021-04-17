@@ -124,7 +124,7 @@ public class AVL {
             }
             System.out.println();
         }
-    }
 
+    }
 }
 
