@@ -52,13 +52,20 @@ public class AVL {
                 if (newNode.data > root.right.data) {
                     // RR problem
                     // right skewed tree
+                    root = LLRotation(root);
                 } else {
                     // RL problem
+                    root = doubleRotationWithRightChild(root);
                 }
             }
         }
         root.height = 1 + max(height(root.left), height(root.right));
         return root;
+    }
+
+    private Node doubleRotationWithRightChild(Node root) {
+        root.right = RRRotation(root.right);
+        return LLRotation(root);
     }
 
     private Node doubleRotationWithLeftChild(Node root) {
