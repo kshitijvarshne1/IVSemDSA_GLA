@@ -23,7 +23,6 @@ public class LinearSearch {
         int element = sc.nextInt();
         System.out.println(searchElement(a, element));
     }
-
     private static int searchElement(int[] a, int element) {
         for (int i = 0; i < a.length; i++) {
             if (a[i] == element) {
