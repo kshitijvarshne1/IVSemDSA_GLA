@@ -30,7 +30,7 @@ public class RecursiveBinarySearch {
             if (a[mid] == element) {
                 return mid;
             }
-            if (a[mid] < element) {
+            if (a[mid] > element) {
                 return recursiveBinarySearch(a, s, mid - 1, element);
             } else {
                 return recursiveBinarySearch(a, mid + 1, e, element);
@@ -38,5 +38,6 @@ public class RecursiveBinarySearch {
         }
         return -1;
     }
+
 }
 
