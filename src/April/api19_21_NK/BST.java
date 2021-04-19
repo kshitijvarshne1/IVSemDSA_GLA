@@ -104,7 +104,9 @@ public class BST {
                             parent.right = current.left;
                         }
                     }
-                } else if (current.left == null && current.right != null) {
+                }
+                // having only right child
+                else if (current.left == null && current.right != null) {
                     if (parent == null) {
                         root = root.right;
                     } else {
