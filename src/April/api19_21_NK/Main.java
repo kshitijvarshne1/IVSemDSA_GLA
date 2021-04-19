@@ -16,7 +16,6 @@ public class Main {
         bstree.bfs();
         bstree.insert(new Node(110));
         bstree.bfs();
-
     }
 }
 
