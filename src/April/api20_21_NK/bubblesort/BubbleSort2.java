@@ -27,8 +27,6 @@ public class BubbleSort2 {
             System.out.println();
         }
         System.out.println(Arrays.toString(arr));
-
-
     }
 }
     /*First Pass:
