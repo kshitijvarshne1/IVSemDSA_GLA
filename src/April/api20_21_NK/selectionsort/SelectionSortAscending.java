@@ -17,6 +17,8 @@ The algorithm maintains two subarrays in a given array.
 
 In every iteration of selection sort, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.*/
 
+// Not preferred in large volume of data
+
 import java.util.Arrays;
 
 public class SelectionSortAscending {
@@ -37,4 +39,22 @@ public class SelectionSortAscending {
         System.out.println(Arrays.toString(arr));
     }
 }
+/*
+arr[] = 64 25 12 22 11
 
+// Find the minimum element in arr[0...4]
+// and place it at beginning
+    11 25 12 22 64
+
+// Find the minimum element in arr[1...4]
+// and place it at beginning of arr[1...4]
+    11 12 25 22 64
+
+// Find the minimum element in arr[2...4]
+// and place it at beginning of arr[2...4]
+    11 12 22 25 64
+
+// Find the minimum element in arr[3...4]
+// and place it at beginning of arr[3...4]
+    11 12 22 25 64
+ */
