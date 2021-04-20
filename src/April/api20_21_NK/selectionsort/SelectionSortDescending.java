@@ -27,6 +27,5 @@ public class SelectionSortDescending {
         }
         System.out.println(Arrays.toString(arr));
     }
-
 }
 
