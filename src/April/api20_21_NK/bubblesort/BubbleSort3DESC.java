@@ -8,5 +8,9 @@
 package April.api20_21_NK.bubblesort;
 
 public class BubbleSort3DESC {
+    public static void main(String[] args) {
+        int[] a = {5, 1, 4, 2, 8};
+
+    }
 }
 
