@@ -7,6 +7,8 @@
 
 package April.api20_21_NK.insertionsort;
 
+import java.util.Arrays;
+
 public class InsertionSort2 {
     public static void main(String[] args) {
         int[] a = {5, 4, 10, 1, 6, 2};
@@ -19,6 +21,7 @@ public class InsertionSort2 {
             }
             a[j + 1] = temp;
         }
+        System.out.println(Arrays.toString(a));
     }
 }
 
