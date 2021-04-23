@@ -18,6 +18,37 @@ public class MergeSort {
     }
 
     public void merge(int[] a, int l, int mid, int r) {
+        int n1 = mid - l + 1;
+        int n2 = r - (mid + 1) + 1; //== r-mid
+        int[] L = new int[n1];
+        int[] R = new int[n2];
+        for (int i = 0; i < n1; i++) {
+            L[i] = a[l + i];
+        }
+        for (int i = 0; i < n2; i++) {
+            R[i] = a[mid + 1 + i];
+        }
+        int i = 0, j = 0, k = l;
+        while (i < n1 && j < n2) {
+            if (L[i] <= R[j]) {
+                a[k] = L[i];
+                i += 1;
+            } else {
+                a[k] = R[j];
+                j += 1;
+            }
+            k += 1;
+        }
+        while (i < mid) {
+            a[k] = a[i];
+            i += 1;
+            k += 1;
+        }
+        while (j < r) {
+            a[k] = a[j];
+            j += 1;
+            k += 1;
+        }
 
     }
 }
