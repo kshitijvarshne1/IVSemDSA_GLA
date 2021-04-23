@@ -8,5 +8,8 @@
 package April.api20_21_NK.mergesort.ascending;
 
 public class Main {
+    public static void main(String[] args) {
+
+    }
 }
 
