@@ -20,16 +20,18 @@ public class MergeSort {
     public void merge(int[] a, int l, int mid, int r) {
         int n1 = mid - l + 1;
         int n2 = r - (mid + 1) + 1; //== r-mid
-        int[] L = new int[n1];
-        int[] R = new int[n2];
+        int[] L = new int[n1 + 1];
+        int[] R = new int[n2 + 1];
         for (int i = 0; i < n1; i++) {
             L[i] = a[l + i];
         }
+        L[n1] = Integer.MAX_VALUE;
         for (int i = 0; i < n2; i++) {
             R[i] = a[mid + 1 + i];
         }
+        R[n2] = Integer.MAX_VALUE;
         int i = 0, j = 0, k = l;
-        while (i < n1 && j < n2) {
+        while (k <= r) {
             if (L[i] <= R[j]) {
                 a[k] = L[i];
                 i += 1;
@@ -37,16 +39,6 @@ public class MergeSort {
                 a[k] = R[j];
                 j += 1;
             }
-            k += 1;
-        }
-        while (i < n1) {
-            a[k] = L[i];
-            i += 1;
-            k += 1;
-        }
-        while (j < n2) {
-            a[k] = R[j];
-            j += 1;
             k += 1;
         }
     }
