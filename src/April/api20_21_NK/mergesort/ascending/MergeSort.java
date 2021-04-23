@@ -38,6 +38,20 @@ public class MergeSort {
             k += 1;
         }
 
+        if (i > mid) {
+            while (j <= r) {
+                arr[k] = a[j];
+                j += 1;
+                k += 1;
+            }
+        } else {
+            while (i <= mid) {
+                arr[k] = a[i];
+                i += 1;
+                k += 1;
+            }
+        }
     }
+
 }
 
