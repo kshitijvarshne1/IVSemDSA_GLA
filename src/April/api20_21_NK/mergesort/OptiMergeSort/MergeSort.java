@@ -10,7 +10,7 @@ package April.api20_21_NK.mergesort.OptiMergeSort;
 public class MergeSort {
     public void mergeSort(int[] a, int l, int r) {
         if (l < r) {
-            int mid = l + r / 2;
+            int mid = (l + r) / 2;
             mergeSort(a, l, mid);
             mergeSort(a, mid + 1, r);
             merge(a, l, mid, r);
@@ -39,13 +39,13 @@ public class MergeSort {
             }
             k += 1;
         }
-        while (i < mid) {
-            a[k] = a[i];
+        while (i < n1) {
+            a[k] = L[i];
             i += 1;
             k += 1;
         }
-        while (j < r) {
-            a[k] = a[j];
+        while (j < n2) {
+            a[k] = R[j];
             j += 1;
             k += 1;
         }
