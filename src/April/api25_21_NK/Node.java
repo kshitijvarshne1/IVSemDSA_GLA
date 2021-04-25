@@ -7,6 +7,15 @@
 
 package April.api25_21_NK;
 
-public class Node {
+public class Node<T extends Comparable<T>> {
+    private T data;
+    private Node<T> left;
+    private Node<T> right;
+
+    public Node(T data, Node<T> left, Node<T> right) {
+        this.data = data;
+        this.left = left;
+        this.right = right;
+    }
 }
 
