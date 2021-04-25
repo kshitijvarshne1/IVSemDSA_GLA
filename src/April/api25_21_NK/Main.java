@@ -16,6 +16,8 @@ public class Main {
         bsttree.insert(new Node<>(105));
         bsttree.bsf();
         System.out.println(bsttree.search(new Node<>(105)));
+        bsttree.delete(new Node<>(11000));
+
     }
 }
 
