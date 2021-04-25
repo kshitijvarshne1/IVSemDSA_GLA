@@ -15,6 +15,20 @@ public class BST<T extends Comparable<T>> {
     }
 
     public void insert(Node<T> newNode) {
+        this.root = insert(this.root, newNode);
+    }
+
+    private Node<T> insert(Node<T> root, Node<T> newNode) {
+        if (root == null) {
+            root = newNode;
+            return root;
+        }
+        if (newNode.getData().compareTo(root.getData()) <= 0) {
+            root.setLeft(newNode);
+        } else {
+            root.setRight(newNode);
+        }
+        return root;
     }
 
 }
