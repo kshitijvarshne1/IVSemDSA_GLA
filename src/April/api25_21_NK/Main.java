@@ -8,5 +8,14 @@
 package April.api25_21_NK;
 
 public class Main {
+    public static void main(String[] args) {
+        BST<Integer> bsttree = new BST<>();
+        bsttree.insert(new Node<>(100));
+        bsttree.bsf();
+        bsttree.insert(new Node<>(95));
+        bsttree.insert(new Node<>(105));
+        bsttree.bsf();
+        System.out.println(bsttree.search(new Node<>(105)));
+    }
 }
 
