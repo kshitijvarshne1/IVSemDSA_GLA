@@ -63,18 +63,60 @@ public class BST<T extends Comparable<T>> {
     }
 
     private boolean search(Node<T> root, Node<T> newNode) {
-        if (root == null) {
+        if (root != null) {
+            if (root.getData().compareTo(newNode.getData()) == 0) {
+                return true;
+            }
+            if (newNode.getData().compareTo(root.getData()) < 0) {
+                return search(root.getLeft(), newNode);
+            } else {
+                return search(root.getRight(), newNode);
+            }
+        } else {
             return false;
         }
-        if (root.getData().compareTo(newNode.getData()) == 0) {
-            return true;
-        }
-        if (newNode.getData().compareTo(root.getData()) < 0) {
-            search(root.getLeft(), newNode);
-        } else {
-            search(root.getRight(), newNode);
-        }
-        return false;
     }
+
+    public void delete(Node<T> newNode) {
+        this.root = delete(this.root, newNode);
+    }
+
+    private Node<T> delete(Node<T> root, Node<T> deleteNode) {
+        if (root == null) {
+            System.out.println("Not found");
+            return root;
+        } else if (deleteNode.getData().compareTo(root.getData()) < 0) {
+            root.setLeft(delete(root.getLeft(), deleteNode));
+        } else if (deleteNode.getData().compareTo(root.getData()) > 0) {
+            root.setRight(delete(root.getRight(), deleteNode));
+        } else {
+            // check two child
+            if (root.getLeft() != null && root.getRight() != null) {
+                Node<T> successor = successorFind(root.getRight());
+                root.setData(successor.getData());
+                root.setRight(delete(root.getRight(), successor));
+                return root;
+            } else if (root.getLeft() == null || root.getRight() == null) {
+                if (root.getLeft() == null) {
+                    return root.getRight();
+                } else {
+                    return root.getLeft();
+                }
+            }
+        }
+        return root;
+    }
+
+    private Node<T> successorFind(Node<T> right) {
+        if (root.getLeft() != null) {
+            Node<T> temp = root.getLeft();
+            while (temp != null) {
+                temp = temp.getLeft();
+            }
+            return temp;
+        }
+        return root;
+    }
+
 }
 
