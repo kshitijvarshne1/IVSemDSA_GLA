@@ -42,7 +42,7 @@ public class BST<T extends Comparable<T>> {
             while (!q.isEmpty()) {
                 Node<T> temp = q.remove();
                 if (temp != null) {
-                    System.out.println(temp.getData() + " ");
+                    System.out.print(temp.getData() + " ");
                     if (temp.getLeft() != null) {
                         q.add(temp.getLeft());
                     }
@@ -56,6 +56,25 @@ public class BST<T extends Comparable<T>> {
             }
             System.out.println();
         }
+    }
+
+    public boolean search(Node<T> newNode) {
+        return search(this.root, newNode);
+    }
+
+    private boolean search(Node<T> root, Node<T> newNode) {
+        if (root == null) {
+            return false;
+        }
+        if (root.getData().compareTo(newNode.getData()) == 0) {
+            return true;
+        }
+        if (newNode.getData().compareTo(root.getData()) < 0) {
+            search(root.getLeft(), newNode);
+        } else {
+            search(root.getRight(), newNode);
+        }
+        return false;
     }
 }
 
