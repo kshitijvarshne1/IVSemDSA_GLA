@@ -7,6 +7,15 @@
 
 package April.api25_21_NK;
 
-public class BST {
+public class BST<T extends Comparable<T>> {
+    public Node<T> root;
+
+    public BST() {
+        this.root = null;
+    }
+
+    public void insert(Node<T> newNode) {
+    }
+
 }
 
