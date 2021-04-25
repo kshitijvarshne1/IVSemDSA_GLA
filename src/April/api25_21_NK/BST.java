@@ -7,6 +7,9 @@
 
 package April.api25_21_NK;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BST<T extends Comparable<T>> {
     public Node<T> root;
 
@@ -31,5 +34,28 @@ public class BST<T extends Comparable<T>> {
         return root;
     }
 
+    public void bsf() {
+        if (root != null) {
+            Queue<Node<T>> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while (!q.isEmpty()) {
+                Node<T> temp = q.remove();
+                if (temp != null) {
+                    System.out.println(temp.getData() + " ");
+                    if (temp.getLeft() != null) {
+                        q.add(temp.getLeft());
+                    }
+                    if (temp.getRight() != null) {
+                        q.add(temp.getRight());
+                    }
+                } else if (!q.isEmpty()) {
+                    q.add(null);
+                    System.out.println();
+                }
+            }
+            System.out.println();
+        }
+    }
 }
 
