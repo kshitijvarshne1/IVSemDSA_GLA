@@ -32,6 +32,7 @@ public class BST {
 
     public void inorder() {
         inorder(this.root);
+        System.out.println();
     }
 
     private void inorder(Node root) {
@@ -40,7 +41,20 @@ public class BST {
             System.out.print(root.data + " ");
             inorder(root.right);
         }
+    }
+
+    public void preorder() {
+        preorder(this.root);
         System.out.println();
     }
+
+    private void preorder(Node root) {
+        if (root != null) {
+            System.out.print(root.data + " ");
+            preorder(root.left);
+            preorder(root.right);
+        }
+    }
+
 }
 
