@@ -56,5 +56,23 @@ public class BST {
         }
     }
 
+    public boolean search(Node searchElement) {
+        return search(root, searchElement);
+    }
+
+    private boolean search(Node root, Node searchElement) {
+        if (root != null) {
+            if (root.data == searchElement.data) {
+                return true;
+            }
+            if (searchElement.data <= root.data) {
+                return search(root.left, searchElement);
+            } else {
+                return search(root.right, searchElement);
+            }
+        }
+        return false;
+    }
+
 }
 
