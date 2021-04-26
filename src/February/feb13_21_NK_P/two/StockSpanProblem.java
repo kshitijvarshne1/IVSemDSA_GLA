@@ -22,6 +22,7 @@ public class StockSpanProblem {
             System.out.print(span[i] + " ");
         }
     }
+
     private static void stockSpan(int[] prices, int n, int[] span) {
         Stack<Integer> stack = new Stack<>();
         stack.push(0);

@@ -44,6 +44,7 @@ public class Execution {
         }
         return 1 + countNumberOfNodes(node.next);
     }
+
     //merge sort method is incomplete
     public static Node getMiddle(Node a) {
         if (a == null) {
