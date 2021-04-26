@@ -19,6 +19,5 @@ public class Main {
         bsttree.preorder();
         System.out.println(bsttree.search(new Node(96)));
     }
-
 }
 
