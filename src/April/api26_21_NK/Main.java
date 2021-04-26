@@ -17,6 +17,8 @@ public class Main {
         bsttree.insert(new Node(97));
         bsttree.inorder();
         bsttree.preorder();
+        System.out.println(bsttree.search(new Node(96)));
     }
+
 }
 
