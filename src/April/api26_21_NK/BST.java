@@ -102,7 +102,6 @@ public class BST {
             }
         }
         return root;
-
     }
 
     private int successor(Node right) {
