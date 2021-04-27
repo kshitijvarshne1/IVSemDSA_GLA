@@ -73,5 +73,41 @@ public class BST {
         }
         return false;
     }
+
+    public void delete(Node deleteElement) {
+        this.root = delete(this.root, deleteElement);
+    }
+
+    private Node delete(Node root, Node deleteElement) {
+        if (root == null) {
+            System.out.println("Not found");
+            return root;
+        }
+        if (deleteElement.data < root.data) {
+            root.left = delete(root.left, deleteElement);
+        } else if (deleteElement.data > root.data) {
+            root.right = delete(root.right, deleteElement);
+        } else {
+            if (root.left != null && root.right != null) {
+                int successorElement = successor(root.right);
+
+            } else if (root.left == null || root.right == null) {
+
+            }
+        }
+
+    }
+
+    private int successor(Node right) {
+        if (root.left != null) {
+            Node temp = root;
+            while (temp.left != null) {
+                temp = temp.left;
+            }
+            return temp.data;
+        } else {
+            return root.data;
+        }
+    }
 }
 
