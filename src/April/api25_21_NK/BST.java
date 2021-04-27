@@ -93,8 +93,8 @@ public class BST<T extends Comparable<T>> {
             // check two child
             if (root.getLeft() != null && root.getRight() != null) {
                 Node<T> successor = successorFind(root.getRight());
-                root.setData(successor.getData());
                 root.setRight(delete(root.getRight(), successor));
+                root.setData(successor.getData());
                 return root;
             } else if (root.getLeft() == null || root.getRight() == null) {
                 if (root.getLeft() == null) {
