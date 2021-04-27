@@ -90,11 +90,18 @@ public class BST {
         } else {
             if (root.left != null && root.right != null) {
                 int successorElement = successor(root.right);
-
+                delete(root.right, deleteElement);
+                root.data = successorElement;
+                return root;
             } else if (root.left == null || root.right == null) {
-
+                if (root.left == null) {
+                    return root.right;
+                } else {
+                    return root.left;
+                }
             }
         }
+        return root;
 
     }
 
