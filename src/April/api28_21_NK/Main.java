@@ -17,7 +17,6 @@ public class Main {
         bsttree.insert(new Node(105));
         bsttree.bfs();
         bsttree.inorder();
-
     }
 }
 
