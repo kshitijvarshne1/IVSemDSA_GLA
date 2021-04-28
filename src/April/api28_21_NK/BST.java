@@ -76,6 +76,5 @@ public class BST {
             inorder(root.right);
         }
     }
-
 }
 
