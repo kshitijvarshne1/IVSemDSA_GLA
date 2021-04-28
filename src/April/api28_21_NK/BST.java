@@ -25,7 +25,7 @@ public class BST {
             Node current = this.root;
             while (current != null) {
                 parent = current;
-                if (current.data <= newNode.data) {
+                if (newNode.data <= current.data) {
                     current = current.left;
                     if (current == null) {
                         parent.left = newNode;
@@ -60,7 +60,22 @@ public class BST {
                     q.add(null);
                 }
             }
+            System.out.println();
         }
     }
+
+    public void inorder() {
+        inorder(this.root);
+        System.out.println();
+    }
+
+    private void inorder(Node root) {
+        if (root != null) {
+            inorder(root.left);
+            System.out.print(root.data + " ");
+            inorder(root.right);
+        }
+    }
+
 }
 
