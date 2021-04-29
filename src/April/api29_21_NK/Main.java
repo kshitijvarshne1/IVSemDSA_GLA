@@ -9,7 +9,11 @@ package April.api29_21_NK;
 
 public class Main {
     public static void main(String[] args) {
+        int[] a = {5, 9, 1, 55, 3, 22, 66, 90};
+        quickSort(a, 0, a.length);
+    }
 
+    private static void quickSort(int[] a, int i, int length) {
     }
 }
 
