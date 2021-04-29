@@ -13,7 +13,13 @@ public class Main {
         quickSort(a, 0, a.length);
     }
 
-    private static void quickSort(int[] a, int i, int length) {
+    private static void quickSort(int[] a, int start, int end) {
+        if (start < end) {
+            int pivot = partition(a, start, end);
+        }
+    }
+
+    private static int partition(int[] a, int start, int end) {
     }
 }
 
