@@ -21,7 +21,6 @@ public class Main {
         bsttree.bfs();
         bsttree.delete(new Node(100));
         bsttree.bfs();
-
     }
 }
 
