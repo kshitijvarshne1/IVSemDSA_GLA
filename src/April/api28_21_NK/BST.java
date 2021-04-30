@@ -76,5 +76,87 @@ public class BST {
             inorder(root.right);
         }
     }
+
+    public void delete(Node deleteElement) {
+        if (this.root != null) {
+            Node current = this.root;
+            Node parent = null;
+            while (current != null) {
+                if (current.data == deleteElement.data) {
+                    break;
+                } else {
+                    parent = current;
+                    if (deleteElement.data < current.data) {
+                        current = current.left;
+                    } else {
+                        current = current.right;
+                    }
+                }
+            }
+            if (current != null) {
+                //1. leaf Case
+                if (current.left == null && current.right == null) {
+                    // root case
+                    if (current == root) {
+                        root = null;
+                    } else if (deleteElement.data < parent.data) {
+                        parent.left = null;
+                    } else {
+                        parent.right = null;
+                    }
+                }
+                // single child -> left child or right child
+                else if (current.left != null && current.right == null) {
+                    // left child
+                    if (current.left != null) {
+                        if (parent == null) {
+                            parent = current;
+                        } else if (deleteElement.data < parent.data) {
+                            parent.left = current.left;
+                        } else {
+                            parent.right = current.left;
+                        }
+                    }
+                } else if (current.left == null && current.right != null) {
+                    if (parent == null) {
+                        parent = current;
+                    } else if (deleteElement.data < parent.data) {
+                        parent.right = current.right;
+                    } else {
+                        parent.left = current.right;
+                    }
+                }
+                // having two child
+                else {
+                    Node successor = getSuccessor(current);
+                    delete(successor);
+                    successor.left = current.left;
+                    successor.right = current.right;
+                    if (parent == null) {
+                        root = successor;
+                    } else {
+                        if (deleteElement.data < parent.data) {
+                            parent.left = successor;
+                        } else {
+                            parent.right = successor;
+                        }
+                    }
+                }
+            } else {
+                System.out.println("Not found");
+            }
+        } else {
+            System.out.println("tree is empty");
+        }
+    }
+
+    private Node getSuccessor(Node current) {
+        Node temp = current.right;
+        while (temp.left != null) {
+            temp = temp.left;
+        }
+        return temp;
+    }
+
 }
 
