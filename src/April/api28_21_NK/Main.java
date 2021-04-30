@@ -11,12 +11,17 @@ public class Main {
     public static void main(String[] args) {
         BST bsttree = new BST();
         bsttree.insert(new Node(100));
-        bsttree.bfs();
         bsttree.insert(new Node(95));
-        bsttree.bfs();
         bsttree.insert(new Node(105));
+        bsttree.insert(new Node(92));
+        bsttree.insert(new Node(97));
+        bsttree.insert(new Node(110));
+        bsttree.insert(new Node(103));
+        bsttree.insert(new Node(108));
         bsttree.bfs();
-        bsttree.inorder();
+        bsttree.delete(new Node(100));
+        bsttree.bfs();
+
     }
 }
 
