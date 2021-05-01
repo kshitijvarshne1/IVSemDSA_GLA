@@ -157,5 +157,25 @@ public class BST {
         }
         return temp;
     }
+
+    public boolean search(Node searchElement) {
+        if (this.root != null) {
+            Node temp = this.root;
+            while (temp != null) {
+                if (temp.data == searchElement.data) {
+                    return true;
+                } else if (searchElement.data < temp.data) {
+                    temp = temp.left;
+                } else if (searchElement.data > temp.data) {
+                    temp = temp.right;
+                } else {
+                    return false;
+                }
+            }
+
+        }
+        return false;
+    }
+
 }
 
