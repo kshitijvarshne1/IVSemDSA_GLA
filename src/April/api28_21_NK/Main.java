@@ -23,6 +23,5 @@ public class Main {
         bsttree.bfs();
         System.out.println(bsttree.search(new Node(104)));
     }
-
 }
 
