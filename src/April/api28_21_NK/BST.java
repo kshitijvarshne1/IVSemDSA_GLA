@@ -66,6 +66,7 @@ public class BST {
 
     public void preorder() {
         preorder(this.root);
+        System.out.println();
     }
 
     private void preorder(Node root) {
