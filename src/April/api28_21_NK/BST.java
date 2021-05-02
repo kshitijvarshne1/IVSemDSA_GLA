@@ -64,6 +64,18 @@ public class BST {
         }
     }
 
+    public void preorder() {
+        preorder(this.root);
+    }
+
+    private void preorder(Node root) {
+        if (root != null) {
+            System.out.print(root.data + " ");
+            preorder(root.left);
+            preorder(root.right);
+        }
+    }
+
     public void inorder() {
         inorder(this.root);
         System.out.println();
