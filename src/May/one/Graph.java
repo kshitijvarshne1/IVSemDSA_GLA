@@ -7,6 +7,17 @@
 
 package May.one;
 
+import java.util.ArrayList;
+
 public class Graph {
+    ArrayList<ArrayList<Integer>> adj;
+
+    public Graph(int noOfVertics) {
+        adj = new ArrayList<>();
+        for (int i = 0; i < noOfVertics; i++) {
+            adj.add(new ArrayList<>());
+        }
+    }
+
 }
 
