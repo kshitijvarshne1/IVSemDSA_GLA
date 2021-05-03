@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] a = {5, 9, 1, 55, 3, 22, 66, 90};
+        int[] a = {73, 25, 66, 99, -5, 0, 23};
         quickSort(a, 0, a.length - 1);
         System.out.println(Arrays.toString(a));
     }
@@ -19,6 +19,8 @@ public class Main {
     private static void quickSort(int[] a, int start, int end) {
         if (start < end) {
             int pivot = partition(a, start, end);
+            System.out.println(Arrays.toString(a));
+            System.out.println();
             quickSort(a, start, pivot - 1);
             quickSort(a, pivot + 1, end);
 
