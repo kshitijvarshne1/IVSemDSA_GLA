@@ -31,7 +31,6 @@ public class BfsForDisconnectedGraph {
             adj.get(v).add(u);
         }
         printGraph(adj);
-
     }
 
     public static void printGraph(ArrayList<ArrayList<Integer>> adj) {
