@@ -29,5 +29,15 @@ public class Main {
             adj.get(v).add(u);
         }
     }
+
+    public static void printGraph(ArrayList<ArrayList<Integer>> adj) {
+        for (int i = 0; i < adj.size(); i++) {
+            System.out.print(adj.get(i) + " -> ");
+            for (int x : adj.get(i)) {
+                System.out.print(x + " ");
+            }
+            System.out.println();
+        }
+    }
 }
 
