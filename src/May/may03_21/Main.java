@@ -5,7 +5,7 @@
  *   File: Main.java
  */
 
-package May;
+package May.may03_21;
 
 import java.util.ArrayList;
 import java.util.Scanner;

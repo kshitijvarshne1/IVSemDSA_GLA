@@ -5,7 +5,7 @@
  *   File: Main.java
  */
 
-package May.one;
+package May.may03_21.one;
 
 public class Main {
     public static void main(String[] args) {
