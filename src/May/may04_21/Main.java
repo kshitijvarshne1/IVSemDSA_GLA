@@ -31,6 +31,8 @@ public class Main {
             adj.get(v).add(u);
         }
         printGraph(adj);
+        bfs(adj, 4, vertices);
+
     }
 
     public static void printGraph(ArrayList<ArrayList<Integer>> adj) {
@@ -43,7 +45,7 @@ public class Main {
         }
     }
 
-    public void bfs(ArrayList<ArrayList<Integer>> adj, int source, int vertices) {
+    public static void bfs(ArrayList<ArrayList<Integer>> adj, int source, int vertices) {
         // vertices = adj.size()
         boolean[] visited = new boolean[vertices + 1];
         Queue<Integer> q = new LinkedList<>();
