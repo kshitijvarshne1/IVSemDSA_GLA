@@ -32,7 +32,6 @@ public class Main {
         }
         printGraph(adj);
         bfs(adj, 4, vertices);
-
     }
 
     public static void printGraph(ArrayList<ArrayList<Integer>> adj) {
