@@ -18,5 +18,12 @@ public class MyGraph {
             adj.add(new ArrayList<>());
         }
     }
+
+    // for undirected graph
+    public void addEdge(int u, int v) {
+        adj.get(u).add(v);
+        adj.get(v).add(u);
+    }
+
 }
 
