@@ -18,6 +18,8 @@ public class Main {
         graph.addEdge(5, 6);
         graph.addEdge(6, 4);
         graph.printGraph();
+        graph.bfs(3);
     }
+
 }
 
