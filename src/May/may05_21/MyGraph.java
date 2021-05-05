@@ -25,5 +25,14 @@ public class MyGraph {
         adj.get(v).add(u);
     }
 
+    public void printGraph() {
+        for (ArrayList<Integer> x : adj) {
+            System.out.print(x + " ->");
+            for (Integer i : x) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+    }
 }
 
