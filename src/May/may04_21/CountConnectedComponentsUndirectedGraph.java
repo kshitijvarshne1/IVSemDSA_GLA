@@ -44,6 +44,7 @@ public class CountConnectedComponentsUndirectedGraph {
         }
     }
 
+
     public static int bfsDis(ArrayList<ArrayList<Integer>> adj, int vertices) {
         int count = 0;
         boolean[] visited = new boolean[vertices + 1];
