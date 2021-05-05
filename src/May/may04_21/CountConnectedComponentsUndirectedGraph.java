@@ -58,7 +58,6 @@ public class CountConnectedComponentsUndirectedGraph {
 
     public static void bfs(ArrayList<ArrayList<Integer>> adj, int source, int vertices, boolean[] visited) {
         // vertices = adj.size()
-
         Queue<Integer> q = new LinkedList<>();
         visited[source] = true;
         q.add(source);
