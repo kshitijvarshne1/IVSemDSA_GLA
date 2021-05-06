@@ -19,5 +19,9 @@ public class Graph {
         }
     }
 
+    public void addEdge(int u, int v) {
+        adj.get(u).add(v);
+        adj.get(v).get(u);
+    }
 }
 
