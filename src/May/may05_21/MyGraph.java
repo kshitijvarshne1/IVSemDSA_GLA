@@ -39,7 +39,6 @@ public class MyGraph {
         }
     }
 
-
     public void bfs(int source) {
         boolean[] visited = new boolean[adj.size() + 1];
         Queue<Integer> q = new LinkedList<>();
