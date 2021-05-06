@@ -8,5 +8,14 @@
 package May.may06_21;
 
 public class Main {
+    public static void main(String[] args) {
+        Graph gf = new Graph(4);
+        gf.addEdge(0, 1);
+        gf.addEdge(1, 2);
+        gf.addEdge(2, 3);
+        gf.addEdge(0, 2);
+        gf.addEdge(1, 3);
+        gf.printGraph();
+    }
 }
 
