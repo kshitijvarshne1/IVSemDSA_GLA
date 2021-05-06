@@ -71,5 +71,27 @@ public class MyGraph {
             }
         }
     }
+
+    public int countComponentsDFS() {
+        boolean[] visited = new boolean[adj.size()];
+        int count = 0;
+        for (int i = 0; i < adj.size(); i++) {
+            if (visited[i] == false) {
+                count += 1;
+                dfsRecCount(adj, i, visited);
+            }
+        }
+        return count;
+    }
+
+    private void dfsRecCount(ArrayList<ArrayList<Integer>> adj, int i, boolean[] visited) {
+        visited[i] = true;
+        for (int x : adj.get(i)) {
+            if (visited[x] == false) {
+                dfsRec(adj, x, visited);
+            }
+        }
+    }
+
 }
 
