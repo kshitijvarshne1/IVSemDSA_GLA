@@ -56,5 +56,20 @@ public class MyGraph {
         }
         System.out.println();
     }
+
+    public void dfs(int s) {
+        boolean[] visited = new boolean[adj.size()];
+        dfsRec(adj, s, visited);
+    }
+
+    private void dfsRec(ArrayList<ArrayList<Integer>> adj, int s, boolean[] visited) {
+        visited[s] = true;
+        System.out.print(s + " ");
+        for (int u : adj.get(s)) {
+            if (visited[u] == false) {
+                dfsRec(adj, u, visited);
+            }
+        }
+    }
 }
 
