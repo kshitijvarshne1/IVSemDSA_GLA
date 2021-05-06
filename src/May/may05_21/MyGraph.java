@@ -39,23 +39,19 @@ public class MyGraph {
         }
     }
 
+
     public void bfs(int source) {
+        boolean[] visited = new boolean[adj.size() + 1];
         Queue<Integer> q = new LinkedList<>();
-        ArrayList<Boolean> visited = new ArrayList<>();
-        for (int i = 0; i < adj.size(); i++) {
-            visited.add(i, true);
-        }
+        visited[source] = true;
         q.add(source);
-        visited.add(source, false);
         while (!q.isEmpty()) {
             int temp = q.remove();
             System.out.print(temp + " ");
-            for (ArrayList<Integer> x : adj) {
-                for (Integer i : x) {
-                    if (visited.get(i) == false) {
-                        visited.add(i, true);
-                        q.add(i);
-                    }
+            for (int v : adj.get(temp)) {
+                if (visited[v] == false) {
+                    visited[v] = true;
+                    q.add(v);
                 }
             }
         }
