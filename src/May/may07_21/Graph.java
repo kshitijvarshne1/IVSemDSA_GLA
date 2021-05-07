@@ -18,5 +18,11 @@ public class Graph {
             adj.add(new ArrayList<>());
         }
     }
+
+    public void addEdge(int u, int v) {
+        adj.get(u).add(v);
+        adj.get(v).add(u);
+    }
+
 }
 
