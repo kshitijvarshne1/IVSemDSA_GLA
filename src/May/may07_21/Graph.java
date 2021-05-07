@@ -28,10 +28,36 @@ public class Graph {
         for (int i = 0; i < adj.size(); i++) {
             System.out.print(i + " -> ");
             for (Integer integer : adj.get(i)) {
-                System.out.println(integer + " ");
+                System.out.print(integer + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public boolean DetectCycleInUndirectedGraph() {
+        boolean[] visited = new boolean[adj.size()];
+        for (int i = 0; i < adj.size(); i++) {
+            if (visited[i] == false) {
+                if (dfsRec(adj, i, visited, -1)) {
+                    return true;
+                }
             }
         }
-        System.out.println();
+        return false;
+    }
+
+    private boolean dfsRec(ArrayList<ArrayList<Integer>> adj, int i, boolean[] visited, int parent) {
+        visited[i] = true;
+        for (int u : adj.get(i)) {
+            if (visited[u] == false) {
+                if (dfsRec(adj, u, visited, i)) {
+                    return true;
+                }
+            } else if (u != parent) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 
