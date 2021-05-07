@@ -46,11 +46,11 @@ public class Graph {
         return false;
     }
 
-    private boolean dfsRec(ArrayList<ArrayList<Integer>> adj, int i, boolean[] visited, int parent) {
-        visited[i] = true;
-        for (int u : adj.get(i)) {
+    private boolean dfsRec(ArrayList<ArrayList<Integer>> adj, int s, boolean[] visited, int parent) {
+        visited[s] = true;
+        for (int u : adj.get(s)) {
             if (visited[u] == false) {
-                if (dfsRec(adj, u, visited, i)) {
+                if (dfsRec(adj, u, visited, s)) {
                     return true;
                 }
             } else if (u != parent) {
