@@ -18,7 +18,6 @@ public class Main {
         gf.addEdge(4, 5);
         gf.printGraph();
         System.out.println(gf.DetectCycleInUndirectedGraph());
-
     }
 }
 
