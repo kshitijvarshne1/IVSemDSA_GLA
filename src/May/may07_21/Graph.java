@@ -24,5 +24,14 @@ public class Graph {
         adj.get(v).add(u);
     }
 
+    public void printGraph() {
+        for (int i = 0; i < adj.size(); i++) {
+            System.out.print(i + " -> ");
+            for (Integer integer : adj.get(i)) {
+                System.out.println(integer + " ");
+            }
+        }
+        System.out.println();
+    }
 }
 
