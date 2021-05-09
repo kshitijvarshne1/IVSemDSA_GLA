@@ -54,5 +54,37 @@ public class Graph {
             }
         }
     }
+
+    // Cycle detection in directed graph using dfs ->> striver
+    public boolean dfsForCycle() {
+        boolean[] visited = new boolean[adj.size()];
+        Arrays.fill(visited, false);
+        boolean[] dfsVisited = new boolean[adj.size()];
+        Arrays.fill(dfsVisited, false);
+        for (int i = 0; i < adj.size(); i++) {
+            if (visited[i] == false) {
+                if (cycleCheck(adj, i, visited, dfsVisited)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean cycleCheck(ArrayList<ArrayList<Integer>> adj, int i, boolean[] visited, boolean[] dfsVisited) {
+        visited[i] = true;
+        dfsVisited[i] = true;
+        for (Integer j : adj.get(i)) {
+            if (visited[i] == false) {
+                if (cycleCheck(adj, j, visited, dfsVisited) == true) {
+                    return true;
+                }
+            } else if (dfsVisited[j] == true) {
+                return true;
+            }
+        }
+        dfsVisited[i] = false;
+        return false;
+    }
 }
 
