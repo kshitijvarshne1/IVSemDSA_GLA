@@ -18,7 +18,6 @@ public class Main {
         gf.addEdge(5, 3);
         gf.printGraph();
         System.out.println(gf.dfsCheckCycle());
-
     }
 }
 

@@ -34,7 +34,7 @@ public class Graph {
         }
     }
 
-    public boolean dfs() {
+    public boolean dfsCheckCycle() {
         boolean[] visited = new boolean[adj.size()];
         boolean[] recStack = new boolean[adj.size()];
         for (int i = 0; i < adj.size(); i++) {
