@@ -20,7 +20,6 @@ public class Main {
         gf.dfs();
         System.out.println();
         System.out.println(gf.dfsForCycle());
-
     }
 }
 

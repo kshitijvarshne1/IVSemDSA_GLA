@@ -75,7 +75,7 @@ public class Graph {
         visited[i] = true;
         dfsVisited[i] = true;
         for (Integer j : adj.get(i)) {
-            if (visited[i] == false) {
+            if (visited[j] == false) {
                 if (cycleCheck(adj, j, visited, dfsVisited) == true) {
                     return true;
                 }
