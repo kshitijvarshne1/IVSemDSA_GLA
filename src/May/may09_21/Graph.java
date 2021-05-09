@@ -27,7 +27,7 @@ public class Graph {
     public void printGraph() {
         for (int i = 0; i < adj.size(); i++) {
             System.out.print(i + " -> ");
-            for (int j = 0; j < adj.get(i).size(); j++) {
+            for (Integer j : adj.get(i)) {
                 System.out.print(j + " ");
             }
             System.out.println();
