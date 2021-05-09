@@ -8,6 +8,7 @@
 package May.may10_21;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Graph {
     ArrayList<ArrayList<Integer>> adj;
@@ -31,6 +32,26 @@ public class Graph {
                 System.out.print(j + " ");
             }
             System.out.println();
+        }
+    }
+
+    public void dfs() {
+        boolean[] visited = new boolean[adj.size()];
+        Arrays.fill(visited, false);
+        for (int i = 0; i < adj.size(); i++) {
+            if (visited[i] == false) {
+                dfsRec(adj, i, visited);
+            }
+        }
+    }
+
+    private void dfsRec(ArrayList<ArrayList<Integer>> adj, int i, boolean[] visited) {
+        visited[i] = true;
+        System.out.print(i + " ");
+        for (Integer j : adj.get(i)) {
+            if (visited[j] == false) {
+                dfsRec(adj, j, visited);
+            }
         }
     }
 }
