@@ -62,5 +62,6 @@ public class Graph {
         recStack[i] = true;
         return false;
     }
+    // topological sorting ->>> directed Acylic graph
 }
 

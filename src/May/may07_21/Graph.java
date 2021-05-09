@@ -8,6 +8,9 @@
 package May.may07_21;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Graph {
     ArrayList<ArrayList<Integer>> adj;
@@ -45,6 +48,7 @@ public class Graph {
         }
         return false;
     }
+
     private boolean dfsRec(ArrayList<ArrayList<Integer>> adj, int s, boolean[] visited, int parent) {
         visited[s] = true;
         for (int u : adj.get(s)) {
@@ -57,6 +61,53 @@ public class Graph {
             }
         }
         return false;
+    }
+
+
+    // Cycle detection Undirected ->> Striver
+
+
+    public boolean checkCycle() {
+        boolean[] visited = new boolean[adj.size()];
+        Arrays.fill(visited, false);
+        for (int i = 0; i < adj.size(); i++) {
+            if (bfsCheck(adj, i, visited) == false) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    private boolean bfsCheck(ArrayList<ArrayList<Integer>> adj, int i, boolean[] visited) {
+        Queue<Pair> q = new LinkedList<>();
+        q.add(new Pair(i, -1));
+        visited[i] = true;
+        while (!q.isEmpty()) {
+            Pair p = q.remove();
+            int x = p.a;
+            int prev = p.previous;
+            for (Integer it : adj.get(x)) {
+                if (visited[it] == false) {
+                    q.add(new Pair(it, x));
+                    visited[it] = true;
+                } else if (prev != it) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
+    class Pair {
+        int a;
+        int previous;
+
+        public Pair(int a, int previous) {
+            this.a = a;
+            this.previous = previous;
+        }
     }
 }
 
