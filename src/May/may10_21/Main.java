@@ -17,7 +17,7 @@ public class Main {
         gf.addEdge(4, 5);
         gf.addEdge(5, 3);
         gf.printGraph();
-
+        gf.dfs();
     }
 }
 
