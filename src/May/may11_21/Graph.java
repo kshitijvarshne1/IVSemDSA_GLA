@@ -7,10 +7,7 @@
 
 package May.may11_21;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Graph {
     ArrayList<ArrayList<Integer>> adj;
@@ -38,7 +35,7 @@ public class Graph {
     }
 
     // TopoSort for only Acylic graph
-    // Khan algorithm
+    // Khan algorithm  ->>>>>BFS
 
 
     public void toposort() {
@@ -69,4 +66,29 @@ public class Graph {
         }
         System.out.println();
     }
+
+
+    // TopoSort for only Acylic graph
+    // Khan algorithm  ->>>>>DFS
+    public void dfsTopo() {
+        boolean[] visited = new boolean[adj.size()];
+        Arrays.fill(visited, false);
+        Stack<Integer> s = new Stack<>();
+        for (int i = 0; i < adj.size(); i++) {
+            if (visited[i] == false) {
+                dfsResTopo(adj, i, visited, s);
+            }
+        }
+    }
+
+    private void dfsResTopo(ArrayList<ArrayList<Integer>> adj, int i, boolean[] visited, Stack<Integer> s) {
+        visited[i] = true;
+        for (Integer j : adj.get(i)) {
+            if (visited[j] == false) {
+                dfsResTopo(adj, j, visited, s);
+            }
+        }
+        s.push(i);
+    }
+
 }
