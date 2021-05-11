@@ -36,8 +36,10 @@ public class Graph {
             System.out.println();
         }
     }
+
     // TopoSort for only Acylic graph
     // Khan algorithm
+
 
     public void toposort() {
         int[] indegree = new int[adj.size()];
