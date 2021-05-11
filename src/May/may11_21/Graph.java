@@ -7,6 +7,16 @@
 
 package May.may11_21;
 
+import java.util.ArrayList;
+
 public class Graph {
+    ArrayList<ArrayList<Integer>> adj;
+
+    public Graph(int vertices) {
+        adj = new ArrayList<>();
+        for (int i = 0; i < vertices; i++) {
+            adj.add(new ArrayList<>());
+        }
+    }
 }
 
