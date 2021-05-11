@@ -16,6 +16,8 @@ public class Main {
         gf.addEdge(1, 3);
         gf.addEdge(1, 4);
         gf.printGraph();
+        gf.toposort();
+
     }
 }
 

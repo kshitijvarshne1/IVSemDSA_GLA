@@ -29,9 +29,9 @@ public class Graph {
 
     public void printGraph() {
         for (int i = 0; i < adj.size(); i++) {
-            System.out.print(i + " ");
+            System.out.print(i + " -> ");
             for (Integer j : adj.get(i)) {
-                System.out.print(j + " -> ");
+                System.out.print(j + " ");
             }
             System.out.println();
         }
@@ -57,7 +57,7 @@ public class Graph {
         }
         while (!q.isEmpty()) {
             int temp = q.remove();
-            System.out.print(temp);
+            System.out.print(temp + " ");
             for (Integer i : adj.get(temp)) {
                 indegree[i]--;
                 if (indegree[i] == 0) {
@@ -65,5 +65,6 @@ public class Graph {
                 }
             }
         }
+        System.out.println();
     }
 }
