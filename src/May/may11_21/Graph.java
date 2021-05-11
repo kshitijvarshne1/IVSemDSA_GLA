@@ -79,6 +79,10 @@ public class Graph {
                 dfsResTopo(adj, i, visited, s);
             }
         }
+        while(!s.isEmpty()){
+            System.out.print(s.pop()+" ");
+        }
+        System.out.println();
     }
 
     private void dfsResTopo(ArrayList<ArrayList<Integer>> adj, int i, boolean[] visited, Stack<Integer> s) {
