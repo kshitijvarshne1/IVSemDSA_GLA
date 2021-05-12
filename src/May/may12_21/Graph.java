@@ -14,13 +14,23 @@ public class Graph {
 
     public Graph(int vertices) {
         for (int i = 0; i < vertices; i++) {
-            adj.add(new ArrayList<>());
+            adj.add(new ArrayList<Pair>());
         }
     }
 
     //Directed Acylic graph->->-> DAG
     public void addEdge(int u, int v, int weight) {
         adj.get(u).add(new Pair(v, weight));
+    }
+
+    public void printGraph() {
+        for (int i = 0; i < adj.size(); i++) {
+            System.out.print(i + " ");
+            for (Pair k : adj.get(i)) {
+                System.out.print("{ " + k.a + " , " + k.b + " }");
+            }
+        }
+        System.out.println();
     }
 }
 
