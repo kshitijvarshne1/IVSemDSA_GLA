@@ -19,7 +19,6 @@ public class Main {
         gf.addEdge(5, 3, 1);
         gf.printGraph();
         gf.shortestPath(0);
-
     }
 }
 
