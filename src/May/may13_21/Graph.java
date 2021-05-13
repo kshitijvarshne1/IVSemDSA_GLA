@@ -55,7 +55,7 @@ public class Graph {
             int mini = Integer.MAX_VALUE;
             int u = 0;
             for (int v = 0; v < adj.size(); v++) {
-                if (mst[v] == false && key[v] < mini) {
+                if (mst[v] == false && key[v] < mini) {   // we can use priority queue ->striver
                     mini = key[v];
                     u = v;
                 }
@@ -76,7 +76,6 @@ public class Graph {
         }
         System.out.println();
         System.out.println(sum);
-
     }
 }
 
