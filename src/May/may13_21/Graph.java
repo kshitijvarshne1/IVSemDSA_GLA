@@ -35,10 +35,48 @@ public class Graph {
         for (int i = 0; i < adj.size(); i++) {
             System.out.print(i + " -> ");
             for (Pair j : adj.get(i)) {
-                System.out.print("{ " + j.v + " " + j.weight + " }");
+                System.out.print(" { " + j.v + " " + j.weight + " } ,");
             }
             System.out.println();
         }
+    }
+
+    public void prism() {
+        int[] key = new int[adj.size()];
+        int[] parent = new int[adj.size()];
+        boolean[] mst = new boolean[adj.size()];
+        for (int i = 0; i < adj.size(); i++) {
+            key[i] = Integer.MAX_VALUE;
+            parent[i] = -1;
+            mst[i] = false;
+        }
+        key[0] = 0;
+        for (int i = 0; i < adj.size() - 1; i++) {
+            int mini = Integer.MAX_VALUE;
+            int u = 0;
+            for (int v = 0; v < adj.size(); v++) {
+                if (mst[v] == false && key[v] < mini) {
+                    mini = key[v];
+                    u = v;
+                }
+            }
+            mst[u] = true;
+
+            for (Pair it : adj.get(u)) {
+                if (mst[it.v] == false && it.weight < key[it.v]) {
+                    parent[it.v] = u;
+                    key[it.v] = it.weight;
+                }
+            }
+        }
+        int sum = 0;
+        for (int i = 0; i < key.length; i++) {
+            System.out.print(key[i] + " ");
+            sum += key[i];
+        }
+        System.out.println();
+        System.out.println(sum);
+
     }
 }
 
