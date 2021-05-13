@@ -30,6 +30,8 @@ public class Main {
 
         gf.printGraph();
 
+        gf.prism();
+
     }
 }
 
