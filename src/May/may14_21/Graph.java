@@ -13,6 +13,7 @@ import java.util.ArrayList;
 // find shortest path from source to all vertices
 // 1- it does not work in negative weight
 // 2- if we add some edge then the output is changed for all vertices
+// Using priority queue -> T.C->  (N+E) log N  S.C-> O(N)+O(N)
 public class Graph {
     public ArrayList<ArrayList<Pair>> adj;
 
@@ -20,6 +21,16 @@ public class Graph {
         adj = new ArrayList<>();
         for (int i = 0; i < vertices; i++) {
             adj.add(new ArrayList<>());
+        }
+    }
+
+    public void printGraph() {
+        for (int i = 0; i < adj.size(); i++) {
+            System.out.print(i + " -> ");
+            for (Pair p : adj.get(i)) {
+                System.out.print("{ " + p.v + " , " + p.weight + " } ");
+            }
+            System.out.println();
         }
     }
 
