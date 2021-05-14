@@ -57,7 +57,6 @@ public class Graph {
         }
         return dist;
     }
-
 }
 
 class Pair implements Comparable<Pair> {

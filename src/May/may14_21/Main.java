@@ -32,7 +32,6 @@ public class Main {
         gf.addEdge(4, 2, 1);
         gf.printGraph();
         System.out.println(Arrays.toString(gf.dijkstra(0)));
-
     }
 }
 
