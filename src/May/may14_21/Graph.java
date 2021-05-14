@@ -8,6 +8,8 @@
 package May.may14_21;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.PriorityQueue;
 
 // Dijkstra algorithm
 // find shortest path from source to all vertices
@@ -38,15 +40,39 @@ public class Graph {
         }
     }
 
+    public int[] dijkstra(int source) {
+        int[] dist = new int[adj.size()];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[source] = 0;
+        PriorityQueue<Pair> pq = new PriorityQueue<>();
+        pq.add(new Pair(source, 0));
+        while (!pq.isEmpty()) {
+            Pair node = pq.remove();
+            for (Pair it : adj.get(node.v)) {
+                if (dist[it.v] > it.weight + dist[node.v]) {
+                    dist[it.v] = it.weight + dist[node.v];
+                    pq.add(new Pair(it.v, dist[it.v]));
+                }
+            }
+        }
+        return dist;
+    }
+
 }
 
-class Pair {
+class Pair implements Comparable<Pair> {
     int v;
     int weight;
 
     public Pair(int v, int weight) {
         this.v = v;
         this.weight = weight;
+    }
+
+
+    @Override
+    public int compareTo(Pair o) {
+        return Integer.compare(this.weight, o.weight);
     }
 }
 
