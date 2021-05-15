@@ -76,7 +76,6 @@ public class Graph {
                 System.out.println();
             }
         }
-
     }
 
     private void revDfs(int node, ArrayList<ArrayList<Integer>> tranpose, boolean[] visited) {
