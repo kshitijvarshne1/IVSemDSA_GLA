@@ -17,6 +17,8 @@ public class Main {
         gf.addEdge(1, 3);
         gf.addEdge(3, 4);
         gf.printGraph();
+        gf.kosaraju();
+
     }
 }
 
