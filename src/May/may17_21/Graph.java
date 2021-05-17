@@ -24,6 +24,16 @@ public class Graph {
     public void addEdge(int u, int v, int weight) {
         adj.get(u).add(new Pair(v, weight));
     }
+
+    public void printGraph() {
+        for (int i = 0; i < adj.size(); i++) {
+            System.out.print(i + " -> ");
+            for (Pair p : adj.get(i)) {
+                System.out.print("{ " + p.v + " , " + p.weight + " } ");
+            }
+            System.out.println();
+        }
+    }
 }
 
 class Pair {
