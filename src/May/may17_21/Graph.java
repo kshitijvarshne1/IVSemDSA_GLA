@@ -20,6 +20,10 @@ public class Graph {
             adj.add(new ArrayList<>());
         }
     }
+
+    public void addEdge(int u, int v, int weight) {
+        adj.get(u).add(new Pair(v, weight));
+    }
 }
 
 class Pair {
