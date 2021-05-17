@@ -6,7 +6,8 @@
  */
 
 package May.may17_21;
-
+// Bellman ford Shortest Path algorithm
+// Work in negative wight
 public class Graph {
 }
 

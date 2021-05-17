@@ -36,6 +36,7 @@ public class Graph {
         }
     }
 
+
     public void kosaraju() {
         //Step 1 -> sort all the node inorder to finishing time
         boolean[] visited = new boolean[adj.size()];
