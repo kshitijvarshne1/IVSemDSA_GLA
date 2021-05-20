@@ -38,5 +38,10 @@ public class SinglyLinkedList {
             System.out.println();
         }
     }
+
+    public void insertATBegin(Node newNode) {
+        newNode.next = head;
+        head = newNode;
+    }
 }
 
