@@ -13,5 +13,19 @@ public class SinglyLinkedList {
     public SinglyLinkedList() {
         this.head = null;
     }
+
+    public void insertAtEnd(Node newNode) {
+        if (head == null) {
+            head = newNode;
+        } else {
+            //copy
+            Node temp = head;
+            // loop and check
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
 }
 
