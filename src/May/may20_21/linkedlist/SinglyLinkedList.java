@@ -27,5 +27,16 @@ public class SinglyLinkedList {
             temp.next = newNode;
         }
     }
+
+    public void print() {
+        if (head != null) {
+            Node temp = head;
+            while (temp != null) {
+                System.out.print(temp.data + " -> ");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
+    }
 }
 
