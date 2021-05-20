@@ -23,12 +23,17 @@ public class Sample {
         }
         //O(n log n)
         for (int i = 0; i < n; i++) {
-            for (int i1 = 0; i1 < n; i1 += 3) {
+            for (int i1 = 0; i1 < n; i1 += 2) {
                 System.out.print(i1 + " ");
             }
             System.out.println();
         }
-
+        for (int i = 0; i < n; i += 2) {
+            for (int i1 = 0; i1 < n; i1++) {
+                System.out.print(i1 + " ");
+            }
+            System.out.println();
+        }
     }
 }
 
