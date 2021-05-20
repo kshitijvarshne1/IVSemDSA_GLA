@@ -8,5 +8,10 @@
 package May.may20_21.linkedlist;
 
 public class SinglyLinkedList {
+    public Node head;
+
+    public SinglyLinkedList() {
+        this.head = null;
+    }
 }
 
