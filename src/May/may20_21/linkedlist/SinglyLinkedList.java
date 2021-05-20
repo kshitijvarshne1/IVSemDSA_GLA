@@ -43,5 +43,6 @@ public class SinglyLinkedList {
         newNode.next = head;
         head = newNode;
     }
+
 }
 

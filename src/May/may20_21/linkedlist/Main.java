@@ -12,9 +12,9 @@ public class Main {
         SinglyLinkedList list = new SinglyLinkedList();
         list.insertAtEnd(new Node(4));
         list.print();
-        list.insertAtEnd(new Node(5));
+        list.insertATBegin(new Node(3));
         list.print();
-        list.insertAtEnd(new Node(6));
+        list.insertATBegin(new Node(2));
         list.print();
     }
 
