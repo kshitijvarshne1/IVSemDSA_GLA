@@ -8,5 +8,17 @@
 package May.may21_21;
 
 public class Main {
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertAtEnd(3);
+        list.insertAtEnd(4);
+        list.print();
+        list.insertAtMiddle(33);
+        list.print();
+        list.insertAtMiddle(44);
+        list.print();
+        list.insertAtMiddle(55);
+        list.print();
+    }
 }
 
