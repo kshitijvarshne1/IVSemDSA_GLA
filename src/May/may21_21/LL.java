@@ -36,5 +36,30 @@ public class LL {
             System.out.println();
         }
     }
+
+    public void insertAtMiddle(int data) {
+        if (head == null) {
+            head = new Node(data);
+        } else if (head.next == null) {
+            head.next = new Node(data);
+        } else {
+            Node temp = head;
+            int count = 0;
+            while (temp != null) {
+                count += 1;
+                temp = temp.next;
+            }
+            int middle = count / 2;
+            int i = 1;
+            temp = head;
+            while (i < middle) {
+                temp = temp.next;
+                i += 1;
+            }
+            Node newNode = new Node(data);
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+    }
 }
 
