@@ -19,6 +19,8 @@ public class Main {
         list.print();
         list.insertAtMiddle(55);
         list.print();
+        System.out.println(list.search(44));
+        System.out.println(list.search(11111));
     }
 }
 
