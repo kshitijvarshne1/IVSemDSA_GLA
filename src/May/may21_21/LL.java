@@ -59,7 +59,25 @@ public class LL {
             Node newNode = new Node(data);
             newNode.next = temp.next;
             temp.next = newNode;
+            // tortoise method  or slow and fast pointer
         }
+    }
+
+    public boolean search(int data) {
+        if (head != null) {
+            Node tmp = head;
+            while (tmp != null) {
+                if (tmp.data == data) {
+                    return true;
+                }
+                tmp = tmp.next;
+            }
+        }
+        return false;
+    }
+
+    public void deleteAtBegin() {
+
     }
 }
 
