@@ -8,5 +8,10 @@
 package May.may21_21;
 
 public class LL {
+    public Node head;
+
+    public LL() {
+        this.head = null;
+    }
 }
 
