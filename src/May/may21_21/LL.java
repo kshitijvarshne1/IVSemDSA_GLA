@@ -24,7 +24,17 @@ public class LL {
             }
             tmp.next = new Node(data);
         }
+    }
 
+    public void print() {
+        if (head != null) {
+            Node tmp = head;
+            while (tmp != null) {
+                System.out.print(tmp.data + " ->");
+                tmp = tmp.next;
+            }
+            System.out.println();
+        }
     }
 }
 
