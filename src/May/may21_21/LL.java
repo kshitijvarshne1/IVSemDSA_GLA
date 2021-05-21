@@ -13,5 +13,18 @@ public class LL {
     public LL() {
         this.head = null;
     }
+
+    public void insertAtEnd(int data) {
+        if (head == null) {
+            head = new Node(data);
+        } else {
+            Node tmp = head;
+            while (tmp.next != null) {
+                tmp = tmp.next;
+            }
+            tmp.next = new Node(data);
+        }
+
+    }
 }
 
