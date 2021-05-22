@@ -21,10 +21,12 @@ public class Main {
         list.print();
         System.out.println(list.search(44));
         System.out.println(list.search(11111));
-        list.deleteAtBegin();
+        /*list.deleteAtBegin();
         list.print();
-        list.deleteAtBegin();
+        list.deleteAtBegin();*/
         list.print();
+        list.deleteAtEnd();
+
 
     }
 }
