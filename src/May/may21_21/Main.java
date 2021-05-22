@@ -7,8 +7,6 @@
 
 package May.may21_21;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         LL list = new LL();
@@ -23,10 +21,10 @@ public class Main {
         list.print();
         System.out.println(list.search(44));
         System.out.println(list.search(11111));
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the element");
-        int element = sc.nextInt();
-        System.out.println(list.search(element));
+        list.deleteAtBegin();
+        list.print();
+        list.deleteAtBegin();
+        list.print();
 
     }
 }
