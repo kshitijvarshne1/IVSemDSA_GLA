@@ -81,5 +81,17 @@ public class LL {
             head = head.next;
         }
     }
+
+    public void deleteAtEnd() {
+        if (head == null || head.next == null) {
+            head = null;
+        } else {
+            Node temp = head;
+            while (temp.next.next != null) {
+                temp = temp.next;
+            }
+            temp.next = null;
+        }
+    }
 }
 
