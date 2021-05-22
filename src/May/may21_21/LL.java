@@ -77,7 +77,9 @@ public class LL {
     }
 
     public void deleteAtBegin() {
-
+        if (head != null) {
+            head = head.next;
+        }
     }
 }
 
