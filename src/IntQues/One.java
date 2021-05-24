@@ -17,6 +17,9 @@ import java.util.Scanner;
  *
  * input 13
  * output 13 8 5 3 2 1 1 0
+ *
+ *
+ * max element 52th
  * */
 public class One {
     public static void main(String[] args) {
