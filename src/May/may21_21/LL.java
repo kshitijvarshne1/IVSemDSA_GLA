@@ -30,7 +30,7 @@ public class LL {
         if (head != null) {
             Node tmp = head;
             while (tmp != null) {
-                System.out.print(tmp.data + " ->");
+                System.out.print(tmp.data + " -> ");
                 tmp = tmp.next;
             }
             System.out.println();
@@ -92,6 +92,19 @@ public class LL {
             }
             temp.next = null;
         }
+    }
+
+    public Node FindMiddle() {
+        if (head == null) {
+            return null;
+        }
+        Node slow = head;
+        Node fast = head.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
     }
 }
 
