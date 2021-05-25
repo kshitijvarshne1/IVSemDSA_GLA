@@ -106,5 +106,21 @@ public class LL {
         }
         return slow;
     }
+
+    public void deleteAtMiddle() {
+        if (head == null || head.next == null) {
+            head = null;
+            return;
+        }
+        Node slow = head;
+        Node fast = head.next;
+        Node temp = null;
+        while (fast != null && fast.next != null) {
+            temp = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        temp.next = slow.next;
+    }
 }
 
