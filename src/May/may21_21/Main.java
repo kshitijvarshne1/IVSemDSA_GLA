@@ -12,22 +12,14 @@ public class Main {
         LL list = new LL();
         list.insertAtEnd(3);
         list.insertAtEnd(4);
-        list.print();
-        list.insertAtMiddle(33);
-        list.print();
-        list.insertAtMiddle(44);
-        list.print();
-        list.insertAtMiddle(55);
-        list.print();
-        System.out.println(list.search(44));
-        System.out.println(list.search(11111));
-        /*list.deleteAtBegin();
-        list.print();
-        list.deleteAtBegin();*/
-        list.print();
-        list.deleteAtEnd();
+        list.insertAtEnd(31);
+        list.insertAtEnd(42);
+        list.insertAtEnd(33);
 
 
+        list.print();
+        list.deleteAtMiddle();
+        list.print();
     }
 }
 
