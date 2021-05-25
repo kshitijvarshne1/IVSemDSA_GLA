@@ -122,5 +122,25 @@ public class LL {
         }
         temp.next = slow.next;
     }
+
+    public void insertAtNPosition(Node newNode, int n) {
+        if (head == null) {
+            head = newNode;
+        } else if (n == 1) {
+            newNode.next = head;
+            head = newNode;
+        } else {
+            Node temp = head;
+            while (n-- > 2 && temp != null) {
+                temp = temp.next;
+            }
+            if (temp != null) {
+                newNode.next = temp.next;
+                temp.next = newNode;
+            } else {
+                System.out.println("limit out of range");
+            }
+        }
+    }
 }
 
