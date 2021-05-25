@@ -15,7 +15,6 @@ public class Main {
         list.print();
         list.insertAtNPosition(new Node(9999), 2);
         list.print();
-
     }
 }
 

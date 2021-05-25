@@ -122,7 +122,6 @@ public class LL {
         }
         temp.next = slow.next;
     }
-
     public void insertAtNPosition(Node newNode, int n) {
         if (head == null) {
             head = newNode;
