@@ -8,5 +8,12 @@
 package May.may26_21;
 
 public class Main {
+    public static void main(String[] args) {
+        DLinkedList dl = new DLinkedList();
+        dl.insertAtEnd(new Node(11));
+        dl.print();
+        dl.insertAtEnd(new Node(221));
+        dl.print();
+    }
 }
 
