@@ -8,5 +8,12 @@
 package May.may26_21;
 
 public class DLinkedList {
+    public Node head;
+    public Node tail;
+
+    public DLinkedList() {
+        this.head = null;
+        this.tail = null;
+    }
 }
 
