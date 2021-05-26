@@ -14,6 +14,8 @@ public class Main {
         dl.print();
         dl.insertAtEnd(new Node(221));
         dl.print();
+        dl.insertAtBegin(new Node(33));
+        dl.print();
     }
 }
 
