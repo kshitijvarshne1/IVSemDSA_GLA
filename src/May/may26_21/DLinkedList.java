@@ -30,11 +30,21 @@ public class DLinkedList {
         if (head != null) {
             Node temp = head;
             while (temp != null) {
-                System.out.print(temp.data + " -> ");
+                System.out.print(temp.data + " -> <- ");
                 temp = temp.next;
             }
             System.out.println();
         }
+    }
+
+    public void insertAtBegin(Node newNode) {
+        if (head == null) {
+            head = tail = newNode;
+            return;
+        }
+        head.prev = newNode;
+        newNode.next = head;
+        head = newNode;
     }
 }
 
