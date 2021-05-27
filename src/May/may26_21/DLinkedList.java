@@ -58,5 +58,18 @@ public class DLinkedList {
             tail.next = null;
         }
     }
+
+    public void deleteAtBegin() {
+        if (head == null) {
+            return;
+        } else if (head.next == null) {
+            head = tail = null;
+        } else {
+            Node temp = head.next;
+            head.next.prev = null;
+            head.next = null;
+            head = temp;
+        }
+    }
 }
 
