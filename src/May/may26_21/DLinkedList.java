@@ -65,10 +65,35 @@ public class DLinkedList {
         } else if (head.next == null) {
             head = tail = null;
         } else {
-            Node temp = head.next;
+            /*Node temp = head.next;
             head.next.prev = null;
             head.next = null;
-            head = temp;
+            head = temp;*/
+            head = head.next;
+            head.prev = null;
+        }
+    }
+
+    public void insertAtMiddle(Node newNode) {
+        if (head == null) {
+            head = tail = newNode;
+        } else if (head.next == null) {
+            head.prev = newNode;
+            newNode.next = head;
+            head = newNode;
+        } else {
+            Node slow = head;
+            Node fast = head.next;
+            while (fast != null && fast.next != null) {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            newNode.next = slow.next;
+            slow.next.prev = newNode;
+            newNode.prev = slow;
+            slow.next = newNode;
+
+
         }
     }
 }
