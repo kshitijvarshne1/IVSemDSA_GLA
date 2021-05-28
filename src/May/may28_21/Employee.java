@@ -43,6 +43,5 @@ public class Employee {
     public void setNoOfLeaves(byte noOfLeaves) {
         this.noOfLeaves = noOfLeaves;
     }
-
 }
 
