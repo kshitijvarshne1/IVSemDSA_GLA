@@ -92,8 +92,6 @@ public class DLinkedList {
             slow.next.prev = newNode;
             newNode.prev = slow;
             slow.next = newNode;
-
-
         }
     }
 }

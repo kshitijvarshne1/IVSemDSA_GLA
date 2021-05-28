@@ -16,7 +16,7 @@ public class Main {
         dl.print();
         dl.insertAtBegin(new Node(33));
         dl.print();
-        dl.deleteAtBegin();
+        dl.insertAtMiddle(new Node(999));
         dl.print();
     }
 }
