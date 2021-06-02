@@ -10,13 +10,18 @@ package June.jun02_21;
 public class Graph {
 }
 
-class Pair {
+class Pair implements Comparable<Pair> {
     int v;
     int weight;
 
     public Pair(int v, int weight) {
         this.v = v;
         this.weight = weight;
+    }
+
+    @Override
+    public int compareTo(Pair o) {
+        return Integer.compare(o.weight, this.weight);
     }
 }
 
