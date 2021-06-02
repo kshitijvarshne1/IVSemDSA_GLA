@@ -6,8 +6,9 @@
  */
 
 package June.jun02_21;
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class Graph {
     ArrayList<ArrayList<Pair>> adj;
@@ -26,10 +27,30 @@ public class Graph {
     public void printGraph() {
         for (int i = 0; i < adj.size(); i++) {
             System.out.print(i + " -> ");
-            for (May.may14_21.Pair p : adj.get(i)) {
+            for (Pair p : adj.get(i)) {
                 System.out.print("{ " + p.v + " , " + p.weight + " } ");
             }
             System.out.println();
+        }
+    }
+
+    public void dijkstra(int source) {
+        int[] dist = new int[adj.size()];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[source] = 0;
+        PriorityQueue<Pair> pq = new PriorityQueue<>();
+
+        while (!pq.isEmpty()) {
+            Pair node = pq.remove();
+            for (Pair it : adj.get(node.v)) {
+                if (dist[it.v] > it.weight + dist[node.v]) {
+                    dist[it.v] = it.weight + dist[node.v];
+                    pq.add(new Pair(it.v, dist[it.v]));
+                }
+            }
+        }
+        for (int i = 0; i < dist.length; i++) {
+            System.out.print(dist[i] + " ");
         }
     }
 
