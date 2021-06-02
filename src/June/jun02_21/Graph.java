@@ -39,7 +39,7 @@ public class Graph {
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[source] = 0;
         PriorityQueue<Pair> pq = new PriorityQueue<>();
-
+        pq.add(new Pair(source, 0));
         while (!pq.isEmpty()) {
             Pair node = pq.remove();
             for (Pair it : adj.get(node.v)) {
