@@ -7,7 +7,17 @@
 
 package June.jun02_21;
 
+import java.util.ArrayList;
+
 public class Graph {
+    ArrayList<ArrayList<Pair>> adj;
+
+    public Graph(int vertices) {
+        adj = new ArrayList<>();
+        for (int i = 0; i < vertices; i++) {
+            adj.add(new ArrayList<>());
+        }
+    }
 }
 
 class Pair implements Comparable<Pair> {
