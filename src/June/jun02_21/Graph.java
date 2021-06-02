@@ -18,6 +18,12 @@ public class Graph {
             adj.add(new ArrayList<>());
         }
     }
+
+    public void addEdge(int u, int v, int weight) {
+        adj.get(u).add(new May.may14_21.Pair(v, weight));
+    }
+
+
 }
 
 class Pair implements Comparable<Pair> {
