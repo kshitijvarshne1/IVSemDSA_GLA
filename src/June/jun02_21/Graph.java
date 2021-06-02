@@ -10,3 +10,13 @@ package June.jun02_21;
 public class Graph {
 }
 
+class Pair {
+    int v;
+    int weight;
+
+    public Pair(int v, int weight) {
+        this.v = v;
+        this.weight = weight;
+    }
+}
+
