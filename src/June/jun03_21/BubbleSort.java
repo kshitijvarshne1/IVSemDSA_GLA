@@ -15,7 +15,6 @@ public class BubbleSort {
         optiBubbleSort(arr);
 
         System.out.println(Arrays.toString(arr));
-
     }
 
     public static void bubbleSort(int[] arr) {
