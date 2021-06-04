@@ -14,7 +14,6 @@ public class selectionSort {
         int[] arr = {64, 34, 25, 12, 22, 11, 90};
         selectionSort(arr);
         System.out.println(Arrays.toString(arr));
-
     }
 
     public static void selectionSort(int[] arr) {
