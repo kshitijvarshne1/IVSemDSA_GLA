@@ -32,7 +32,6 @@ public class AStack {
             return arr[top];
         }
         return -1;
-
     }
 
     public int pop() {
