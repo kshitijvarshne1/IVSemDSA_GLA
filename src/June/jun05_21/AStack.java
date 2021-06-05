@@ -10,10 +10,21 @@ package June.jun05_21;
 public class AStack {
     int[] arr;
     int maxSize;
+    int top;
 
     public AStack(int maxSize) {
         this.arr = new int[maxSize];
         this.maxSize = maxSize;
+        this.top = -1;
+    }
+
+    public void push(int data) {
+        if (top < maxSize) {
+            top += 1;
+            arr[top] = data;
+        } else {
+            System.out.println("Stack is full");
+        }
     }
 }
 
