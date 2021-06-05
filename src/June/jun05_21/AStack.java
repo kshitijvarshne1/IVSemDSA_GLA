@@ -26,5 +26,13 @@ public class AStack {
             System.out.println("Stack is full");
         }
     }
+
+    public int peek() {
+        if (top != -1) {
+            return arr[top];
+        }
+        return -1;
+
+    }
 }
 
