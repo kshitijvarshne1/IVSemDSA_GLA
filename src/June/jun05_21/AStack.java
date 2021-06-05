@@ -8,5 +8,12 @@
 package June.jun05_21;
 
 public class AStack {
+    int[] arr;
+    int maxSize;
+
+    public AStack(int maxSize) {
+        this.arr = new int[maxSize];
+        this.maxSize = maxSize;
+    }
 }
 
