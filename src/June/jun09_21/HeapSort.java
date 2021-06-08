@@ -7,6 +7,8 @@
 
 package June.jun09_21;
 
+import java.util.Arrays;
+
 public class HeapSort {
     public int[] arr;
     public int currSize;
@@ -43,6 +45,11 @@ public class HeapSort {
 
     public int parent(int i) {
         return (i - 1) / 2;
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(arr);
     }
 }
 
