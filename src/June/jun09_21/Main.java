@@ -21,7 +21,6 @@ public class Main {
         System.out.println(hs);
         hs.insert(12);
         System.out.println(hs);
-
     }
 }
 

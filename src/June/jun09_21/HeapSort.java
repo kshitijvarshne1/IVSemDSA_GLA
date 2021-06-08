@@ -19,7 +19,7 @@ public class HeapSort {
         this.currSize = 0;
         this.capacity = capacity;
     }
-
+    // o(log size)
     public void insert(int value) {
         if (currSize == capacity) return;
 
