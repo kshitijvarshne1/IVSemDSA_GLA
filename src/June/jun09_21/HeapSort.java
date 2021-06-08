@@ -14,7 +14,7 @@ public class HeapSort {
     public int currSize;
     public int capacity;
 
-    public HeapSort(int[] arr, int capacity) {
+    public HeapSort(int capacity) {
         this.arr = new int[capacity];
         this.currSize = 0;
         this.capacity = capacity;
