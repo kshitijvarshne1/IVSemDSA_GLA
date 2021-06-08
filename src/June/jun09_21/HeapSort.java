@@ -51,5 +51,24 @@ public class HeapSort {
     public String toString() {
         return Arrays.toString(arr);
     }
+
+    public void minHeapify(int i) {
+        int lt = left(i);
+        int rt = right(i);
+        int smallest = i;
+
+        if (lt < currSize && arr[lt] < arr[i]) {
+            smallest = lt;
+        }
+        if (rt < currSize && arr[rt] < arr[smallest]) {
+            smallest = rt;
+        }
+        if (smallest != i) {
+            int k = arr[i];
+            arr[i] = arr[smallest];
+            arr[smallest] = k;
+            minHeapify(smallest);
+        }
+    }
 }
 
