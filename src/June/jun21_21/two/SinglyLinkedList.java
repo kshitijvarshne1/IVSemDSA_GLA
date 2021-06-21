@@ -26,6 +26,11 @@ public class SinglyLinkedList {
         }
     }
 
+    public void insertAtBeginning(Node newNode) {
+        newNode.setNext(head);
+        head = newNode;
+    }
+
     public void traverse() {
         if (head != null) {
             Node tmp = this.head;
