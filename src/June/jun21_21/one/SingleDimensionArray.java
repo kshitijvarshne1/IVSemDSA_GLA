@@ -52,5 +52,12 @@ public class SingleDimensionArray {
         arr = null;
     }
 
+    public void traverse() {
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
 }
 
