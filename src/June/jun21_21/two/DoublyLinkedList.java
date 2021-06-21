@@ -27,5 +27,17 @@ public class DoublyLinkedList {
         newNode.setNext(head);
         head = newNode;
     }
+
+    public void traverse() {
+        if (head != null) {
+            DNode tmp = this.head;
+
+            while (tmp != null) {
+                System.out.print(tmp.getData() + " ");
+                tmp = tmp.getNext();
+            }
+            System.out.println();
+        }
+    }
 }
 
