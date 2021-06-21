@@ -25,5 +25,16 @@ public class SinglyLinkedList {
             tmp.setNext(newNode);
         }
     }
+
+    public void traverse() {
+        if (head != null) {
+            Node tmp = this.head;
+            while (tmp != null) {
+                System.out.print(tmp.getData() + " ");
+                tmp = tmp.getNext();
+            }
+            System.out.println();
+        }
+    }
 }
 
