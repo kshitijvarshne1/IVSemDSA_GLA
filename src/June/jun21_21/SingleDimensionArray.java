@@ -47,5 +47,9 @@ public class SingleDimensionArray {
             System.out.println("Index out of bound");
         }
     }
+
+    public void deleteArray() {
+        arr = null;
+    }
 }
 
