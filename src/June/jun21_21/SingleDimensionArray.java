@@ -8,5 +8,13 @@
 package June.jun21_21;
 
 public class SingleDimensionArray {
+    int[] arr = null;
+
+    public SingleDimensionArray(int size) {
+        arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = Integer.MIN_VALUE;
+        }
+    }
 }
 
