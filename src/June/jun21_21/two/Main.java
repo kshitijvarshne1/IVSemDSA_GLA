@@ -17,6 +17,9 @@ public class Main {
         sl.traverse();
         sl.deleteAtBeginning();
         sl.traverse();
+        sl.deleteAtLast();
+        sl.traverse();
+
     }
 }
 
