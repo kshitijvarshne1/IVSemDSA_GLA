@@ -22,5 +22,10 @@ public class DoublyLinkedList {
             tail.setNext(newNode);
         }
     }
+
+    public void insertAtEnd(DNode newNode) {
+        newNode.setNext(head);
+        head = newNode;
+    }
 }
 
