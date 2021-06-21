@@ -48,5 +48,12 @@ public class StudentArray {
     public void deleteArray() {
         arr = null;
     }
+
+    public void traverse() {
+        for (Student student : arr) {
+            System.out.print(student + " ");
+        }
+        System.out.println();
+    }
 }
 
