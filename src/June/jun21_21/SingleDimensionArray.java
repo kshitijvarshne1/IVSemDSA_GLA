@@ -37,5 +37,15 @@ public class SingleDimensionArray {
         }
         return Integer.MIN_VALUE;
     }
+
+    public void delete(int index) {
+        try {
+            if (index < arr.length) {
+                arr[index] = Integer.MIN_VALUE;
+            }
+        } catch (Exception e) {
+            System.out.println("Index out of bound");
+        }
+    }
 }
 
