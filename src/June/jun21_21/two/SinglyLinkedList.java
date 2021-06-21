@@ -35,10 +35,16 @@ public class SinglyLinkedList {
         if (head != null) {
             Node tmp = this.head;
             while (tmp != null) {
-                System.out.print(tmp.getData() + " ");
+                System.out.print(tmp.getData() + " -> ");
                 tmp = tmp.getNext();
             }
             System.out.println();
+        }
+    }
+
+    public void deleteAtBeginning() {
+        if (head != null) {
+            head = head.getNext();
         }
     }
 }
