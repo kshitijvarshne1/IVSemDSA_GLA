@@ -34,5 +34,19 @@ public class StudentArray {
         }
         return null;
     }
+
+    public void deleteStudent(int index) {
+        try {
+            if (index < arr.length) {
+                arr[index] = null;
+            }
+        } catch (Exception e) {
+            System.out.println("Index out of bound");
+        }
+    }
+
+    public void deleteArray() {
+        arr = null;
+    }
 }
 
