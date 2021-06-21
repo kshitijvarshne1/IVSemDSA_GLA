@@ -39,5 +39,12 @@ public class DoublyLinkedList {
             System.out.println();
         }
     }
+
+    public void deleteAtBegin() {
+        if (head == null || head.getNext() == null) {
+            head = tail = null;
+        }
+        head = head.getNext();
+    }
 }
 
