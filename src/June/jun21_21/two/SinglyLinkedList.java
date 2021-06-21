@@ -42,6 +42,7 @@ public class SinglyLinkedList {
         }
     }
 
+
     public void deleteAtBeginning() {
         if (head != null) {
             head = head.getNext();
