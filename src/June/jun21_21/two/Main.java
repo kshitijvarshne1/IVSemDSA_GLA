@@ -15,6 +15,8 @@ public class Main {
         sl.traverse();
         sl.insertAtBeginning(new Node(1));
         sl.traverse();
+        sl.deleteAtBeginning();
+        sl.traverse();
     }
 }
 

@@ -42,6 +42,18 @@ public class SinglyLinkedList {
         }
     }
 
+    public void deleteAtLast() {
+        if (head == null || head.getNext() == null) {
+            head = null;
+        } else {
+            Node tmp = this.head;
+            while (tmp.getNext().getNext() != null) {
+                tmp = tmp.getNext();
+            }
+            tmp.setNext(null);
+        }
+
+    }
 
     public void deleteAtBeginning() {
         if (head != null) {
