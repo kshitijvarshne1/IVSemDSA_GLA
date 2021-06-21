@@ -51,5 +51,6 @@ public class SingleDimensionArray {
     public void deleteArray() {
         arr = null;
     }
+
 }
 
