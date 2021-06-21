@@ -8,5 +8,19 @@
 package June.jun21_21.two;
 
 public class DoublyLinkedList {
+    public DNode head;
+    public DNode tail;
+
+    public DoublyLinkedList() {
+        head = tail = null;
+    }
+
+    public void insertAtHead(DNode newNode) {
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            tail.setNext(newNode);
+        }
+    }
 }
 
