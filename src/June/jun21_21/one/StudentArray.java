@@ -23,5 +23,16 @@ public class StudentArray {
             System.out.println("index out of bound");
         }
     }
+
+    public Student getStudent(int index) {
+        try {
+            if (index < arr.length) {
+                return arr[index];
+            }
+        } catch (Exception e) {
+            System.out.println("Index out of bound");
+        }
+        return null;
+    }
 }
 
