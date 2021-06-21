@@ -19,13 +19,20 @@ public class DoublyLinkedList {
         if (head == null) {
             head = tail = newNode;
         } else {
-            tail.setNext(newNode);
+            head.setPrev(newNode);
+            newNode.setNext(head);
+            head = newNode;
         }
     }
 
     public void insertAtEnd(DNode newNode) {
-        newNode.setNext(head);
-        head = newNode;
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            newNode.setNext(tail);
+            tail.setNext(newNode);
+            tail = newNode;
+        }
     }
 
     public void traverse() {
@@ -40,11 +47,31 @@ public class DoublyLinkedList {
         }
     }
 
-    public void deleteAtBegin() {
-        if (head == null || head.getNext() == null) {
+    public void deleteAtEnd() {
+        if (head == null) {
+            return;
+        } else if (head.getNext() == null) {
             head = tail = null;
+        } else {
+            tail = tail.getPrev();
+            tail.getNext().setPrev(null);
+            tail.setNext(null);
         }
-        head = head.getNext();
+    }
+
+    public void deleteAtBegin() {
+        if (head == null) {
+            return;
+        } else if (head.getNext() == null) {
+            head = tail = null;
+        } else {
+            /*Node temp = head.next;
+            head.next.prev = null;
+            head.next = null;
+            head = temp;*/
+            head = head.getNext();
+            head.setPrev(null);
+        }
     }
 }
 
