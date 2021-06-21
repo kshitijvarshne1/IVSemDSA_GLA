@@ -29,7 +29,7 @@ public class DoublyLinkedList {
         if (head == null) {
             head = tail = newNode;
         } else {
-            newNode.setNext(tail);
+            newNode.setPrev(tail);
             tail.setNext(newNode);
             tail = newNode;
         }
@@ -40,7 +40,7 @@ public class DoublyLinkedList {
             DNode tmp = this.head;
 
             while (tmp != null) {
-                System.out.print(tmp.getData() + " ");
+                System.out.print(tmp.getData() + " <- ->");
                 tmp = tmp.getNext();
             }
             System.out.println();
