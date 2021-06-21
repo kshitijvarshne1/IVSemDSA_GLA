@@ -26,5 +26,16 @@ public class SingleDimensionArray {
             System.out.println("Index out of bound");
         }
     }
+
+    public int getElement(int index) {
+        try {
+            if (index < arr.length) {
+                return arr[index];
+            }
+        } catch (Exception e) {
+            System.out.println("Index out of bound");
+        }
+        return Integer.MIN_VALUE;
+    }
 }
 
