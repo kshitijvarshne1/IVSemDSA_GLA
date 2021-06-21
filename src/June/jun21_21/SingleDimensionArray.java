@@ -16,5 +16,15 @@ public class SingleDimensionArray {
             arr[i] = Integer.MIN_VALUE;
         }
     }
+
+    public void insert(int index, int element) {
+        try {
+            if (index < arr.length) {
+                arr[index] = element;
+            }
+        } catch (Exception e) {
+            System.out.println("Index out of bound");
+        }
+    }
 }
 
