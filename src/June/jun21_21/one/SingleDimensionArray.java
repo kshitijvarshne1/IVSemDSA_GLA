@@ -5,7 +5,7 @@
  *   File: SingleDimensionArray.java
  */
 
-package June.jun21_21;
+package June.jun21_21.one;
 
 public class SingleDimensionArray {
     int[] arr = null;

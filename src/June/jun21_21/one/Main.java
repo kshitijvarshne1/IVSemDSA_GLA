@@ -5,7 +5,7 @@
  *   File: Main.java
  */
 
-package June.jun21_21;
+package June.jun21_21.one;
 
 public class Main {
 }
