@@ -8,5 +8,10 @@
 package June.jun21_21.two;
 
 public class SinglyLinkedList {
+    public Node head;
+
+    public SinglyLinkedList() {
+        head = null;
+    }
 }
 
