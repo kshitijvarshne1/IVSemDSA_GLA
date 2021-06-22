@@ -41,5 +41,16 @@ public class StackUsingArray {
             return arr[top];
         }
     }
+
+    public int pop() {
+        if (isEmpty()) {
+            return -1;
+        } else {
+            int v = arr[top];
+            top--;
+            return v;
+        }
+    }
+
 }
 
