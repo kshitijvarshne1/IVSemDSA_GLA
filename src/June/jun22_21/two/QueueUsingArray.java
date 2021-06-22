@@ -58,5 +58,6 @@ public class QueueUsingArray {
             System.out.println(arr[front]);
         }
     }
+
 }
 
