@@ -29,5 +29,34 @@ public class QueueUsingArray {
     public void deleteQueue() {
         arr = null;
     }
+
+    public void enqueue(int value) {
+        if (isEmpty()) {
+            front = rear = 0;
+            arr[front] = value;
+        } else if (isFull()) {
+            System.out.println("Queue is full");
+        } else {
+            rear++;
+            arr[rear] = value;
+        }
+    }
+
+    public void dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+        } else {
+            System.out.println(arr[front]);
+            front++;
+        }
+    }
+
+    public void peek() {
+        if (isEmpty()) {
+            System.out.println("queue is empty");
+        } else {
+            System.out.println(arr[front]);
+        }
+    }
 }
 
