@@ -51,6 +51,5 @@ public class StackUsingArray {
             return v;
         }
     }
-
 }
 
