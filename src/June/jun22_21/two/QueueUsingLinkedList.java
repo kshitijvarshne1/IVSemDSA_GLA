@@ -8,5 +8,15 @@
 package June.jun22_21.two;
 
 public class QueueUsingLinkedList {
+    public Node front;
+    public Node rear;
+
+    public QueueUsingLinkedList() {
+        front = rear = null;
+    }
+
+    public boolean isEmpty() {
+        return front == null;
+    }
 }
 
