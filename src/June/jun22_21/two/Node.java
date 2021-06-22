@@ -8,19 +8,19 @@
 package June.jun22_21.two;
 
 public class Node {
-    private int data;
+    private Employee data;
     private Node next;
 
-    public Node(int data) {
+    public Node(Employee data) {
         this.data = data;
         this.next = null;
     }
 
-    public int getData() {
+    public Employee getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(Employee data) {
         this.data = data;
     }
 

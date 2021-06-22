@@ -16,6 +16,14 @@ public class Main {
         qa.enqueue(3);
         qa.dequeue();
         qa.dequeue();
+
+        QueueUsingLinkedList ql = new QueueUsingLinkedList();
+        ql.enqueue(new Node(new Employee(1, "sam", 1000)));
+        ql.enqueue(new Node(new Employee(2, "john", 2000)));
+        ql.peek();
+        ql.dequeue();
+        ql.peek();
+
     }
 }
 
