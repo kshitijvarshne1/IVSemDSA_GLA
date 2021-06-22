@@ -8,5 +8,26 @@
 package June.jun22_21.two;
 
 public class QueueUsingArray {
+    int[] arr;
+    int front;
+    int rear;
+
+    public QueueUsingArray(int size) {
+        arr = new int[size];
+        this.front = -1;
+        this.rear = -1;
+    }
+
+    public boolean isEmpty() {
+        return front == -1;
+    }
+
+    public boolean isFull() {
+        return rear == arr.length - 1;
+    }
+
+    public void deleteQueue() {
+        arr = null;
+    }
 }
 
