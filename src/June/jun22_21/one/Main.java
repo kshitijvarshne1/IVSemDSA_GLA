@@ -9,7 +9,6 @@ package June.jun22_21.one;
 
 public class Main {
     public static void main(String[] args) {
-
         StackUsingArray sa = new StackUsingArray(5);
         sa.push(3);
         sa.push(1);

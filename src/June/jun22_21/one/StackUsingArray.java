@@ -51,5 +51,9 @@ public class StackUsingArray {
             return v;
         }
     }
+
+    public void deleteStack() {
+        arr = null;
+    }
 }
 
