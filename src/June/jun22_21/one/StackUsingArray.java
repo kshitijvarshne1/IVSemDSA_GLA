@@ -24,5 +24,22 @@ public class StackUsingArray {
     public boolean isFull() {
         return this.top == arr.length - 1;
     }
+
+    public void push(int value) {
+        if (isFull()) {
+            System.out.println("Stack is full");
+        } else {
+            top++;
+            arr[top] = value;
+        }
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            return -1;
+        } else {
+            return arr[top];
+        }
+    }
 }
 
