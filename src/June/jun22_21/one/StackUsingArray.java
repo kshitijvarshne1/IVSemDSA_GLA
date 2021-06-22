@@ -8,5 +8,13 @@
 package June.jun22_21.one;
 
 public class StackUsingArray {
+    int[] arr;
+    int top;
+
+    public StackUsingArray(int size) {
+        arr = new int[size];
+        this.top = -1;
+
+    }
 }
 
