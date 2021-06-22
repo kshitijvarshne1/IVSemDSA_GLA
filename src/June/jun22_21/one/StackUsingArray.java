@@ -16,5 +16,13 @@ public class StackUsingArray {
         this.top = -1;
 
     }
+
+    public boolean isEmpty() {
+        return this.top == -1;
+    }
+
+    public boolean isFull() {
+        return this.top == arr.length - 1;
+    }
 }
 
