@@ -20,7 +20,21 @@ public class Main {
         System.out.println(sa.peek());
         System.out.println(sa.pop());
         System.out.println(sa.peek());
+
+
+        StackUsingLinkedList sl = new StackUsingLinkedList();
+        sl.push(new Node(33));
+        System.out.println(sl.peek().getData());
+        sl.push(new Node(12));
+        System.out.println(sl.peek().getData());
+        sl.push(new Node(1213));
+        System.out.println(sl.peek().getData());
+        sl.pop();
+        System.out.println(sl.peek().getData());
+
+
     }
+
 
 }
 
