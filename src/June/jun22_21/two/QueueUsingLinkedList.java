@@ -18,5 +18,31 @@ public class QueueUsingLinkedList {
     public boolean isEmpty() {
         return front == null;
     }
+
+    public void enqueue(Node newNode) {
+        if (isEmpty()) {
+            front = rear = newNode;
+        } else {
+            rear.setNext(newNode);
+            rear = newNode;
+        }
+    }
+
+    public void dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+        } else {
+            System.out.println(front.getData());
+            front = front.getNext();
+        }
+    }
+
+    public void peek() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+        } else {
+            System.out.println(front.getData());
+        }
+    }
 }
 
