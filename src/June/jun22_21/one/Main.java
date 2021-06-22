@@ -17,6 +17,10 @@ public class Main {
         System.out.println(sa.peek());
         System.out.println(sa.pop());
         System.out.println(sa.peek());
+        System.out.println(sa.pop());
+        System.out.println(sa.peek());
+        System.out.println(sa.pop());
+        System.out.println(sa.peek());
     }
 
 }
