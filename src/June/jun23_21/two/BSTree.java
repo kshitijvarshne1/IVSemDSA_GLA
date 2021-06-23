@@ -58,5 +58,50 @@ public class BSTree {
             System.out.println();
         }
     }
+
+    public void inorder() {
+        inorder(this.root);
+        System.out.println();
+    }
+
+    private void inorder(Node root) {
+        if (root != null) {
+            inorder(root.getLeft());
+            System.out.print(root.getData() + " ");
+            inorder(root.getRight());
+        }
+    }
+
+    public void preorder() {
+        preorder(this.root);
+        System.out.println();
+    }
+
+    private void preorder(Node root) {
+        if (root != null) {
+            preorder(root.getLeft());
+            System.out.print(root.getData() + " ");
+            preorder(root.getRight());
+        }
+    }
+
+    public boolean search(Node newNode) {
+        return search(this.root, newNode);
+    }
+
+    private boolean search(Node root, Node newNode) {
+        if (root == null) {
+            return false;
+        }
+        if (root.getData() == newNode.getData()) {
+            return true;
+        } else if (newNode.getData() < root.getData()) {
+            return search(root.getLeft(), newNode);
+        } else if (newNode.getData() > root.getData()) {
+            return search(root.getRight(), newNode);
+        } else {
+            return false;
+        }
+    }
 }
 

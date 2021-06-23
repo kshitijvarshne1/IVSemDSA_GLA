@@ -20,6 +20,8 @@ public class Main {
         bsTree.bfs();
         bsTree.insert(new Node(97));
         bsTree.bfs();
+        bsTree.inorder();
+        System.out.println(bsTree.search(new Node(85)));
     }
 }
 
