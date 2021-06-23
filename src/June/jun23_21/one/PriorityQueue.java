@@ -8,5 +8,11 @@
 package June.jun23_21.one;
 
 public class PriorityQueue {
+    public Node front;
+    public Node rear;
+
+    public PriorityQueue() {
+        this.front = this.rear = null;
+    }
 }
 
