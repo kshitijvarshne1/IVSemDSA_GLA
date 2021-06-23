@@ -55,6 +55,7 @@ public class BSTree {
 
                 }
             }
+            System.out.println();
         }
     }
 }
