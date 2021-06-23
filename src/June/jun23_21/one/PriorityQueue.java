@@ -25,7 +25,7 @@ public class PriorityQueue {
     }
 
     public void enqueue(Node newNode) {
-        if (rear == null || newNode.getPriority() > front.getPriority()) {
+        if (front == null || newNode.getPriority() > front.getPriority()) {
             newNode.setNext(front);
             front = newNode;
         } else {
@@ -65,6 +65,7 @@ public class PriorityQueue {
                 System.out.print(tmp.getData() + " -> ");
                 tmp = tmp.getNext();
             }
+            System.out.println();
         }
     }
 }
