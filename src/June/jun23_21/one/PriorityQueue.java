@@ -36,5 +36,13 @@ public class PriorityQueue {
             tmp.setNext(newNode);
         }
     }
+
+    public void dequeue() {
+        if (front == null) {
+            System.out.println("Queue is empty");
+        } else {
+            System.out.println(front.getData() + " " + front.getPriority());
+        }
+    }
 }
 
