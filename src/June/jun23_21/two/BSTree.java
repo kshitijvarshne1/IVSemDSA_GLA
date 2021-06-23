@@ -8,5 +8,10 @@
 package June.jun23_21.two;
 
 public class BSTree {
+    public Node root;
+
+    public BSTree() {
+        root = null;
+    }
 }
 
