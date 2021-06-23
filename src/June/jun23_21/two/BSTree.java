@@ -7,6 +7,9 @@
 
 package June.jun23_21.two;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BSTree {
     public Node root;
 
@@ -27,6 +30,32 @@ public class BSTree {
             root.setRight(insert(root.getRight(), newNode));
         }
         return root;
+    }
+
+    public void bfs() {
+        if (root == null) {
+            System.out.println("Tree is empty");
+        } else {
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while (!q.isEmpty()) {
+                Node tmp = q.remove();
+                if (tmp != null) {
+                    System.out.print(tmp.getData() + " ");
+                    if (tmp.getLeft() != null) {
+                        q.add(tmp.getLeft());
+                    }
+                    if (tmp.getRight() != null) {
+                        q.add(tmp.getRight());
+                    }
+                } else if (!q.isEmpty()) {
+                    q.add(null);
+                    System.out.println();
+
+                }
+            }
+        }
     }
 }
 
