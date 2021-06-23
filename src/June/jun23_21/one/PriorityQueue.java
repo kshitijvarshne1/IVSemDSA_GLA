@@ -44,5 +44,16 @@ public class PriorityQueue {
             System.out.println(front.getData() + " " + front.getPriority());
         }
     }
+
+    public void traverse() {
+        if (front != null) {
+            Node tmp = front;
+
+            while (tmp != null) {
+                System.out.print(tmp.getData() + " -> ");
+                tmp = tmp.getNext();
+            }
+        }
+    }
 }
 
