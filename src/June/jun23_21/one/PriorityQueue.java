@@ -6,6 +6,7 @@
  */
 
 package June.jun23_21.one;
+
 // Two types of pq
 /*
  * 1. ascending pq
@@ -42,7 +43,18 @@ public class PriorityQueue {
             System.out.println("Queue is empty");
         } else {
             System.out.println(front.getData() + " " + front.getPriority());
+            front = front.getNext();
         }
+    }
+
+    public void peek() {
+        if (front == null) {
+            System.out.println("Queue is empty");
+        } else {
+            System.out.println(front.getData() + " " + front.getPriority());
+
+        }
+
     }
 
     public void traverse() {
