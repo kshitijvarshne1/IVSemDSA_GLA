@@ -13,5 +13,20 @@ public class BSTree {
     public BSTree() {
         root = null;
     }
+
+    public void insert(Node newNode) {
+        root = insert(this.root, newNode);
+    }
+
+    private Node insert(Node root, Node newNode) {
+        if (root == null) {
+            return root = newNode;
+        } else if (newNode.getData() <= root.getData()) {
+            root.setLeft(insert(root.getLeft(), newNode));
+        } else {
+            root.setRight(insert(root.getRight(), newNode));
+        }
+        return root;
+    }
 }
 
