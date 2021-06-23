@@ -8,5 +8,14 @@
 package June.jun23_21.one;
 
 public class Node {
+    private int data;
+    private int priority;
+    private Node next;
+
+    public Node(int data, int priority) {
+        this.data = data;
+        this.priority = priority;
+        this.next = null;
+    }
 }
 
