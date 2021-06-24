@@ -143,8 +143,9 @@ public class BSTree {
                 }
             } else {
                 Node successor = getSuccessor(root);
+                int k = root.getData();
                 root.setData(successor.getData());
-                root.setRight(deleteNode(root.getRight(), new Node(successor.getData())));
+                root.setRight(deleteNode(root.getRight(), new Node(k)));
                 return root;
             }
         } else {
