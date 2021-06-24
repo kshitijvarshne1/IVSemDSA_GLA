@@ -26,7 +26,7 @@ public class Main {
         sl.insertAtEnd(new Node(6));
         sl.insertAtEnd(new Node(2));
         sl.traverse();
-        System.out.println(sl.getNumber(sl.head));
+        System.out.println("Number is :- " + sl.getNumber(sl.head));
 
     }
 }
