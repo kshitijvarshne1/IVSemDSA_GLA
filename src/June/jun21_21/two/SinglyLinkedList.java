@@ -75,5 +75,18 @@ public class SinglyLinkedList {
             return result;
         }
     }
+
+    public boolean search(Node node) {
+        if (head != null) {
+            Node temp = head;
+            while (temp != null) {
+                if (temp.getData() == node.getData()) {
+                    return true;
+                }
+                temp = temp.getNext();
+            }
+        }
+        return false;
+    }
 }
 

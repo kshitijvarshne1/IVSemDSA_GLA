@@ -1,7 +1,7 @@
 /*   Created by IntelliJ IDEA.
  *   Author: Kshitij Varshney (kshitijvarshne1)
  *   Date: 04-Jun-21
- *   Time: 9:01 PM
+ *   Time: 09:01 PM
  *   File: selectionSort.java
  */
 
@@ -12,6 +12,8 @@ import java.util.Arrays;
 public class selectionSort {
     public static void main(String[] args) {
         int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        System.out.println(Arrays.toString(arr));
+        System.out.println("After sort");
         selectionSort(arr);
         System.out.println(Arrays.toString(arr));
     }

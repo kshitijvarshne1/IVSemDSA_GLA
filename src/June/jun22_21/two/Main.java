@@ -25,13 +25,8 @@ public class Main {
         while (true) {
             switch (k) {
                 case 1:
-                    System.out.println("Enter the id");
-                    int id = sc.nextInt();
-                    System.out.println("Enter the name");
-                    String name = sc.next();
-                    System.out.println("Enter the salary:- ");
-                    int salary = sc.nextInt();
-                    ql.enqueue(new Node(new Employee(id, name, salary)));
+                    int kp = sc.nextInt();
+                    ql.enqueue(new Node(kp));
                     break;
                 case 2:
                     ql.dequeue();
