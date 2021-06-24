@@ -60,5 +60,20 @@ public class SinglyLinkedList {
             head = head.getNext();
         }
     }
+
+    public int getNumber(Node head) {
+        if (head == null) {
+            return -1;
+        } else {
+            String s = "";
+            Node tmp = head;
+            while (tmp != null) {
+                s += tmp.getData();
+                tmp = tmp.getNext();
+            }
+            int result = Integer.parseInt(s);
+            return result;
+        }
+    }
 }
 

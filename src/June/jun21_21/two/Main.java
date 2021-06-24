@@ -19,6 +19,14 @@ public class Main {
         sl.traverse();
         sl.deleteAtLast();
         sl.traverse();
+        sl.deleteAtLast();
+        sl.traverse();
+        sl.insertAtEnd(new Node(1));
+        sl.insertAtEnd(new Node(8));
+        sl.insertAtEnd(new Node(6));
+        sl.insertAtEnd(new Node(2));
+        sl.traverse();
+        System.out.println(sl.getNumber(sl.head));
 
     }
 }
