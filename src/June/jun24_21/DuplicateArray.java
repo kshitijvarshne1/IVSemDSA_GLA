@@ -9,6 +9,7 @@ package June.jun24_21;
 
 public class DuplicateArray {
     public static void main(String[] args) {
+        int[] arr = {1, 8, 1, 9, 2, 3, 8, 6, 9, 1};
     }
 }
 

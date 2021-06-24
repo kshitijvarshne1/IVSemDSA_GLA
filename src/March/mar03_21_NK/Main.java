@@ -1,7 +1,7 @@
 /*   Created by IntelliJ IDEA.
  *   Author: Kshitij Varshney (kshitijvarshne1)
- *   Date: 04-Mar-21
- *   Time: 12:35 AM
+ *   Date: 24-Jun-21
+ *   Time: 12:30 PM
  *   File: Main.java
  */
 
@@ -11,10 +11,12 @@ public class Main {
     public static void main(String[] args) {
         CircularLinkedList ll = new CircularLinkedList();
         ll.insertAtEnd(new Node(5));
+        ll.insertAtEnd(new Node(10));
+        ll.insertAtEnd(new Node(12));
+        ll.insertAtEnd(new Node(11));
         ll.print();
         ll.deleteAtBegin();
         ll.print();
-
     }
 }
 
