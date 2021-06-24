@@ -114,5 +114,43 @@ public class BSTree {
         }
         return null;
     }
+
+    public void deleteNode(Node node) {
+        root = deleteNode(this.root, node);
+    }
+
+    private Node deleteNode(Node root, Node node) {
+        if (root == null) {
+            return null;
+        }
+        if (node.getData() < root.getData()) {
+            root.setLeft(deleteNode(root.getLeft(), node));
+        } else if (node.getData() > root.getData()) {
+            root.setRight(deleteNode(root.getRight(), node));
+        } else if (root.getData() == node.getData()) {
+            // one child is null
+            if (root.getLeft() == null || root.getRight() == null) {
+                Node tmp;
+                if (root.getLeft() == null) {
+                    tmp = root.getRight();
+                } else {
+                    tmp = root.getLeft();
+                }
+                if (tmp == null) {
+                    return null;
+                } else {
+                    return tmp;
+                }
+            } else {
+                Node successor = getSuccessor(root);
+                root.setData(successor.getData());
+                root.setRight(deleteNode(root.getRight(), new Node(successor.getData())));
+                return root;
+            }
+        } else {
+            return root;
+        }
+        return root;
+    }
 }
 
