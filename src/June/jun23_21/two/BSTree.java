@@ -103,5 +103,16 @@ public class BSTree {
             return false;
         }
     }
+
+    public Node getSuccessor(Node root) {
+        if (root != null) {
+            Node tmp = root.getRight();
+            while (tmp.getLeft() != null) {
+                tmp = tmp.getLeft();
+            }
+            return tmp;
+        }
+        return null;
+    }
 }
 
