@@ -18,7 +18,6 @@ public class Main {
         bsTree.bfs();
         bsTree.deleteNode(new Node(95));
         bsTree.bfs();
-
     }
 }
 
