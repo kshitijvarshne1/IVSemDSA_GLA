@@ -19,7 +19,44 @@ public class QueueUsingArray {
     }
 
     public void pushFront(int element) {
+        if (full()) {
+            System.out.println("Overflow");
+        } else {
 
+            if (front == -1) {
+                front = rear = 0;
+            } else if (front == 0) {
+                front = arr.length - 1;
+            } else {
+                --front;
+            }
+
+            arr[front] = element;
+        }
+
+    }
+
+    public void pushback(int element) {
+        if (full()) {
+            System.out.println("Overflow");
+        } else {
+            if (front == -1) {
+                front = rear = 0;
+            } else if (rear == arr.length - 1) {
+                rear = 0;
+            } else {
+                ++rear;
+            }
+            arr[rear] = element;
+        }
+    }
+
+    public boolean full() {
+        return (front == 0 && rear == arr.length - 1) || (front == rear + 1);
+    }
+
+    public boolean empty() {
+        return front == -1;
     }
 }
 
