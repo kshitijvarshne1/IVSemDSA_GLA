@@ -39,6 +39,32 @@ public class DoublyLinkedList {
         }
     }
 
+    public void getSecondHighest() {
+        if (head == null || head.next == null) {
+            System.out.println("Not found");
+            return;
+        }
+        Node tmp = head;
+
+        int first = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        while (tmp != null) {
+            if (tmp.data > first) {
+                second = first;
+                first = tmp.data;
+            } else if (tmp.data > second && tmp.data != first) {
+                second = tmp.data;
+            }
+            tmp = tmp.next;
+        }
+        if (second == Integer.MIN_VALUE) {
+            System.out.println("Not available");
+        } else {
+            System.out.println("Second Highest value :- " + second);
+        }
+    }
+
     public boolean isEmpty() {
         return head == null;
     }
