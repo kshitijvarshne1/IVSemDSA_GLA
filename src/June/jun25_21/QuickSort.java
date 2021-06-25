@@ -13,7 +13,17 @@ public class QuickSort {
         quicksort(arr, 0, arr.length - 1);
     }
 
-    private static void quicksort(int[] arr, int i, int i1) {
+    private static void quicksort(int[] arr, int low, int high) {
+        if (low < high) {
+            int pivot = partition(arr, low, high);
+            quicksort(arr, low, pivot - 1);
+            quicksort(arr, pivot + 1, high);
+
+        }
+    }
+
+    private static int partition(int[] arr, int low, int high) {
+        int tempPivot = arr[high];
     }
 }
 
