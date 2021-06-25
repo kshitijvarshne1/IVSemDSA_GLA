@@ -58,5 +58,39 @@ public class QueueUsingArray {
     public boolean empty() {
         return front == -1;
     }
+
+    public void popFront() {
+        if (empty()) {
+            System.out.println("Undeflow");
+        } else {
+            if (front == rear) {
+                System.out.println(arr[front]);
+                front = rear = -1;
+            } else if (front == arr.length - 1) {
+                System.out.println(arr[front]);
+                front = 0;
+            } else {
+                System.out.println(arr[front]);
+                ++front;
+            }
+        }
+    }
+
+    public void popBack() {
+        if (empty()) {
+            System.out.println("Underflow");
+        } else {
+            if (front == rear) {
+                System.out.println(arr[front]);
+                front = rear = -1;
+            } else if (rear == 0) {
+                System.out.println(arr[rear]);
+                rear = arr.length - 1;
+            } else {
+                System.out.println(arr[rear]);
+                rear--;
+            }
+        }
+    }
 }
 
