@@ -8,5 +8,12 @@
 package June.jun25_21;
 
 public class QuickSort {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 99, 4, 2, 77};
+        quicksort(arr, 0, arr.length - 1);
+    }
+
+    private static void quicksort(int[] arr, int i, int i1) {
+    }
 }
 
