@@ -9,6 +9,7 @@ package June.jun21_21.two;
 
 public class SinglyLinkedList {
     public Node head;
+    private Node d;
 
     public SinglyLinkedList() {
         head = null;
@@ -39,6 +40,80 @@ public class SinglyLinkedList {
                 tmp = tmp.getNext();
             }
             System.out.println();
+        }
+    }
+
+    public void deleteFirstOccurence(Node dNode) {
+        if (head != null) {
+            Node temp = head;
+            Node newHead = new Node('x');
+            Node dummy = newHead;
+            int c = 0;
+            while (temp != null) {
+                if (temp.getData() == dNode.getData() && c == 0) {
+                    c += 1;
+                } else {
+                    dummy.setNext(new Node(temp.getData()));
+                    dummy = dummy.getNext();
+                }
+                temp = temp.getNext();
+            }
+            head = newHead.getNext();
+
+        } else {
+            System.out.println("List is empty");
+        }
+    }
+
+    public void deleteAllOccurence(Node dNode) {
+        if (head != null) {
+            Node temp = head;
+            Node newHead = new Node('x');
+            Node dummy = newHead;
+            int c = 0;
+            while (temp != null) {
+                if (temp.getData() != dNode.getData()) {
+                    dummy.setNext(new Node(temp.getData()));
+                    dummy = dummy.getNext();
+                }
+                temp = temp.getNext();
+            }
+            head = newHead.getNext();
+
+        } else {
+            System.out.println("List is empty");
+        }
+    }
+
+    public void deleteLastOccurence(Node dNode) {
+        if (head != null) {
+            Node temp = head;
+            int c = 0;
+            while (temp != null) {
+                if (temp.getData() == dNode.getData()) {
+                    c += 1;
+                }
+                temp = temp.getNext();
+            }
+            temp = head;
+            Node newHead = new Node('x');
+            Node dummy = newHead;
+            while (temp != null) {
+                if (temp.getData() == dNode.getData() && c >= 1) {
+                    c -= 1;
+                    if (c != 0) {
+                        dummy.setNext(new Node(temp.getData()));
+                        dummy = dummy.getNext();
+                    }
+                } else {
+                    dummy.setNext(new Node(temp.getData()));
+                    dummy = dummy.getNext();
+                }
+                temp = temp.getNext();
+            }
+            head = newHead.getNext();
+        } else {
+            System.out.println("Empty");
         }
     }
 

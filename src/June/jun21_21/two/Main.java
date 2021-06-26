@@ -10,23 +10,18 @@ package June.jun21_21.two;
 public class Main {
     public static void main(String[] args) {
         SinglyLinkedList sl = new SinglyLinkedList();
-        sl.insertAtEnd(new Node(2));
-        sl.insertAtEnd(new Node(3));
+        sl.insertAtEnd(new Node('a'));
+        sl.insertAtEnd(new Node('v'));
+        sl.insertAtBeginning(new Node('c'));
+        sl.insertAtEnd(new Node('d'));
+        sl.insertAtEnd(new Node('c'));
+        sl.insertAtEnd(new Node('a'));
+        sl.insertAtEnd(new Node('d'));
         sl.traverse();
-        sl.insertAtBeginning(new Node(1));
+        sl.deleteFirstOccurence(new Node('a'));
         sl.traverse();
-        sl.deleteAtBeginning();
+        sl.deleteLastOccurence(new Node('c'));
         sl.traverse();
-        sl.deleteAtLast();
-        sl.traverse();
-        sl.deleteAtLast();
-        sl.traverse();
-        sl.insertAtEnd(new Node(1));
-        sl.insertAtEnd(new Node(8));
-        sl.insertAtEnd(new Node(6));
-        sl.insertAtEnd(new Node(2));
-        sl.traverse();
-        System.out.println("Number is :- " + sl.getNumber(sl.head));
 
     }
 }
