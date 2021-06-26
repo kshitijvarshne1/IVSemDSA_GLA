@@ -73,5 +73,22 @@ public class DoublyLinkedList {
             head.setPrev(null);
         }
     }
+
+    public void changeFirstLast() {
+        if (head != null) {
+            DNode tHead = head;
+            DNode tTail = tail;
+
+            while (tHead != tTail) {
+                int k = tHead.getData();
+                tHead.setData(tTail.getData());
+                tTail.setData(k);
+                tHead = tHead.getNext();
+                tTail = tTail.getPrev();
+            }
+        } else {
+            System.out.println("Empty");
+        }
+    }
 }
 

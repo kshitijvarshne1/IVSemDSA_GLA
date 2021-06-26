@@ -11,16 +11,12 @@ public class DMain {
     public static void main(String[] args) {
         DoublyLinkedList dl = new DoublyLinkedList();
         dl.insertAtEnd(new DNode(33));
-        dl.traverse();
         dl.insertAtEnd(new DNode(44));
-        dl.traverse();
+        dl.insertAtEnd(new DNode(99));
         dl.insertAtEnd(new DNode(55));
-        dl.traverse();
         dl.insertAtHead(new DNode(22));
         dl.traverse();
-        dl.deleteAtBegin();
-        dl.traverse();
-        dl.deleteAtEnd();
+        dl.changeFirstLast();
         dl.traverse();
     }
 }
