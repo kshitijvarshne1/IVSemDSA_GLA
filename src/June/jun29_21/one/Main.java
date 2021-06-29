@@ -14,6 +14,7 @@ public class Main {
         System.out.println(cal.multiplication(4, 7));
         System.out.println(cal.subtraction(67, 1));
         System.out.println(cal.division(88, 2));
+        System.out.println(cal.percentage(339, 500));
     }
 }
 

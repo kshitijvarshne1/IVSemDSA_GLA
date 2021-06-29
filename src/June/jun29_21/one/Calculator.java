@@ -8,4 +8,6 @@ public interface Calculator {
     int multiplication(int a, int b);
 
     int division(int a, int b);
+
+    float percentage(int get, int total);
 }

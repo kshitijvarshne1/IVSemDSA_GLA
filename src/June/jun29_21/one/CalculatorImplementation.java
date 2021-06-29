@@ -31,5 +31,10 @@ public class CalculatorImplementation implements Calculator {
             return 0;
         }
     }
+
+    @Override
+    public float percentage(int get, int total) {
+        return (get * 100) / total;
+    }
 }
 
