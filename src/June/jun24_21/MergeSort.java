@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int[] arr = {11, 55, 12, 11, 13, 5, 6, 7};
+        int[] arr = {346, 22, 31, 212, 57, 102, 568, 435, 8, 14, 5};
 
         System.out.println("Given Array");
         System.out.println(Arrays.toString(arr));

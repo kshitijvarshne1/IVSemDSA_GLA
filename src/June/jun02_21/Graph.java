@@ -35,7 +35,7 @@ public class Graph {
     }
 
     public void dijkstra(int source) {
-        int[] dist = new int[adj.size()];
+        int[] dist = new int[adj.size() - 1];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[source] = 0;
         PriorityQueue<Pair> pq = new PriorityQueue<>();
@@ -47,6 +47,8 @@ public class Graph {
                     dist[it.v] = it.weight + dist[node.v];
                     pq.add(new Pair(it.v, dist[it.v]));
                 }
+                System.out.print(node.v + "  " + it.v + "    ");
+                System.out.println(Arrays.toString(dist));
             }
         }
         for (int i = 0; i < dist.length; i++) {
