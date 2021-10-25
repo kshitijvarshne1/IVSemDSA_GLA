@@ -19,7 +19,7 @@ public class Main {
         btree.insert(new Node(106));
         btree.insert(new Node(1));
         btree.bfsPrintLevelByLevel();
-        btree.deleteANode(new Node(100));
+        btree.deleteANode(new Node(106));
         btree.bfsPrintLevelByLevel();
     }
 }

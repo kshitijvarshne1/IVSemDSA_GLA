@@ -173,7 +173,7 @@ public class BinarySearchTree {
             root.left = deleteANodeFromBST(root.left, node);
         } else if (node.data > root.data) {
             root.right = deleteANodeFromBST(root.right, node);
-        } else {
+        } else if (root.data == node.data) {
             // case 3: 2 child
             if (root.left != null && root.right != null) {
                 int lmax = findMaxData(root.left);
